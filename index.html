@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>رواق | REWAQ - أرقى المجوهرات والإكسسوارات العصرية</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="متجر رواق REWAQ - وجهتكِ الأولى لأرقى الإكسسوارات النسائية من الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- خطوط جوجل العربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+    
+    <style>
+        :root {
+            --rewaq-black: #0c0c0e;
+            --rewaq-dark: #16161a;
+            --rewaq-gold: #c59b27;
+            --rewaq-gold-light: #e6be58;
+            --rewaq-gold-soft: rgba(197, 155, 39, 0.12);
+            --rewaq-gold-glow: rgba(197, 155, 39, 0.25);
+            --rewaq-pearl: #faf8f5;
+            --rewaq-surface: #ffffff;
+            --rewaq-muted: #71717a;
+            --rewaq-border: rgba(197, 155, 39, 0.22);
+            --rewaq-radius-xl: 32px;
+            --rewaq-radius-lg: 22px;
+            --rewaq-radius-md: 16px;
+            --rewaq-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --rewaq-shadow-gold: 0 14px 40px -8px rgba(197, 155, 39, 0.26);
+            --rewaq-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* لضمان عدم تغطية الناف بار الثابت لعناوين الأقسام */
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        body {
+            font-family: 'Alexandria', 'Cairo', sans-serif;
+            color: var(--rewaq-black);
+            overflow-x: hidden;
+            padding-bottom: 75px;
+            background-color: #fbf9f5;
+            position: relative;
+        }
+
+        @media (min-width: 992px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        /* حاوية الخلفية الواضحة والحيوية */
+        .modern-dynamic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.06);
+            transition: opacity 2s ease-in-out, transform 8s ease-out;
+        }
+
+        /* زيادة وضوح الصور الخلفية */
+        .bg-slide.active {
+            opacity: 0.65;
+            transform: scale(1);
+        }
+
+        .color-morph-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(197, 155, 39, 0.22), 
+                rgba(230, 190, 88, 0.18), 
+                rgba(225, 29, 72, 0.1), 
+                rgba(197, 155, 39, 0.2));
+            background-size: 300% 300%;
+            mix-blend-mode: overlay;
+            animation: gradientFlow 12s ease infinite alternate;
+        }
+
+        /* تخفيف الضبابية والتعتيم لتظهر الصور بوضوح تام */
+        .luxury-soft-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(251, 249, 245, 0.42);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .font-en {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .text-primary-gold {
+            color: var(--rewaq-gold) !important;
+        }
+
+        .bg-primary-gold {
+            background: linear-gradient(135deg, var(--rewaq-gold) 0%, var(--rewaq-gold-light) 100%) !important;
+            color: #0c0c0e !important;
+        }
+
+        /* تفاعلات الأزرار */
+        .btn-rewaq-primary, .btn-rewaq-gold, .btn-quick-buy, .btn-rewaq-outline, .btn-whatsapp {
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-rewaq-primary:active, .btn-rewaq-gold:active, .btn-quick-buy:active, .btn-rewaq-outline:active, .btn-whatsapp:active {
+            transform: scale(0.96) !important;
+        }
+
+        .btn-rewaq-primary {
+            background: linear-gradient(135deg, var(--rewaq-black) 0%, #202026 100%);
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 600;
+            padding: 0.85rem 1.6rem;
+            border-radius: 50rem;
+            transition: var(--rewaq-transition);
+        }
+
+        .btn-rewaq-primary:hover {
+            background: linear-gradient(135deg, #1c1c22 0%, #000000 100%);
+            color: var(--rewaq-gold-light) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-rewaq-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #e8c868 100%);
+            color: #0c0c0e !important;
+            border: none;
+            font-weight: 700;
+            padding: 0.85rem 1.85rem;
+            border-radius: 50rem;
+            transition: var(--rewaq-transition);
+            box-shadow: 0 6px 20px rgba(197, 155, 39, 0.3);
+        }
+
+        .btn-rewaq-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(197, 155, 39, 0.45);
+            color: #000000 !important;
+        }
+
+        .btn-quick-buy {
+            background: linear-gradient(135deg, #c59b27 0%, #ddb243 100%);
+            color: #0c0c0e !important;
+            border: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+            border-radius: 50rem;
+            transition: var(--rewaq-transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-quick-buy:hover {
+            background: linear-gradient(135deg, #b38a1f 0%, #d4a938 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 155, 39, 0.38);
+        }
+
+        .btn-rewaq-outline {
+            background: transparent;
+            color: var(--rewaq-black);
+            border: 1.5px solid rgba(0, 0, 0, 0.15);
+            font-weight: 600;
+            padding: 0.85rem 1.85rem;
+            border-radius: 50rem;
+            transition: var(--rewaq-transition);
+        }
+
+        .btn-rewaq-outline:hover {
+            border-color: var(--rewaq-gold);
+            color: var(--rewaq-gold);
+            background: rgba(197, 155, 39, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366 0%, #1ebd5b 100%);
+            color: #ffffff !important;
+            border: none;
+            font-weight: 700;
+            transition: var(--rewaq-transition);
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #20bd5a 0%, #189e4a 100%);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+        }
+
+        /* شريط التنقل العلوي */
+        .rewaq-navbar {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(197, 155, 39, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            transition: var(--rewaq-transition);
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2c2c30 !important;
+            padding: 0.5rem 1rem !important;
+            position: relative;
+            transition: var(--rewaq-transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--rewaq-gold) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            right: 50%;
+            width: 0;
+            height: 2.5px;
+            background: var(--rewaq-gold);
+            transition: var(--rewaq-transition);
+            transform: translateX(50%);
+            border-radius: 4px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 65%;
+        }
+
+        .action-icon-btn {
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: var(--rewaq-black);
+            position: relative;
+            transition: var(--rewaq-transition);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .action-icon-btn:hover {
+            background: var(--rewaq-black);
+            color: #ffffff;
+            border-color: var(--rewaq-black);
+            transform: translateY(-2px);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            background: var(--rewaq-gold);
+            color: #0c0c0e;
+            font-size: 0.75rem;
+            font-weight: 800;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ffffff;
+        }
+
+        /* البنر الرئيسي */
+        .hero-banner {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--rewaq-radius-xl);
+            border: 1.5px solid var(--rewaq-border);
+            padding: 2.5rem 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(197, 155, 39, 0.16), 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: var(--rewaq-transition);
+        }
+
+        @media (min-width: 992px) {
+            .hero-banner {
+                padding: 4.5rem 3.5rem;
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(1.85rem, 4.5vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.3;
+            color: var(--rewaq-black);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title .gold-accent {
+            color: var(--rewaq-gold);
+            display: inline-block;
+            background: linear-gradient(135deg, #c59b27 0%, #e4bb4e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-visual-container {
+            background: radial-gradient(circle at center, #ffffff 0%, #faf6ec 100%);
+            border-radius: 24px;
+            padding: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid rgba(197, 155, 39, 0.35);
+            min-height: 320px;
+            box-shadow: 0 15px 45px rgba(197, 155, 39, 0.15);
+            overflow: hidden;
+        }
+
+        @media (min-width: 992px) {
+            .hero-visual-container {
+                min-height: 420px;
+                padding: 1.25rem;
+                border-radius: 28px;
+            }
+        }
+
+        .hero-img-cover {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            transition: transform 0.6s ease;
+        }
+
+        @media (min-width: 992px) {
+            .hero-img-cover {
+                height: 390px;
+            }
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            padding: 7px 14px;
+            border-radius: 50rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+            border: 1px solid rgba(197, 155, 39, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        /* سحب أفقي للأقسام والفلاتر للموبايل */
+        .mobile-snap-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 12px;
+            padding-bottom: 10px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .mobile-snap-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width: 767.98px) {
+            .story-category-card {
+                flex: 0 0 95px;
+                scroll-snap-align: start;
+            }
+            .filter-pill {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                white-space: nowrap;
+            }
+        }
+
+        .story-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--rewaq-gold);
+            padding: 4px;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(197, 155, 39, 0.16);
+            transition: var(--rewaq-transition);
+            overflow: hidden;
+        }
+
+        .story-category-card:hover .story-circle {
+            transform: scale(1.08) translateY(-3px);
+            border-color: var(--rewaq-black);
+        }
+
+        .category-svg-icon {
+            width: 34px;
+            height: 34px;
+            color: var(--rewaq-gold);
+            transition: var(--rewaq-transition);
+        }
+
+        /* ركائز الثقة */
+        .pillar-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--rewaq-radius-lg);
+            padding: 1.25rem 1rem;
+            border: 1px solid rgba(197, 155, 39, 0.15);
+            box-shadow: var(--rewaq-shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: var(--rewaq-transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--rewaq-gold);
+            box-shadow: var(--rewaq-shadow-gold);
+        }
+
+        .pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--rewaq-gold-soft);
+            color: var(--rewaq-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+        }
+
+        /* فلاتر المنتجات */
+        .filter-pill {
+            border: 1.5px solid rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.92);
+            color: #333336;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 50rem;
+            cursor: pointer;
+            transition: var(--rewaq-transition);
+            font-size: 0.9rem;
+        }
+
+        .filter-pill.active, .filter-pill:hover {
+            background: var(--rewaq-black) !important;
+            color: #ffffff !important;
+            border-color: var(--rewaq-black);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.14);
+        }
+
+        /* كارت المنتج بتأثير الزجاج */
+        .rewaq-product-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1.5px solid rgba(197, 155, 39, 0.15);
+            padding: 1.25rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: var(--rewaq-transition);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+
+        @media (min-width: 992px) {
+            .rewaq-product-card {
+                padding: 1.5rem;
+                border-radius: 26px;
+            }
+            .rewaq-product-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--rewaq-gold);
+                box-shadow: 0 20px 45px -10px rgba(197, 155, 39, 0.25);
+            }
+        }
+
+        .product-visual-wrap {
+            background: #fbf9f4;
+            border-radius: 20px;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .product-img-real {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .rewaq-product-card:hover .product-img-real {
+            transform: scale(1.08);
+        }
+
+        .product-badge-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 50rem;
+            z-index: 2;
+        }
+
+        .wishlist-toggle-btn {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: var(--rewaq-transition);
+            color: #71717a;
+        }
+
+        .wishlist-toggle-btn:hover, .wishlist-toggle-btn.active {
+            background: #ffffff;
+            color: #e11d48;
+            transform: scale(1.12);
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--rewaq-black);
+            margin-bottom: 0.4rem;
+        }
+
+        .price-now {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--rewaq-black);
+        }
+
+        .price-old {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+            color: #a1a1aa;
+            margin-right: 8px;
+        }
+
+        .variant-select {
+            font-size: 0.88rem;
+            border: 1.5px solid rgba(0, 0, 0, 0.1);
+            padding: 8px 12px;
+            font-weight: 600;
+            background-color: #faf9f5;
+            cursor: pointer;
+            border-radius: 50rem;
+            transition: var(--rewaq-transition);
+        }
+
+        /* نافذة فورم الطلب الفوري المودال */
+        .checkout-modal-content {
+            border-radius: 26px;
+            border: 1.5px solid rgba(197, 155, 39, 0.35);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .checkout-modal-header {
+            background: linear-gradient(135deg, #111114 0%, #1a1a20 100%);
+            color: #ffffff;
+            padding: 1.5rem 1.75rem;
+            border-bottom: 1px solid rgba(197, 155, 39, 0.25);
+        }
+
+        .form-floating-custom label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 4px;
+        }
+
+        .form-control-custom {
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.12);
+            padding: 11px 14px;
+            font-size: 0.95rem;
+            background-color: #faf9f6;
+            transition: var(--rewaq-transition);
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--rewaq-gold);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 0.2rem rgba(197, 155, 39, 0.18);
+            outline: none;
+        }
+
+        .order-summary-box {
+            background: linear-gradient(145deg, #fdfbf7 0%, #f7f1e1 100%);
+            border: 1px solid rgba(197, 155, 39, 0.25);
+            border-radius: 18px;
+            padding: 1.15rem;
+        }
+
+        /* كروت البينتو */
+        .bento-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(197, 155, 39, 0.15);
+            box-shadow: var(--rewaq-shadow-sm);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 992px) {
+            .bento-card {
+                padding: 2.25rem;
+                border-radius: 28px;
+            }
+        }
+
+        .bento-dark {
+            background: linear-gradient(145deg, rgba(20, 20, 23, 0.95) 0%, rgba(10, 10, 12, 0.98) 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(197, 155, 39, 0.35) !important;
+        }
+
+        .bento-dark h3 {
+            color: #ffffff !important;
+        }
+
+        .bento-dark p {
+            color: #e4e4e7 !important;
+            line-height: 1.7;
+        }
+
+        .bento-gold {
+            background: linear-gradient(145deg, rgba(255, 252, 245, 0.95) 0%, rgba(244, 233, 203, 0.9) 100%);
+            border-color: rgba(197, 155, 39, 0.35);
+        }
+
+        .border-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .bento-label-light {
+            color: #a1a1aa;
+        }
+
+        .testimonial-bubble {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 22px;
+            padding: 1.75rem 1.5rem;
+            border: 1px solid rgba(197, 155, 39, 0.15);
+            box-shadow: var(--rewaq-shadow-sm);
+            height: 100%;
+            transition: var(--rewaq-transition);
+        }
+
+        .testimonial-bubble:hover {
+            transform: translateY(-3px);
+            border-color: var(--rewaq-gold);
+            box-shadow: var(--rewaq-shadow-gold);
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 22px;
+            border: 1px solid rgba(197, 155, 39, 0.15);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: var(--rewaq-transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--rewaq-gold);
+            box-shadow: var(--rewaq-shadow-gold);
+        }
+
+        .guide-read-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--rewaq-gold) !important;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: var(--rewaq-transition);
+        }
+
+        .guide-step-card {
+            background: #faf9f6;
+            border: 1px solid rgba(197, 155, 39, 0.2);
+            border-radius: 16px;
+            padding: 1.15rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            background-color: var(--rewaq-gold);
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+
+        .toast-container {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2100;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .rewaq-footer {
+            background-color: var(--rewaq-black) !important;
+            color: #e4e4e7 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rewaq-footer p, .rewaq-footer span, .rewaq-footer small {
+            color: #d4d4d8 !important;
+        }
+
+        .rewaq-footer .footer-title {
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .footer-link {
+            color: #cbd5e1 !important;
+            text-decoration: none;
+            transition: var(--rewaq-transition);
+            display: inline-block;
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-link:hover {
+            color: var(--rewaq-gold-light) !important;
+            transform: translateX(-4px);
+        }
+
+        .star-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            color: var(--rewaq-gold);
+        }
+
+        .star-rating svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--rewaq-gold);
+        }
+
+        #scroll-top-btn {
+            width: 46px;
+            height: 46px;
+            bottom: 85px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1025;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: var(--rewaq-transition);
+        }
+
+        @media (min-width: 992px) {
+            #scroll-top-btn {
+                bottom: 25px;
+                left: 25px;
+            }
+        }
+
+        /* شريط التطبيق السفلي المخصص للموبايل */
+        .mobile-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(197, 155, 39, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1040;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (min-width: 992px) {
+            .mobile-bottom-bar {
+                display: none !important;
+            }
+        }
+
+        .bottom-bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 600;
+            gap: 3px;
+            position: relative;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .bottom-bar-item.active, .bottom-bar-item:hover {
+            color: var(--rewaq-gold);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+    <!-- حاوية الخلفية الواضحة والحيوية المتغيرة الألوان -->
+    <div class="modern-dynamic-bg" aria-hidden="true">
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="color-morph-layer"></div>
+        <div class="luxury-soft-overlay"></div>
+    </div>
+
+    <!-- نافذة التنبيهات المنبثقة (Toast Container) -->
+    <div class="toast-container">
+        <div id="rewaqToast" class="toast align-items-center text-white bg-dark border-0 shadow-lg rounded-pill" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex align-items-center px-4 py-2">
+                <span class="text-warning me-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <div id="toastMsg" class="toast-body fw-bold fs-6 text-white">تمت العملية بنجاح!</div>
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="toast" aria-label="إغلاق"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="rewaq-navbar py-2" id="navbar">
+        <nav class="navbar navbar-expand-lg" aria-label="شريط تنقل رواق">
+            <div class="container-lg">
+                <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none" href="#intro">
+                    <div class="bg-dark text-warning p-2 rounded-3 fw-bold fs-4 d-flex align-items-center justify-content-center shadow-sm" style="width: 46px; height: 46px; border: 1px solid rgba(197, 155, 39, 0.3);">
+                        ر
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span class="fw-bold fs-4 text-dark lh-1">رِواق</span>
+                        <span class="font-en text-muted fs-6 tracking-wide lh-1" style="letter-spacing: 2px;">REWAQ</span>
+                    </div>
+                </a>
+
+                <div class="d-flex align-items-center gap-2 d-lg-none">
+                    <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="سلة المشتريات">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        <span class="cart-badge mobile-cart-badge">0</span>
+                    </button>
+                    <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-label="فتح القائمة">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-bold text-dark">قائمة رواق</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="offcanvas-body align-items-center">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 pe-lg-4 gap-lg-1">
+                            <li class="nav-item"><a class="nav-link active" href="#intro" data-bs-dismiss="offcanvas">الرئيسية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#categories-showcase" data-bs-dismiss="offcanvas">الأقسام</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#products-catalog" data-bs-dismiss="offcanvas">المنتجات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#bento-editorial" data-bs-dismiss="offcanvas">التشكيلة الحصرية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#testimonials" data-bs-dismiss="offcanvas">آراء العميلات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#latest-blog" data-bs-dismiss="offcanvas">دليل الأناقة</a></li>
+                        </ul>
+
+                        <div class="d-none d-lg-flex align-items-center gap-2 mt-3 mt-lg-0">
+                            <div class="d-flex align-items-center bg-white border rounded-pill px-3 py-1 shadow-sm">
+                                <span class="text-muted ms-2">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                </span>
+                                <input type="text" id="liveSearchInput" placeholder="ابحثي عن سلسلة، خاتم..." class="border-0 bg-transparent outline-none small text-dark" style="width: 170px;">
+                            </div>
+
+                            <button class="action-icon-btn" onclick="openWishlistToast()" title="المفضلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </button>
+
+                            <button class="action-icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" title="سلة المشتريات">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                <span class="cart-badge" id="cartBadgeCount">0</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- شريط بحث مخصص للموبايل -->
+    <div class="container-lg d-lg-none mt-3">
+        <div class="d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+            <span class="text-muted ms-2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <input type="text" id="mobileSearchInput" placeholder="ابحثي عن سلسلة، خاتم، إسورة..." class="border-0 bg-transparent w-100 outline-none small text-dark">
+        </div>
+    </div>
+
+    <!-- البنر الرئيسي (Hero Banner) -->
+    <section id="intro" class="py-3 py-lg-5">
+        <div class="container-lg">
+            <div class="hero-banner">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 text-center text-lg-end pe-lg-4">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white border border-warning shadow-sm mb-3">
+                            <span class="text-warning"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></span>
+                            <span class="small fw-bold text-dark">كولكشن موسم 2026 الحصري</span>
+                        </div>
+                        <h1 class="hero-title mb-3">
+                            بريقٌ يليق بكِ،<br>
+                            وفخامة تروي <span class="gold-accent">تفاصيل أنوثتكِ</span>.
+                        </h1>
+                        <p class="lead text-muted mb-4 fs-6">
+                            في <strong>رواق REWAQ</strong> ننتقي لكِ أجود خامات الفضة عيار 925 والقطع المطلية بماء الذهب والمزينة بأحجار الزركون الفاخرة، لتكتمل إطلالتكِ في كل يوم ومناسبة.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start mb-4">
+                            <a href="#products-catalog" class="btn btn-rewaq-gold px-4 shadow">تسوقي التشكيلة الآن</a>
+                            <a href="#categories-showcase" class="btn btn-rewaq-outline px-4">استكشفي الأقسام</a>
+                        </div>
+                        <div class="d-flex gap-3 gap-sm-4 justify-content-center justify-content-lg-start pt-3 border-top">
+                            <div>
+                                <h4 class="fw-bold font-en mb-0 text-dark">+15,000</h4>
+                                <small class="text-muted">عميلة تثق بنا</small>
+                            </div>
+                            <div class="border-start ps-3 ps-sm-4">
+                                <h4 class="fw-bold font-en mb-0 text-dark">100%</h4>
+                                <small class="text-muted">فضة إسترليني أصلية</small>
+                            </div>
+                            <div class="border-start ps-3 ps-sm-4">
+                                <h4 class="fw-bold font-en mb-0 text-dark d-flex align-items-center justify-content-center justify-content-lg-start gap-1">
+                                    4.9 <svg width="16" height="16" viewBox="0 0 24 24" fill="#c59b27" stroke="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </h4>
+                                <small class="text-muted">تقييم العميلات</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-visual-container">
+                            <div class="floating-badge top-0 end-0 m-2 m-sm-3">
+                                <span class="text-warning"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg></span>
+                                <span>فضة إسترليني 925</span>
+                            </div>
+                            <div class="floating-badge bottom-0 start-0 m-2 m-sm-3">
+                                <span class="text-warning"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg></span>
+                                <span>ضمان ثبات اللون 12 شهراً</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="مجوهرات وإكسسوارات رواق" class="hero-img-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ركائز ومميزات متجر رواق -->
+    <section class="py-2 py-lg-3">
+        <div class="container-lg">
+            <div class="row g-2 g-sm-3">
+                <div class="col-6 col-lg-3">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark fs-6">خامات وضمان</h6>
+                            <small class="text-muted d-none d-sm-block">فضة 925 مقاومة لتغير اللون</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark fs-6">تغليف ملكي</h6>
+                            <small class="text-muted d-none d-sm-block">علب مخملية فاخرة للإهداء</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark fs-6">شحن سريع</h6>
+                            <small class="text-muted d-none d-sm-block">توصيل خلال 24 - 48 ساعة</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark fs-6">معاينة أولاً</h6>
+                            <small class="text-muted d-none d-sm-block">حق المعاينة مع المندوب</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- أقسام الإكسسوارات السريعة (سحب أفقي باللمس للموبايل وشبكة للابتوب) -->
+    <section id="categories-showcase" class="py-4">
+        <div class="container-lg">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <span class="text-primary-gold fw-bold small text-uppercase">تشكيلاتنا المختارة</span>
+                    <h3 class="fw-bold m-0 text-dark fs-4 fs-lg-3">تسوقي حسب الفئة</h3>
+                </div>
+                <a href="#products-catalog" class="btn btn-link text-dark fw-bold text-decoration-none p-0">مشاهدة الكل ←</a>
+            </div>
+
+            <div class="mobile-snap-scroll row g-3 text-center flex-nowrap flex-md-wrap">
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3c0 6.627 3.134 12 7 12s7-5.373 7-12"/><circle cx="12" cy="18" r="3"/><line x1="12" y1="15" x2="12" y2="15.5"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">سلاسل</h6>
+                    <small class="text-muted">+120 قطعة</small>
+                </div>
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('rings', document.getElementById('pill-rings'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="7"/><path d="M9 5l3-3 3 3-1.5 2h-3z"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">خواتم</h6>
+                    <small class="text-muted">+85 قطعة</small>
+                </div>
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">أساور</h6>
+                    <small class="text-muted">+90 قطعة</small>
+                </div>
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a4 4 0 0 1 4 4v6"/><circle cx="12" cy="17" r="4"/><circle cx="12" cy="17" r="1.5" fill="currentColor"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">أقراط</h6>
+                    <small class="text-muted">+70 قطعة</small>
+                </div>
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('sets', document.getElementById('pill-sets'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 19h20M4 19l2-11 5 6 1-9 1 9 5-6 2 11z"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">أطقم</h6>
+                    <small class="text-muted">+45 طقم</small>
+                </div>
+                <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('all', document.getElementById('pill-all'))">
+                    <div class="story-circle">
+                        <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h6 class="fw-bold fs-6 mb-0 text-dark">جديدنا</h6>
+                    <small class="text-muted">الموسم</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- كتالوج المنتجات المتجاوب بتأثير الزجاج الشفاف -->
+    <section id="products-catalog" class="py-4 py-lg-5">
+        <div class="container-lg">
+            <div class="text-center mb-4 mb-lg-5">
+                <span class="text-primary-gold fw-bold small text-uppercase">بريق يخطف الأنظار</span>
+                <h2 class="display-6 fw-bold mt-1 text-dark">المنتجات الأكثر طلباً في رواق</h2>
+                <p class="text-muted fs-6">انتقاء فاخر يناسب إطلالاتكِ اليومية والمناسبات الاستثنائية</p>
+                
+                <!-- فلاتر تدعم التمرير الأفقي باللمس للموبايل -->
+                <div class="mobile-snap-scroll justify-content-start justify-content-md-center mt-3 px-1">
+                    <button id="pill-all" class="filter-pill active" onclick="filterCategory('all', this)">جميع الإكسسوارات</button>
+                    <button id="pill-necklaces" class="filter-pill" onclick="filterCategory('necklaces', this)">سلاسل وعقود</button>
+                    <button id="pill-rings" class="filter-pill" onclick="filterCategory('rings', this)">خواتم ومحابس</button>
+                    <button id="pill-bracelets" class="filter-pill" onclick="filterCategory('bracelets', this)">أساور وبناجر</button>
+                    <button id="pill-earrings" class="filter-pill" onclick="filterCategory('earrings', this)">أقراط وحلقان</button>
+                    <button id="pill-sets" class="filter-pill" onclick="filterCategory('sets', this)">أطقم كاملة</button>
+                </div>
+            </div>
+
+            <!-- رسالة عند عدم وجود نتائج بحث -->
+            <div id="noResultsMsg" class="text-center py-5 d-none">
+                <h5 class="fw-bold text-muted">عذراً، لم نجد قطعاً تطابق بحثكِ!</h5>
+                <p class="text-muted small">جربي البحث بكلمة أخرى مثل: خاتم، سلسلة، أو لؤلؤ</p>
+            </div>
+
+            <div class="row g-3 g-lg-4" id="productsGrid">
+                <!-- منتج 1: سلسلة الفراشة -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="necklaces">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-danger product-badge-tag">خصم 20%</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة الفراشة بماء الذهب')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="سلسلة الفراشة بماء الذهب" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">سلاسل عيار 18</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.9)</span></span>
+                        </div>
+                        <h4 class="product-title">سلسلة الفراشة بماء الذهب</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">الطلاء المفضل:</label>
+                            <select id="variant-neck-1" class="form-select variant-select">
+                                <option value="طلاء ذهب أصفر عيار 18">ذهب أصفر عيار 18</option>
+                                <option value="فضة إسترليني 925 بيضاء">فضة إسترليني 925</option>
+                                <option value="روز جولد وردي فاخر">روز جولد</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">340 ج.م</span>
+                            <span class="price-old">425 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سلسلة الفراشة بماء الذهب', 340, 'variant-neck-1', 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة الفراشة بماء الذهب', 340, 'variant-neck-1')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 2: خاتم التاج -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="rings">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">الأكثر مبيعاً</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'خاتم التاج الملكي مرصع بزركون')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="خاتم التاج الملكي" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">زركون نقي عيار 925</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(5.0)</span></span>
+                        </div>
+                        <h4 class="product-title">خاتم التاج الملكي المرصع</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">المقاس الأمريكي (US):</label>
+                            <select id="variant-ring-1" class="form-select variant-select">
+                                <option value="مقاس 6 (52 مم)">مقاس 6 (52 مم)</option>
+                                <option value="مقاس 7 (54 مم)" selected>مقاس 7 (54 مم) - الأكثر طلباً</option>
+                                <option value="مقاس 8 (57 مم)">مقاس 8 (57 مم)</option>
+                                <option value="مقاس 9 (60 مم)">مقاس 9 (60 مم)</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">280 ج.م</span>
+                            <span class="price-old">350 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('خاتم التاج الملكي مرصع بزركون', 280, 'variant-ring-1', 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('خاتم التاج الملكي مرصع بزركون', 280, 'variant-ring-1')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 3: إسورة الحلقات -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="bracelets">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-success product-badge-tag">فضة 925</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'إسورة كارتييه الحلقات المتداخلة')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1611591475850-8b1e459db4b9?auto=format&fit=crop&w=800&q=80" alt="إسورة الحلقات" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">أساور كلاسيكية</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.8)</span></span>
+                        </div>
+                        <h4 class="product-title">إسورة الحلقات المترابطة</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">اللون / التصميم:</label>
+                            <select id="variant-brace-1" class="form-select variant-select">
+                                <option value="مزدوج (ذهبي وفضي)">مزدوج (ذهبي وفضي معاً)</option>
+                                <option value="ذهبي خالص عيار 18">ذهبي مطلي بالكامل</option>
+                                <option value="فضي إسترليني 925">فضي إسترليني 925</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">420 ج.م</span>
+                            <span class="price-old">500 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('إسورة الحلقات المترابطة', 420, 'variant-brace-1', 'https://images.unsplash.com/photo-1611591475850-8b1e459db4b9?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('إسورة الحلقات المترابطة', 420, 'variant-brace-1')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 4: حلق اللؤلؤ -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="earrings">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-primary product-badge-tag">جديد رواق</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'حلق اللؤلؤ الطبيعي الأنيق')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="حلق اللؤلؤ" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">لؤلؤ طبيعي مستزرع</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.9)</span></span>
+                        </div>
+                        <h4 class="product-title">حلق اللؤلؤ الطبيعي الأنيق</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">لون اللؤلؤة:</label>
+                            <select id="variant-ear-1" class="form-select variant-select">
+                                <option value="لؤلؤ أبيض كلاسيكي">أبيض كلاسيكي لؤلؤي</option>
+                                <option value="لؤلؤ عاجي وردي">عاجي وردي سوفت</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">220 ج.م</span>
+                            <span class="price-old">290 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('حلق اللؤلؤ الطبيعي الأنيق', 220, 'variant-ear-1', 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('حلق اللؤلؤ الطبيعي الأنيق', 220, 'variant-ear-1')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 5: طقم لورا الفضي -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="sets">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-secondary text-white product-badge-tag fw-bold">طقم ملكي 3 قطع</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'طقم لورا الفضي الملكي')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="طقم لورا الفضي" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">سلسلة + خاتم + حلق</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(5.0)</span></span>
+                        </div>
+                        <h4 class="product-title">طقم لورا الفضي الملكي</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">مقاس خاتم الطقم:</label>
+                            <select id="variant-set-1" class="form-select variant-select">
+                                <option value="خاتم مقاس 6">خاتم مقاس 6</option>
+                                <option value="خاتم مقاس 7" selected>خاتم مقاس 7</option>
+                                <option value="خاتم مقاس 8">خاتم مقاس 8</option>
+                                <option value="خاتم مقاس 9">خاتم مقاس 9</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">750 ج.م</span>
+                            <span class="price-old">950 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('طقم لورا الفضي الملكي', 750, 'variant-set-1', 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('طقم لورا الفضي الملكي', 750, 'variant-set-1')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 6: سلسلة إنفينيتي -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="necklaces">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">الأكثر إهداءً</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة إنفينيتي المالانهاية')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80" alt="سلسلة إنفينيتي" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">رمز المالانهاية | 925</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.9)</span></span>
+                        </div>
+                        <h4 class="product-title">سلسلة إنفينيتي المالانهاية</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
+                            <select id="variant-neck-2" class="form-select variant-select">
+                                <option value="فضة 925 إسترليني">فضة 925 إسترليني</option>
+                                <option value="مطلية بماء الذهب 18">مطلية بماء الذهب 18</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">260 ج.م</span>
+                            <span class="price-old">320 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سلسلة إنفينيتي المالانهاية', 260, 'variant-neck-2', 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة إنفينيتي المالانهاية', 260, 'variant-neck-2')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 7: محبس سوليتير -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="rings">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-danger product-badge-tag">قطعة نادرة</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'محبس سوليتير كلاسيكي')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80" alt="محبس سوليتير" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">حجر سداسي فاخر</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.9)</span></span>
+                        </div>
+                        <h4 class="product-title">محبس سوليتير كلاسيكي</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">المقاس المطلوب:</label>
+                            <select id="variant-ring-2" class="form-select variant-select">
+                                <option value="مقاس 6">مقاس 6</option>
+                                <option value="مقاس 7" selected>مقاس 7</option>
+                                <option value="مقاس 8">مقاس 8</option>
+                                <option value="مقاس 9">مقاس 9</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">390 ج.م</span>
+                            <span class="price-old">480 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('محبس سوليتير كلاسيكي', 390, 'variant-ring-2', 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('محبس سوليتير كلاسيكي', 390, 'variant-ring-2')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منتج 8: سوار النجوم -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="bracelets">
+                    <div class="rewaq-product-card">
+                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">وصل حديثاً</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سوار النجوم المرصع بأحجار ملونة')" title="إضافة للمفضلة">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </button>
+                        <div class="product-visual-wrap">
+                            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" alt="سوار النجوم" class="product-img-real" loading="lazy">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted small">زركون ملون فاخر</span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(4.8)</span></span>
+                        </div>
+                        <h4 class="product-title">سوار النجوم الساحر</h4>
+
+                        <div class="mb-3">
+                            <label class="small text-muted fw-bold d-block mb-1">لون السوار:</label>
+                            <select id="variant-brace-2" class="form-select variant-select">
+                                <option value="فضي 925 بأحجار ملونة">فضي 925 بأحجار ملونة</option>
+                                <option value="ذهبي بأحجار زركون بيضاء">ذهبي بأحجار زركون بيضاء</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price-now">310 ج.م</span>
+                            <span class="price-old">380 ج.م</span>
+                        </div>
+
+                        <div class="d-flex gap-2 mt-auto pt-2">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سوار النجوم الساحر', 310, 'variant-brace-2', 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80')">
+                                <span>طلب فوري</span>
+                                <span>⚡</span>
+                            </button>
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سوار النجوم الساحر', 310, 'variant-brace-2')" title="أضيفي للسلة">
+                                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- التشكيلة الحصرية -->
+    <section id="bento-editorial" class="py-4 py-lg-5 bg-transparent">
+        <div class="container-lg">
+            <div class="text-center mb-4 mb-lg-5">
+                <span class="text-primary-gold fw-bold small text-uppercase">أناقة بلا حدود</span>
+                <h2 class="display-6 fw-bold mt-1 text-dark">تشكيلة رواق الحصرية 2026</h2>
+                <div class="mx-auto" style="width: 60px; height: 3px; background-color: var(--rewaq-gold); border-radius: 2px;"></div>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-lg-7">
+                    <div class="bento-card bento-dark">
+                        <div>
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fw-bold">إصدار محدود</span>
+                            <h3 class="display-6 fw-bold mb-3">إطلالة السهرة الملكية</h3>
+                            <p class="fs-6 mb-4">تصاميم استثنائية تم ابتكارها لتمنحكِ سحراً يلفت الأنظار في مناسباتك الكبرى. تفاصيل دقيقة، أحجار مصقولة بعناية، وبريق يدوم طويلاً.</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between pt-4 border-divider">
+                            <div>
+                                <span class="d-block bento-label-light small">يبدأ سعر القطع من</span>
+                                <h4 class="fw-bold text-warning font-en mb-0">290 ج.م</h4>
+                            </div>
+                            <a href="#products-catalog" class="btn btn-rewaq-gold">تصفحي المجموعة ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="bento-card bento-gold">
+                        <div>
+                            <span class="badge bg-dark text-white px-3 py-2 rounded-pill mb-3 fw-bold">خدمة الإهداء</span>
+                            <h3 class="fw-bold mb-3 text-dark">صندوق هدايا رواق الفاخر</h3>
+                            <p class="text-muted small mb-4">اختاري أي قطعة وسنقوم بتغليفها في صندوق رواق المخملي الفاخر، مع كارت إهداء خاص يُكتب بخط اليد لمفاجأة من تحبين.</p>
+                        </div>
+                        <button class="btn btn-rewaq-primary w-100" onclick="showToast('تم تفعيل خيار التغليف الفاخر لطلبك بنجاح')">طلب التغليف الفاخر (مجاناً)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- آراء العميلات -->
+    <section id="testimonials" class="py-4 py-lg-5">
+        <div class="container-lg">
+            <div class="text-center mb-4 mb-lg-5">
+                <span class="text-primary-gold fw-bold small text-uppercase">شهادات نفخر بها</span>
+                <h2 class="display-6 fw-bold mt-1 text-dark">ماذا تقول عاشقات رواق؟</h2>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-bubble">
+                        <div class="mb-2"><span class="star-rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div>
+                        <p class="text-dark fs-6 mb-4">"طلبت سلسلة الفراشة وخاتم التاج.. جودة القطع مبهرة ولمعتها راقية جداً وثابتة تماماً حتى مع العطور. والتغليف الفاخر مناسب جداً للإهداء."</p>
+                        <div class="d-flex align-items-center gap-3 border-top pt-3">
+                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">س</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark">سارة الشاذلي</h6>
+                                <small class="text-muted">عميلة موثقة • التجمع الخامس</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonial-bubble">
+                        <div class="mb-2"><span class="star-rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div>
+                        <p class="text-dark fs-6 mb-4">"خاتم السوليتير مقاسه دقيق بالمليمتر، وبريق الزركون يطابق الألماس الطبيعي بدقة. الشحن وصلني في أقل من 48 ساعة وبإمكانية المعاينة قبل الاستلام."</p>
+                        <div class="d-flex align-items-center gap-3 border-top pt-3">
+                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">ن</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark">نورهان عبد الرحمن</h6>
+                                <small class="text-muted">عميلة موثقة • المعادي</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="testimonial-bubble">
+                        <div class="mb-2"><span class="star-rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div>
+                        <p class="text-dark fs-6 mb-4">"طقم لورا الفضي كان اختياري المثالي لمناسبتي الخاصة! الجميع أثنى على أناقته كأنه ذهب أبيض مصمم خصيصاً. ذوقكم رفيع وتعامل راقٍ للغاية."</p>
+                        <div class="d-flex align-items-center gap-3 border-top pt-3">
+                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">م</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-dark">مريم الدسوقي</h6>
+                                <small class="text-muted">عميلة موثقة • الإسكندرية</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- دليل الأناقة والعناية -->
+    <section id="latest-blog" class="py-4 py-lg-5">
+        <div class="container-lg">
+            <div class="text-center mb-4 mb-lg-5">
+                <span class="text-primary-gold fw-bold small text-uppercase">أسرار الأناقة الدائمة</span>
+                <h2 class="display-6 fw-bold mt-1 text-dark">دليل رواق للأناقة والعناية</h2>
+                <p class="text-muted">نصائح احترافية للحفاظ على بريق مجوهراتك واختيار المقاسات بدقة متناهية</p>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="العناية بالقطع" class="product-img-real" loading="lazy">
+                        </div>
+                        <span class="text-muted small">العناية بالقطع • قراءة في دقيقتين</span>
+                        <h5 class="fw-bold fs-6 my-2 text-dark">5 خطوات أساسية للحفاظ على بريق الفضة والقطع المطلية</h5>
+                        <p class="text-muted small mb-3">إرشادات بسيطة وفعالة لحماية إكسسواراتك من العطور والرطوبة لتدوم كالجديدة تماماً.</p>
+                        <button class="guide-read-btn mt-auto" onclick="openGuideModal('care')">
+                            <span>اقرئي الدليل كاملاً</span>
+                            <span>←</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="دليل المقاسات" class="product-img-real" loading="lazy">
+                        </div>
+                        <span class="text-muted small">دليل المقاسات • قراءة في دقيقة</span>
+                        <h5 class="fw-bold fs-6 my-2 text-dark">كيف تحددين مقاس خاتمك بدقة متناهية من المنزل؟</h5>
+                        <p class="text-muted small mb-3">طريقة عملية وسريعة لمعرفة مقاس إصبعك واختيار الخاتم الأنسب لراحتك بكل ثقة.</p>
+                        <button class="guide-read-btn mt-auto" onclick="openGuideModal('size')">
+                            <span>اقرئي الدليل كاملاً</span>
+                            <span>←</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="blog-card">
+                        <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="تنسيق السلاسل" class="product-img-real" loading="lazy">
+                        </div>
+                        <span class="text-muted small">أسرار التنسيق • قراءة في 3 دقائق</span>
+                        <h5 class="fw-bold fs-6 my-2 text-dark">فن تنسيق الطبقات المتعددة للسلاسل (Layering)</h5>
+                        <p class="text-muted small mb-3">تعلمي أسرار موازنة أطوال السلاسل ودمج اللونين الذهبي والفضي لإطلالة عصرية جذابة.</p>
+                        <button class="guide-read-btn mt-auto" onclick="openGuideModal('layering')">
+                            <span>اقرئي الدليل كاملاً</span>
+                            <span>←</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة فورم الطلب الفوري المباشر (Quick Checkout Modal) -->
+    <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content checkout-modal-content">
+                <div class="checkout-modal-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="bg-warning text-dark p-2 rounded-circle fw-bold d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                            ⚡
+                        </div>
+                        <div>
+                            <h5 class="modal-title fw-bold text-white m-0" id="quickCheckoutTitle">إتمام الطلب السريع</h5>
+                            <small class="text-warning">الدفع عند الاستلام بعد المعاينة مع المندوب</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+
+                <div class="modal-body p-3 p-sm-4 bg-white">
+                    <div class="order-summary-box mb-4 d-flex align-items-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center gap-2 gap-sm-3">
+                            <img id="modalProductImg" src="" alt="المنتج" class="rounded-3 shadow-sm" style="width: 70px; height: 70px; object-fit: cover; border: 1.5px solid rgba(197, 155, 39, 0.35);">
+                            <div>
+                                <h6 class="fw-bold mb-1 text-dark fs-6 fs-sm-5" id="modalProductName">اسم المنتج</h6>
+                                <span class="badge bg-dark text-warning rounded-pill small" id="modalProductVariant">المقاس: قياسي</span>
+                            </div>
+                        </div>
+                        <div class="text-start">
+                            <span class="small text-muted d-block">السعر:</span>
+                            <span class="fs-5 fs-sm-4 fw-bold text-dark font-en" id="modalProductPrice">0 ج.م</span>
+                        </div>
+                    </div>
+
+                    <form id="quickCheckoutForm" onsubmit="event.preventDefault(); submitQuickCheckoutToWhatsApp();">
+                        <div class="row g-3">
+                            <div class="col-md-6 form-floating-custom">
+                                <label for="checkoutCustomerName">الاسم بالكامل (ثلاثي) <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-custom w-100" id="checkoutCustomerName" placeholder="مثال: سارة أحمد محمود" required>
+                            </div>
+
+                            <div class="col-md-6 form-floating-custom">
+                                <label for="checkoutCustomerPhone">رقم الموبايل / واتساب للتأكيد <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control form-control-custom w-100" id="checkoutCustomerPhone" placeholder="01xxxxxxxxx" required dir="ltr">
+                            </div>
+
+                            <div class="col-md-6 form-floating-custom">
+                                <label for="checkoutGovernorate">المحافظة (تحديد الشحن) <span class="text-danger">*</span></label>
+                                <select id="checkoutGovernorate" class="form-select form-control-custom w-100" onchange="recalculateModalTotal()" required>
+                                    <option value="50" data-name="القاهرة">القاهرة (شحن 50 ج.م)</option>
+                                    <option value="50" data-name="الجيزة">الجيزة (شحن 50 ج.م)</option>
+                                    <option value="60" data-name="الإسكندرية">الإسكندرية (شحن 60 ج.م)</option>
+                                    <option value="60" data-name="محافظات القناة (السويس، بورسعيد، الإسماعيلية)">محافظات القناة (شحن 60 ج.م)</option>
+                                    <option value="75" data-name="الدلتا والوجه البحري">الدلتا والوجه البحري (شحن 75 ج.م)</option>
+                                    <option value="75" data-name="الصعيد وأسوان وكافة المحافظات">الصعيد وأسوان وباقي المحافظات (شحن 75 ج.م)</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 form-floating-custom">
+                                <label for="checkoutVariantSelector">تأكيد المقاس / اللون المطلوب:</label>
+                                <select id="checkoutVariantSelector" class="form-select form-control-custom w-100" onchange="updateModalVariantText()">
+                                </select>
+                            </div>
+
+                            <div class="col-12 form-floating-custom">
+                                <label for="checkoutDetailedAddress">العنوان بالتفصيل <span class="text-danger">*</span></label>
+                                <textarea class="form-control form-control-custom w-100" id="checkoutDetailedAddress" rows="2" placeholder="المدينة، المنطقة، اسم الشارع، رقم العمارة والدور، وعلامة مميزة" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="p-3 bg-light rounded-3 border d-flex align-items-center justify-content-between">
+                                    <div class="form-check m-0 d-flex align-items-center gap-2">
+                                        <input class="form-check-input ms-0" type="checkbox" id="checkoutGiftWrap" checked>
+                                        <label class="form-check-label small fw-bold text-dark cursor-pointer" for="checkoutGiftWrap">
+                                            🎁 علبة رواق المخملية الفاخرة وكارت إهداء خاص مجاناً
+                                        </label>
+                                    </div>
+                                    <span class="badge bg-warning text-dark font-en">هدية</span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 form-floating-custom">
+                                <label for="checkoutNotes">ملاحظات التوصيل أو العبارة المطلوبة لكارت الإهداء (اختياري):</label>
+                                <input type="text" class="form-control form-control-custom w-100" id="checkoutNotes" placeholder="مثال: الاتصال قبل الوصول / كتابة 'كل عام وأنتِ الأجمل'">
+                            </div>
+                        </div>
+
+                        <div class="border-top pt-3 mt-4">
+                            <div class="d-flex justify-content-between align-items-center mb-1 text-muted small">
+                                <span>سعر القطعة:</span>
+                                <span id="modalSummarySubtotal" class="font-en fw-bold text-dark">0 ج.م</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-2 text-muted small">
+                                <span>مصاريف التوصيل للمحافظة:</span>
+                                <span id="modalSummaryShipping" class="font-en fw-bold text-dark">50 ج.م</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-dark text-white mb-3">
+                                <span class="fw-bold fs-6">الإجمالي المطلوب عند الاستلام:</span>
+                                <span id="modalSummaryGrandTotal" class="fs-4 fw-bold text-warning font-en">0 ج.م</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-whatsapp w-100 py-3 fw-bold fs-6 shadow rounded-pill d-flex align-items-center justify-content-center gap-2">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+                                <span>تأكيد الطلب الفوري عبر واتساب ⚡</span>
+                            </button>
+                            <p class="text-center text-muted small mt-2 mb-0">سيتم فتح محادثة فورية لتأكيد موعد الشحن مع خدمة العملاء.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة قراءة الدليل المنبثقة -->
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content checkout-modal-content">
+                <div class="checkout-modal-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="badge bg-warning text-dark rounded-pill fw-bold mb-1" id="guideCategory">دليل الأناقة</span>
+                        <h4 class="modal-title fw-bold text-white m-0" id="guideModalTitle">عنوان الدليل</h4>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body p-4 bg-white" id="guideModalContent" style="font-size: 1.05rem; line-height: 1.85;">
+                </div>
+                <div class="modal-footer bg-light border-0 py-3 d-flex justify-content-between">
+                    <span class="text-muted small">فريق متجر رواق REWAQ</span>
+                    <button type="button" class="btn btn-rewaq-primary rounded-pill px-4" data-bs-dismiss="modal">العودة للتسوق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- درج سلة المشتريات التفاعلي -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCart" aria-labelledby="cartDrawerTitle">
+        <div class="offcanvas-header border-bottom">
+            <div class="d-flex align-items-center gap-2">
+                <h5 class="offcanvas-title fw-bold m-0 text-dark" id="cartDrawerTitle">سلة المشتريات</h5>
+                <span class="badge bg-warning text-dark rounded-pill fw-bold" id="cartDrawerCount">0</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div>
+                <ul class="list-group list-group-flush mb-3" id="cartItemsList">
+                </ul>
+            </div>
+            <div class="border-top pt-3">
+                <div class="p-3 bg-light rounded-4 mb-3 border">
+                    <label class="form-label small fw-bold text-dark mb-1 d-flex align-items-center gap-1">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>محافظة التوصيل:</span>
+                    </label>
+                    <select id="shippingZoneSelect" class="form-select form-select-sm rounded-pill variant-select" onchange="updateShipping()">
+                        <option value="50" data-name="القاهرة والجيزة">القاهرة والجيزة (50 ج.م)</option>
+                        <option value="60" data-name="الإسكندرية والقناة">الإسكندرية والقناة (60 ج.م)</option>
+                        <option value="75" data-name="الدلتا والصعيد وباقي المحافظات">الدلتا، الصعيد وباقي المحافظات (75 ج.م)</option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-1 text-muted small">
+                    <span>مجموع المنتجات:</span>
+                    <span id="cartSubtotal" class="font-en fw-bold text-dark">0 ج.م</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2 text-muted small">
+                    <span>تكلفة الشحن والتوصيل:</span>
+                    <span id="cartShippingCost" class="font-en fw-bold text-dark">50 ج.م</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-3 pt-2 border-top">
+                    <span class="fs-5 fw-bold text-dark">الإجمالي الكلي:</span>
+                    <span id="cartGrandTotal" class="fs-4 fw-bold text-primary-gold font-en">0 ج.م</span>
+                </div>
+                
+                <button class="btn btn-whatsapp w-100 py-3 mb-2 fw-bold fs-6 shadow-sm rounded-pill d-flex align-items-center justify-content-center gap-2" onclick="checkoutCartWhatsApp()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+                    <span>طلب سلة المشتريات عبر واتساب</span>
+                </button>
+
+                <button class="btn btn-rewaq-gold w-100 py-2 mb-2 fw-bold rounded-pill" onclick="showToast('جاري تفعيل بوابة الدفع الإلكتروني...')">
+                    إتمام الطلب والدفع الإلكتروني ←
+                </button>
+                <p class="text-center text-muted small m-0">المعاينة متاحة مجاناً مع المندوب قبل الاستلام</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر الصعود للأعلى -->
+    <div id="scroll-top-btn" class="bg-white rounded-circle text-dark position-fixed shadow" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="العودة للأعلى">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </div>
+
+    <!-- شريط التطبيق السفلي المخصص للموبايل -->
+    <nav class="mobile-bottom-bar" aria-label="شريط الوصول السريع">
+        <a href="#intro" class="bottom-bar-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#categories-showcase" class="bottom-bar-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>الأقسام</span>
+        </a>
+        <a href="#products-catalog" class="bottom-bar-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>المنتجات</span>
+        </a>
+        <button type="button" class="bottom-bar-item" onclick="openWishlistToast()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>المفضلة</span>
+        </button>
+        <button type="button" class="bottom-bar-item position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-badge mobile-cart-badge" style="top: -6px; left: 8px;">0</span>
+            <span>السلة</span>
+        </button>
+    </nav>
+
+    <!-- الفوتر -->
+    <footer id="footer" class="rewaq-footer pt-5 pb-4">
+        <div class="container-lg">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="bg-warning text-dark p-2 rounded-3 fw-bold fs-4 d-flex align-items-center justify-content-center" style="width: 44px; height: 44px;">
+                            ر
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-white m-0">رِواق</h4>
+                            <span class="font-en text-muted small" style="letter-spacing: 2px;">REWAQ ACCESSORIES</span>
+                        </div>
+                    </div>
+                    <p class="text-light small pe-lg-4 lh-lg">علامة تجارية متخصصة في أرقى الإكسسوارات والمجوهرات العصرية، تجمع بين بريق الفضة الإسترليني 925 والأناقة الخالدة لقطع تدوم طويلاً.</p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge bg-dark border border-secondary text-white p-2 d-inline-flex align-items-center gap-1">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg>
+                            فضة إسترليني 925
+                        </span>
+                        <span class="badge bg-dark border border-secondary text-white p-2 d-inline-flex align-items-center gap-1">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            شحن سريع لكافة المحافظات
+                        </span>
+                        <span class="badge bg-dark border border-secondary text-white p-2 d-inline-flex align-items-center gap-1">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            معاينة مجانية عند الاستلام
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="footer-title mb-3">أقسام المتجر</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#categories-showcase" class="footer-link" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود</a></li>
+                        <li><a href="#categories-showcase" class="footer-link" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس</a></li>
+                        <li><a href="#categories-showcase" class="footer-link" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر</a></li>
+                        <li><a href="#categories-showcase" class="footer-link" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">أقراط وحلقان</a></li>
+                        <li><a href="#categories-showcase" class="footer-link" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية كاملة</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-title mb-3">خدمة العملاء والطلب الفوري</h6>
+                    <ul class="list-unstyled text-light small">
+                        <li class="mb-3 d-flex align-items-center gap-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span class="fw-bold">واتساب المبيعات: 01299914230</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center gap-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>البريد الإلكتروني: rewaq1egy@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-2 mb-md-0">
+                    <p class="m-0 text-light small">© 2026 متجر رواق REWAQ. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="m-0 text-light small">صُمم بحب للمرأة العصرية</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        var REWAQ_WHATSAPP_PHONE = "201299914230";
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v8';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v8';
+
+        function loadCartFromStorage() {
+            try {
+                var stored = localStorage.getItem(CART_STORAGE_KEY);
+                if (stored) return JSON.parse(stored);
+            } catch (e) {
+                console.warn('LocalStorage unavailable');
+            }
+            return [];
+        }
+
+        function saveCartToStorage() {
+            try {
+                localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartState));
+            } catch (e) {}
+        }
+
+        function loadWishlistFromStorage() {
+            try {
+                var stored = localStorage.getItem(WISHLIST_STORAGE_KEY);
+                if (stored) return JSON.parse(stored);
+            } catch (e) {}
+            return [];
+        }
+
+        function saveWishlistToStorage() {
+            try {
+                localStorage.setItem(WISHLIST_STORAGE_KEY, JSON.stringify(wishlistState));
+            } catch (e) {}
+        }
+
+        var cartState = loadCartFromStorage();
+        var wishlistState = loadWishlistFromStorage();
+
+        var currentQuickCheckoutItem = {
+            name: '',
+            price: 0,
+            variant: '',
+            img: ''
+        };
+
+        function openQuickCheckoutModal(name, price, variantSelectId, imgSrc) {
+            var selectedVariant = 'قياسي';
+            var originalSelect = document.getElementById(variantSelectId);
+            var modalVariantSelect = document.getElementById('checkoutVariantSelector');
+
+            modalVariantSelect.innerHTML = '';
+            if (originalSelect) {
+                selectedVariant = originalSelect.value;
+                for (var i = 0; i < originalSelect.options.length; i++) {
+                    var opt = document.createElement('option');
+                    opt.value = originalSelect.options[i].value;
+                    opt.textContent = originalSelect.options[i].textContent;
+                    if (originalSelect.options[i].value === selectedVariant) {
+                        opt.selected = true;
+                    }
+                    modalVariantSelect.appendChild(opt);
+                }
+            } else {
+                var opt = document.createElement('option');
+                opt.value = 'قياسي';
+                opt.textContent = 'المقاس/اللون القياسي';
+                modalVariantSelect.appendChild(opt);
+            }
+
+            currentQuickCheckoutItem = {
+                name: name,
+                price: price,
+                variant: selectedVariant,
+                img: imgSrc || 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80'
+            };
+
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductVariant').textContent = selectedVariant;
+            document.getElementById('modalProductPrice').textContent = price + ' ج.م';
+            document.getElementById('modalProductImg').src = currentQuickCheckoutItem.img;
+
+            recalculateModalTotal();
+
+            var modalEl = document.getElementById('quickCheckoutModal');
+            if (modalEl && window.bootstrap) {
+                var modal = new bootstrap.Modal(modalEl);
+                modal.show();
+            }
+        }
+
+        function updateModalVariantText() {
+            var sel = document.getElementById('checkoutVariantSelector');
+            if (sel) {
+                currentQuickCheckoutItem.variant = sel.value;
+                document.getElementById('modalProductVariant').textContent = sel.value;
+            }
+        }
+
+        function recalculateModalTotal() {
+            var govSelect = document.getElementById('checkoutGovernorate');
+            var shippingCost = govSelect ? parseInt(govSelect.value, 10) : 50;
+            var subtotal = currentQuickCheckoutItem.price || 0;
+            var grandTotal = subtotal + shippingCost;
+
+            document.getElementById('modalSummarySubtotal').textContent = subtotal + ' ج.م';
+            document.getElementById('modalSummaryShipping').textContent = shippingCost + ' ج.م';
+            document.getElementById('modalSummaryGrandTotal').textContent = grandTotal + ' ج.م';
+        }
+
+        function submitQuickCheckoutToWhatsApp() {
+            var name = document.getElementById('checkoutCustomerName').value.trim();
+            var phone = document.getElementById('checkoutCustomerPhone').value.trim();
+            var address = document.getElementById('checkoutDetailedAddress').value.trim();
+            var notes = document.getElementById('checkoutNotes').value.trim();
+            var giftWrap = document.getElementById('checkoutGiftWrap').checked;
+
+            var variantSelect = document.getElementById('checkoutVariantSelector');
+            var finalVariant = variantSelect ? variantSelect.value : currentQuickCheckoutItem.variant;
+
+            var govSelect = document.getElementById('checkoutGovernorate');
+            var selectedGov = govSelect.options[govSelect.selectedIndex];
+            var govName = selectedGov.getAttribute('data-name');
+            var shippingCost = parseInt(govSelect.value, 10);
+
+            if (!name || !phone || !address) {
+                showToast('يرجى كتابة الاسم، ورقم الهاتف، والعنوان بالتفصيل.');
+                return;
+            }
+
+            var subtotal = currentQuickCheckoutItem.price;
+            var grandTotal = subtotal + shippingCost;
+
+            var text = "👑 *طلب شراء فوري جديد من متجر رواق REWAQ*\n";
+            text += "--------------------------------------\n";
+            text += "🛍️ *القطعة المطلوبة:*\n";
+            text += "• *" + currentQuickCheckoutItem.name + "*\n";
+            text += "• *المقاس / الطلاء:* " + finalVariant + "\n";
+            text += "• *السعر:* " + subtotal + " ج.م\n";
+            text += "--------------------------------------\n";
+            text += "👤 *بيانات العميل والتوصيل:*\n";
+            text += "• *الاسم:* " + name + "\n";
+            text += "• *رقم الهاتف:* " + phone + "\n";
+            text += "• *المحافظة:* " + govName + "\n";
+            text += "• *العنوان بالتفصيل:* " + address + "\n";
+            if (giftWrap) {
+                text += "• *تغليف الهدايا:* نعم، مطلوب التغليف الملكي الفاخر وكارت إهداء مجاناً 🎁\n";
+            }
+            if (notes) {
+                text += "• *ملاحظات إضافية:* " + notes + "\n";
+            }
+            text += "--------------------------------------\n";
+            text += "💵 *تفاصيل الحساب:*\n";
+            text += "• سعر القطعة: " + subtotal + " ج.م\n";
+            text += "• رسوم الشحن: " + shippingCost + " ج.م\n";
+            text += "💰 *المطلوب سداده عند الاستلام بعد المعاينة:* *" + grandTotal + " ج.م*\n";
+            text += "--------------------------------------\n";
+            text += "يرجى تأكيد تجهيز الشحنة وموعد وصول المندوب.";
+
+            var whatsappUrl = "https://wa.me/" + REWAQ_WHATSAPP_PHONE + "?text=" + encodeURIComponent(text);
+
+            var modalEl = document.getElementById('quickCheckoutModal');
+            if (modalEl && window.bootstrap) {
+                var modal = bootstrap.Modal.getInstance(modalEl);
+                if (modal) modal.hide();
+            }
+
+            try {
+                var win = window.open(whatsappUrl, '_blank');
+                if (!win || win.closed || typeof win.closed === 'undefined') {
+                    window.location.href = whatsappUrl;
+                }
+            } catch (e) {
+                window.location.href = whatsappUrl;
+            }
+        }
+
+        function updateShipping() {
+            var subtotal = 0;
+            cartState.forEach(function(item) {
+                subtotal += item.price * item.qty;
+            });
+
+            var shippingSelect = document.getElementById('shippingZoneSelect');
+            var shippingCost = (cartState.length > 0 && shippingSelect) ? parseInt(shippingSelect.value, 10) : 0;
+            var grandTotal = subtotal + shippingCost;
+
+            var subtotalEl = document.getElementById('cartSubtotal');
+            var shippingCostEl = document.getElementById('cartShippingCost');
+            var grandTotalEl = document.getElementById('cartGrandTotal');
+
+            if (subtotalEl) subtotalEl.textContent = subtotal + ' ج.م';
+            if (shippingCostEl) shippingCostEl.textContent = (cartState.length > 0 ? shippingCost + ' ج.م' : '0 ج.م');
+            if (grandTotalEl) grandTotalEl.textContent = (cartState.length > 0 ? grandTotal + ' ج.م' : '0 ج.م');
+        }
+
+        function renderCart() {
+            var listEl = document.getElementById('cartItemsList');
+            var totalBadge = document.getElementById('cartBadgeCount');
+            var itemsCountBadge = document.getElementById('cartDrawerCount');
+            var mobileBadges = document.querySelectorAll('.mobile-cart-badge');
+
+            if (!listEl) return;
+            listEl.innerHTML = '';
+            var totalQty = 0;
+
+            if (cartState.length === 0) {
+                listEl.innerHTML = '<li class="list-group-item text-center py-4 bg-transparent border-0 text-muted">سلتكِ فارغة حالياً.. تصفحي الكتالوج وأضيفي قطعكِ المفضلة!</li>';
+            } else {
+                cartState.forEach(function(item) {
+                    totalQty += item.qty;
+                    var li = document.createElement('li');
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center py-3 bg-transparent border-bottom';
+                    li.innerHTML = `
+                        <div class="pe-2">
+                            <h6 class="my-0 fw-bold fs-6 text-dark">${item.name}</h6>
+                            <span class="badge bg-light text-dark border rounded-pill small my-1">${item.variant}</span>
+                            <div class="text-muted small">${item.price} ج.م × ${item.qty}</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary rounded-circle py-0 px-2" onclick="changeQty(${item.id}, -1)">-</button>
+                            <span class="fw-bold px-1 text-dark">${item.qty}</span>
+                            <button class="btn btn-sm btn-outline-secondary rounded-circle py-0 px-2" onclick="changeQty(${item.id}, 1)">+</button>
+                            <strong class="text-primary-gold ms-2 font-en">${item.price * item.qty} ج.م</strong>
+                            <button class="btn btn-sm text-danger border-0 ms-1 p-1 fs-5 lh-1" onclick="removeFromCart(${item.id})" title="حذف">&times;</button>
+                        </div>
+                    `;
+                    listEl.appendChild(li);
+                });
+            }
+
+            if (totalBadge) totalBadge.textContent = totalQty;
+            if (itemsCountBadge) itemsCountBadge.textContent = totalQty;
+            mobileBadges.forEach(b => b.textContent = totalQty);
+
+            updateShipping();
+            saveCartToStorage();
+        }
+
+        function addToCart(name, price, variantSelectId) {
+            var selectedVariant = 'قياسي';
+            if (variantSelectId) {
+                var selectEl = document.getElementById(variantSelectId);
+                if (selectEl) selectedVariant = selectEl.value;
+            }
+
+            var existing = cartState.find(item => item.name === name && item.variant === selectedVariant);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cartState.push({
+                    id: Date.now(),
+                    name: name,
+                    variant: selectedVariant,
+                    price: price,
+                    qty: 1
+                });
+            }
+
+            renderCart();
+            showToast('تمت إضافة "' + name + ' (' + selectedVariant + ')" إلى السلة بنجاح');
+        }
+
+        function changeQty(id, delta) {
+            var item = cartState.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) cartState = cartState.filter(i => i.id !== id);
+                renderCart();
+            }
+        }
+
+        function removeFromCart(id) {
+            cartState = cartState.filter(i => i.id !== id);
+            renderCart();
+            showToast('تم حذف القطعة من السلة');
+        }
+
+        function checkoutCartWhatsApp() {
+            if (cartState.length === 0) {
+                showToast('سلة المشتريات فارغة حالياً!');
+                return;
+            }
+
+            var shippingSelect = document.getElementById('shippingZoneSelect');
+            var selectedOption = shippingSelect ? shippingSelect.options[shippingSelect.selectedIndex] : null;
+            var zoneName = selectedOption ? selectedOption.getAttribute('data-name') : 'القاهرة والجيزة';
+            var shippingCost = selectedOption ? parseInt(shippingSelect.value, 10) : 50;
+
+            var subtotal = 0;
+            var text = "مرحباً متجر رواق REWAQ، أود تأكيد طلبي من السلة:\n\n";
+            cartState.forEach(function(item, idx) {
+                var itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                text += (idx + 1) + ". *" + item.name + "* (" + item.variant + ")\n   الكمية: " + item.qty + " | السعر: " + itemTotal + " ج.م\n";
+            });
+
+            var grandTotal = subtotal + shippingCost;
+            text += "\n---------------------------\n";
+            text += "📦 مجموع المنتجات: " + subtotal + " ج.م\n";
+            text += "🚚 الشحن والتوصيل: " + shippingCost + " ج.م (" + zoneName + ")\n";
+            text += "💰 الإجمالي المطلوب عند الاستلام: *" + grandTotal + " ج.م*\n";
+            text += "---------------------------\n";
+            text += "يرجى تأكيد الطلب لتزويدكم بالاسم والعنوان بالتفصيل.";
+
+            var whatsappUrl = "https://wa.me/" + REWAQ_WHATSAPP_PHONE + "?text=" + encodeURIComponent(text);
+            try {
+                var win = window.open(whatsappUrl, '_blank');
+                if (!win || win.closed || typeof win.closed === 'undefined') {
+                    window.location.href = whatsappUrl;
+                }
+            } catch (e) {
+                window.location.href = whatsappUrl;
+            }
+        }
+
+        function toggleWishlist(btn, productName) {
+            var index = wishlistState.indexOf(productName);
+            var heart = btn.querySelector('svg');
+
+            if (index === -1) {
+                wishlistState.push(productName);
+                btn.classList.add('active');
+                if (heart) heart.setAttribute('fill', '#e11d48');
+                showToast('تمت إضافة "' + productName + '" إلى المفضلة');
+            } else {
+                wishlistState.splice(index, 1);
+                btn.classList.remove('active');
+                if (heart) heart.setAttribute('fill', 'none');
+                showToast('تمت إزالة "' + productName + '" من المفضلة');
+            }
+            saveWishlistToStorage();
+        }
+
+        function restoreWishlistUI() {
+            var buttons = document.querySelectorAll('.wishlist-toggle-btn');
+            buttons.forEach(function(btn) {
+                var onclickAttr = btn.getAttribute('onclick') || '';
+                wishlistState.forEach(function(name) {
+                    if (onclickAttr.includes(name)) {
+                        btn.classList.add('active');
+                        var heart = btn.querySelector('svg');
+                        if (heart) heart.setAttribute('fill', '#e11d48');
+                    }
+                });
+            });
+        }
+
+        function openWishlistToast() {
+            if (wishlistState.length === 0) {
+                showToast('قائمة المفضلة فارغة حالياً!');
+            } else {
+                showToast('لديكِ ' + wishlistState.length + ' قطع في قائمة المفضلة.');
+            }
+        }
+
+        function filterCategory(category, pillBtn) {
+            document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+            if (pillBtn) pillBtn.classList.add('active');
+
+            var cards = document.querySelectorAll('.product-filter-item');
+            var count = 0;
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    count++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            var noRes = document.getElementById('noResultsMsg');
+            if (noRes) noRes.classList.toggle('d-none', count > 0);
+        }
+
+        function showToast(message) {
+            var msgEl = document.getElementById('toastMsg');
+            if (msgEl) msgEl.textContent = message;
+            var toastEl = document.getElementById('rewaqToast');
+            if (toastEl && window.bootstrap) {
+                var toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+                toast.show();
+            }
+        }
+
+        var guidesDatabase = {
+            care: {
+                category: 'العناية بالقطع وبريقها',
+                title: '5 خطوات أساسية للحفاظ على بريق الفضة والقطع المطلية',
+                html: `
+                    <div class="mb-4">
+                        <p class="lead text-dark fw-bold">الفضة عيار 925 والإكسسوارات المطلية بماء الذهب تدوم لسنوات طويلة مع مراعاة هذه الإرشادات البسيطة:</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">1</span> وضع العطور ومستحضرات التجميل أولاً:</h6>
+                        <p class="text-muted mb-0 small">دعي العطور والكريمات تجف تماماً على بشرتكِ قبل ارتداء المجوهرات بـ 5 دقائق، حيث تتفاعل الكحوليات مع طبقات الطلاء وتطفئ لمعتها.</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">2</span> الحفظ في أكياس مفرغة من الهواء:</h6>
+                        <p class="text-muted mb-0 small">الرطوبة والأكسدة هما السبب الرئيسي في تغير لون الفضة. احفظي كل قطعة في كيس محكم الإغلاق أو في صندوق رواق المخملي.</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">3</span> تجنب المياه والكلور:</h6>
+                        <p class="text-muted mb-0 small">يُفضل نزع المجوهرات قبل الاستحمام أو السباحة أو ممارسة الرياضة لتجنب تأثير الكلور والأملاح على بريق الأحجار.</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">4</span> المسح الدوري بقطعة قماش ناعمة:</h6>
+                        <p class="text-muted mb-0 small">بعد كل استخدام، امسحي القطع بلطف بقطعة قماش قطنية ناعمة لإزالة آثار التعرق والزيوت الطبيعية.</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">5</span> فصل القطع الذهبية عن الفضية:</h6>
+                        <p class="text-muted mb-0 small">تجنبي تخزين المعادن المختلفة متلامسة لمنع الاحتكاك وتفادي تشابك السلاسل الدقيقة.</p>
+                    </div>
+                `
+            },
+            size: {
+                category: 'دليل المقاسات الدقيقة',
+                title: 'كيف تحددين مقاس خاتمك بدقة متناهية من المنزل؟',
+                html: `
+                    <div class="mb-4">
+                        <p class="lead text-dark fw-bold">لضمان وصول الخاتم بالمقاس الأنسب والمريح لإصبعكِ تماماً، اتبعي الخطوات التالية:</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">1</span> استخدام شريط ورقي أو خيط:</h6>
+                        <p class="text-muted mb-2 small">لفي شريطاً من الورق حول الإصبع المطلوب بشكل مريح، وحددي نقطة الالتقاء بقلم، ثم قيسي الطول على المسطرة بالمليمتر (مم).</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">2</span> جدول مقاسات متجر رواق:</h6>
+                        <div class="table-responsive mt-2">
+                            <table class="table table-sm table-bordered text-center small mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>المقاس الأمريكي (US)</th>
+                                        <th>محيط الإصبع (مم)</th>
+                                        <th>الملائمة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>مقاس 6</strong></td><td>حوالي 52 مم</td><td>للأصابع الدقيقة والرقيقة</td></tr>
+                                    <tr><td><strong>مقاس 7</strong></td><td>حوالي 54 مم</td><td>المقاس القياسي الأكثر طلباً</td></tr>
+                                    <tr><td><strong>مقاس 8</strong></td><td>حوالي 57 مم</td><td>للأصابع المتوسطة والممتلئة</td></tr>
+                                    <tr><td><strong>مقاس 9</strong></td><td>حوالي 60 مم</td><td>للإبهام أو المقاسات الأعرض</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">3</span> نصيحة هامة:</h6>
+                        <p class="text-muted mb-0 small">يُفضل قياس الإصبع في نهاية اليوم عندما يكون حجم اليد في حالته الطبيعية والمستقرة.</p>
+                    </div>
+                `
+            },
+            layering: {
+                category: 'تنسيق السلاسل العصرية',
+                title: 'فن تنسيق الطبقات المتعددة للسلاسل (Layering)',
+                html: `
+                    <div class="mb-4">
+                        <p class="lead text-dark fw-bold">تنسيق عدة سلاسل معاً يمنحكِ مظهراً جذاباً ومواكباً لأحدث صيحات الموضة. إليكِ القواعد الأساسية:</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">1</span> قاعدة التدرج الثلاثي:</h6>
+                        <p class="text-muted mb-0 small">
+                        • <strong>الطبقة الأولى (القصيرة):</strong> تشوكر ناعم ملاصق للعنق (38 - 40 سم).<br>
+                        • <strong>الطبقة الثانية (المتوسطة):</strong> سلسلة بدلاية رقيقة كالفراشة أو اللؤلؤ (45 سم).<br>
+                        • <strong>الطبقة الثالثة (الطويلة):</strong> سلسلة واصلة لأسفل بدلاية مميزة (55 - 60 سم).
+                        </p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">2</span> التباين في الأحجام والسماكة:</h6>
+                        <p class="text-muted mb-0 small">اجمعي بين سلسلة ذات حلقات بارزة وسلاسل رفيعة لإضفاء توازن وعمق جمالي للمظهر.</p>
+                    </div>
+
+                    <div class="guide-step-card">
+                        <h6 class="fw-bold text-dark"><span class="guide-step-number">3</span> دمج الذهبي مع الفضي (Two-Tone):</h6>
+                        <p class="text-muted mb-0 small">مزيج اللونين الذهبي والفضي أصبح من أبرز الاتجاهات العصرية لإطلالة جريئة وفاخرة في آن واحد.</p>
+                    </div>
+                `
+            }
+        };
+
+        function openGuideModal(guideKey) {
+            var data = guidesDatabase[guideKey];
+            if (!data) return;
+            document.getElementById('guideCategory').textContent = data.category;
+            document.getElementById('guideModalTitle').textContent = data.title;
+            document.getElementById('guideModalContent').innerHTML = data.html;
+
+            var modalEl = document.getElementById('guideModal');
+            if (modalEl && window.bootstrap) {
+                var modal = new bootstrap.Modal(modalEl);
+                modal.show();
+            }
+        }
+
+        // تفاعل البحث الموحد للموبايل واللابتوب
+        function handleLiveSearch(term) {
+            term = term.trim().toLowerCase();
+            var cards = document.querySelectorAll('.product-filter-item');
+            var visibleCount = 0;
+
+            cards.forEach(function(card) {
+                var title = card.querySelector('.product-title').textContent.toLowerCase();
+                if (title.includes(term)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            var noRes = document.getElementById('noResultsMsg');
+            if (noRes) noRes.classList.toggle('d-none', visibleCount > 0);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            renderCart();
+            restoreWishlistUI();
+
+            // كود تبديل صور الخلفية السينمائية تلقائياً كل 6 ثوانٍ
+            var bgSlides = document.querySelectorAll('.modern-dynamic-bg .bg-slide');
+            var currentSlideIndex = 0;
+
+            if (bgSlides.length > 0) {
+                setInterval(function () {
+                    bgSlides[currentSlideIndex].classList.remove('active');
+                    currentSlideIndex = (currentSlideIndex + 1) % bgSlides.length;
+                    bgSlides[currentSlideIndex].classList.add('active');
+                }, 6000);
+            }
+
+            var desktopSearch = document.getElementById('liveSearchInput');
+            var mobileSearch = document.getElementById('mobileSearchInput');
+
+            if (desktopSearch) {
+                desktopSearch.addEventListener('input', function(e) {
+                    if (mobileSearch) mobileSearch.value = e.target.value;
+                    handleLiveSearch(e.target.value);
+                });
+            }
+
+            if (mobileSearch) {
+                mobileSearch.addEventListener('input', function(e) {
+                    if (desktopSearch) desktopSearch.value = e.target.value;
+                    handleLiveSearch(e.target.value);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
