@@ -26,7 +26,6 @@
         :root {
             --rewaq-black: #0c0c0e;
             --rewaq-dark: #151518;
-            --rewaq-dark-card: #1c1c22;
             --rewaq-gold: #c59b27;
             --rewaq-gold-light: #e6be58;
             --rewaq-gold-soft: rgba(197, 155, 39, 0.12);
@@ -34,7 +33,7 @@
             --rewaq-pearl: #faf8f5;
             --rewaq-surface: #ffffff;
             --rewaq-muted: #71717a;
-            --rewaq-border: rgba(197, 155, 39, 0.22);
+            --rewaq-border: rgba(197, 155, 39, 0.25);
             --rewaq-radius-xl: 28px;
             --rewaq-radius-lg: 20px;
             --rewaq-radius-md: 14px;
@@ -51,22 +50,70 @@
             scroll-margin-top: 85px;
         }
 
-        /* خلفية خفيفة وسريعة للأجهزة بدون لاج */
         body {
             font-family: 'Alexandria', 'Cairo', sans-serif;
             color: var(--rewaq-black);
             overflow-x: hidden;
             padding-bottom: 70px;
             background-color: #fbf9f5;
-            background-image: radial-gradient(circle at 10% 20%, rgba(197, 155, 39, 0.05) 0%, transparent 40%),
-                              radial-gradient(circle at 90% 80%, rgba(230, 190, 88, 0.04) 0%, transparent 40%);
-            background-attachment: fixed;
+            position: relative;
         }
 
         @media (min-width: 992px) {
             body {
                 padding-bottom: 0;
             }
+        }
+
+        /* حاوية الخلفية الحركية العصرية والواضحة */
+        .modern-dynamic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1.05);
+            transition: opacity 1.8s ease-in-out, transform 7s ease-out;
+        }
+
+        .bg-slide.active {
+            opacity: 0.72;
+            transform: scale(1);
+        }
+
+        .color-morph-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(197, 155, 39, 0.15), rgba(230, 190, 88, 0.12), rgba(225, 29, 72, 0.06), rgba(197, 155, 39, 0.14));
+            mix-blend-mode: overlay;
+        }
+
+        .luxury-soft-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(251, 249, 245, 0.45);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -238,7 +285,7 @@
 
         /* شريط التنقل */
         .rewaq-navbar {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(197, 155, 39, 0.16);
@@ -304,12 +351,14 @@
         /* البنر الرئيسي */
         .hero-banner {
             position: relative;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: var(--rewaq-radius-xl);
             border: 1.5px solid var(--rewaq-border);
             padding: 2.25rem 1.25rem;
             overflow: hidden;
-            box-shadow: 0 15px 40px -10px rgba(197, 155, 39, 0.12);
+            box-shadow: 0 15px 40px -10px rgba(197, 155, 39, 0.16);
         }
 
         @media (min-width: 992px) {
@@ -333,14 +382,14 @@
         }
 
         .hero-visual-container {
-            background: #faf7ef;
+            background: radial-gradient(circle at center, #ffffff 0%, #faf6ec 100%);
             border-radius: 22px;
             padding: 0.85rem;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1.5px solid rgba(197, 155, 39, 0.3);
+            border: 1.5px solid rgba(197, 155, 39, 0.35);
             min-height: 290px;
         }
 
@@ -357,7 +406,7 @@
             height: 280px;
             object-fit: cover;
             border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
         @media (min-width: 992px) {
@@ -369,6 +418,7 @@
         .floating-badge {
             position: absolute;
             background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
             padding: 6px 13px;
             border-radius: 50rem;
             font-size: 0.78rem;
@@ -436,7 +486,8 @@
 
         /* ركائز الثقة */
         .pillar-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
             border-radius: var(--rewaq-radius-lg);
             padding: 1.15rem 0.95rem;
             border: 1px solid rgba(197, 155, 39, 0.15);
@@ -469,7 +520,7 @@
         /* الفلاتر وكروت المنتجات */
         .filter-pill {
             border: 1.5px solid rgba(0,0,0,0.08);
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95);
             color: #333336;
             font-weight: 600;
             padding: 7px 18px;
@@ -486,16 +537,17 @@
         }
 
         .rewaq-product-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
             border-radius: 22px;
-            border: 1.5px solid rgba(197, 155, 39, 0.15);
+            border: 1.5px solid rgba(197, 155, 39, 0.18);
             padding: 1.15rem;
             position: relative;
             display: flex;
             flex-direction: column;
             height: 100%;
             transition: var(--rewaq-transition);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
         }
 
         @media (min-width: 992px) {
@@ -506,7 +558,7 @@
             .rewaq-product-card:hover {
                 transform: translateY(-6px);
                 border-color: var(--rewaq-gold);
-                box-shadow: 0 16px 36px -10px rgba(197, 155, 39, 0.22);
+                box-shadow: 0 16px 36px -10px rgba(197, 155, 39, 0.25);
             }
         }
 
@@ -600,10 +652,11 @@
 
         /* كروت البينتو والمقالات */
         .bento-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
             border-radius: 22px;
             padding: 1.75rem 1.35rem;
-            border: 1px solid rgba(197, 155, 39, 0.15);
+            border: 1px solid rgba(197, 155, 39, 0.18);
             box-shadow: var(--rewaq-shadow-sm);
             height: 100%;
             display: flex;
@@ -630,7 +683,8 @@
         }
 
         .testimonial-bubble, .blog-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 1.5rem 1.35rem;
             border: 1px solid rgba(197, 155, 39, 0.15);
@@ -735,30 +789,39 @@
             max-width: 380px;
         }
 
-        /* ================== الفوتر المودرن الجديد ================== */
+        /* ================== الفوتر المودرن الجديد بعد حل تباين الألوان ================== */
         .rewaq-footer-modern {
-            background: linear-gradient(180deg, #131317 0%, #09090b 100%);
-            color: #e4e4e7;
-            border-top: 2px solid var(--rewaq-gold);
+            background: linear-gradient(180deg, #111115 0%, #070709 100%) !important;
+            color: #ffffff !important;
+            border-top: 2.5px solid var(--rewaq-gold);
             position: relative;
             padding-top: 3.5rem;
             padding-bottom: 2rem;
         }
 
+        /* كارت التواصل الراقي بألوان ناصعة */
         .footer-action-card {
-            background: linear-gradient(135deg, rgba(28, 28, 35, 0.9) 0%, rgba(18, 18, 22, 0.95) 100%);
-            border: 1px solid rgba(197, 155, 39, 0.3);
+            background: linear-gradient(135deg, rgba(28, 28, 35, 0.95) 0%, rgba(18, 18, 24, 0.98) 100%);
+            border: 1.5px solid rgba(197, 155, 39, 0.35);
             border-radius: 20px;
             padding: 1.75rem;
             margin-bottom: 3rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer-action-card h4 {
+            color: #ffffff !important;
+        }
+
+        .footer-action-card p {
+            color: #d4d4d8 !important;
         }
 
         .footer-modern-title {
-            color: #ffffff;
-            font-size: 1.05rem;
+            color: #ffffff !important;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.25rem;
             position: relative;
             display: inline-block;
         }
@@ -768,21 +831,28 @@
             position: absolute;
             bottom: -6px;
             right: 0;
-            width: 28px;
-            height: 2px;
+            width: 30px;
+            height: 2.5px;
             background: var(--rewaq-gold);
             border-radius: 2px;
         }
 
+        .footer-desc-text {
+            color: #d1d5db !important;
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+
         .footer-nav-link {
-            color: #a1a1aa !important;
+            color: #e2e8f0 !important;
             text-decoration: none;
             transition: var(--rewaq-transition);
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            margin-bottom: 0.65rem;
-            font-size: 0.92rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.93rem;
+            font-weight: 500;
         }
 
         .footer-nav-link:hover {
@@ -791,23 +861,43 @@
         }
 
         .trust-pill-tag {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #d4d4d8;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(197, 155, 39, 0.3);
+            color: #f4f4f5 !important;
             padding: 8px 14px;
             border-radius: 12px;
             font-size: 0.85rem;
+            font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
+        .contact-info-item {
+            color: #f4f4f5 !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-info-item a {
+            color: #f4f4f5 !important;
+            text-decoration: none;
+            transition: var(--rewaq-transition);
+        }
+
+        .contact-info-item a:hover {
+            color: var(--rewaq-gold-light) !important;
+        }
+
         .social-circle-btn {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(197, 155, 39, 0.35);
             color: #ffffff;
             display: inline-flex;
             align-items: center;
@@ -820,6 +910,12 @@
             background: var(--rewaq-gold);
             color: #0c0c0e;
             transform: translateY(-3px);
+            border-color: var(--rewaq-gold);
+        }
+
+        .footer-bottom-text {
+            color: #d1d5db !important;
+            font-size: 0.88rem;
         }
 
         /* شريط الموبايل السفلي وزر الصعود */
@@ -889,6 +985,15 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
 
+    <!-- حاوية الخلفية الحركية العصرية المتغيرة والواضحة -->
+    <div class="modern-dynamic-bg" aria-hidden="true">
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1920&q=85');"></div>
+        <div class="color-morph-layer"></div>
+        <div class="luxury-soft-overlay"></div>
+    </div>
+
     <!-- نافذة التنبيهات المنبثقة السريعة (Toast) -->
     <div class="toast-container">
         <div id="rewaqToast" class="toast align-items-center text-white bg-dark border-0 shadow-lg rounded-pill" role="alert" aria-live="assertive" aria-atomic="true">
@@ -902,7 +1007,7 @@
         </div>
     </div>
 
-    <!-- شريط التنقل العلوي (مع اللوجو الجديد المفصول والمنضبط) -->
+    <!-- شريط التنقل العلوي -->
     <header class="rewaq-navbar py-2" id="navbar">
         <nav class="navbar navbar-expand-lg" aria-label="شريط تنقل رواق">
             <div class="container-lg">
@@ -1218,7 +1323,7 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="text-muted small">زركون نقي عيار 925</span>
-                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span> <span class="text-muted font-en small">(5.0)</span></span>
+                            <span class="small d-inline-flex align-items-center gap-1"><span class="star-rating"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c59b27"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span class="text-muted font-en small">(5.0)</span></span>
                         </div>
                         <h4 class="product-title">خاتم التاج الملكي المرصع</h4>
 
@@ -1708,7 +1813,7 @@
                                     <option value="60" data-name="الإسكندرية">الإسكندرية (شحن 60 ج.م)</option>
                                     <option value="60" data-name="محافظات القناة (السويس، بورسعيد، الإسماعيلية)">محافظات القناة (شحن 60 ج.م)</option>
                                     <option value="75" data-name="الدلتا والوجه البحري">الدلتا والوجه البحري (شحن 75 ج.م)</option>
-                                    <option value="75" data-name="الصعيد وأسوان وكافة المحافظات">الصعيد وباقي المحافظات (شحن 75 ج.م)</option>
+                                    <option value="75" data-name="الصعيد وباقي المحافظات">الصعيد وباقي المحافظات (شحن 75 ج.م)</option>
                                 </select>
                             </div>
 
@@ -1871,7 +1976,7 @@
         </button>
     </nav>
 
-    <!-- الفوتر المودرن الجديد بالكامل -->
+    <!-- الفوتر المودرن الجديد بالكامل (بعد إزالة طرق الدفع وضبط تباين النصوص باللون الأبيض والفضي) -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
             
@@ -1879,9 +1984,9 @@
             <div class="footer-action-card">
                 <div class="row align-items-center g-3">
                     <div class="col-lg-8 text-center text-lg-end">
-                        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold small mb-2">خدمة عملاء VIP</span>
-                        <h4 class="fw-bold text-white mb-1">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h4>
-                        <p class="text-muted small mb-0">فريق رواق جاهز لمساعدتكِ فوراً عبر واتساب لتأكيد الطلب واقتراح أفضل الخيارات.</p>
+                        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold small mb-2">خدمة عملاء رواق VIP</span>
+                        <h4 class="fw-bold text-white mb-2 fs-4">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h4>
+                        <p class="mb-0 text-light small">فريق رواق جاهز لمساعدتكِ فوراً عبر واتساب لتأكيد مواعيد الشحن وتجهيز علب الإهداء الخاصة.</p>
                     </div>
                     <div class="col-lg-4 text-center text-lg-start">
                         <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp px-4 py-2 rounded-pill shadow d-inline-flex align-items-center gap-2">
@@ -1892,9 +1997,9 @@
                 </div>
             </div>
 
-            <!-- أعمدة الفوتر -->
+            <!-- أعمدة الفوتر الثلاثة بعد حذف طرق الدفع وتنسيق كامل النصوص بالأبيض والفضي -->
             <div class="row g-4 mb-4">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-5 col-md-6">
                     <div class="rewaq-brand mb-3">
                         <div class="brand-badge">ر</div>
                         <div class="brand-text-wrap">
@@ -1902,56 +2007,51 @@
                             <span class="brand-subtitle">REWAQ</span>
                         </div>
                     </div>
-                    <p class="text-muted small lh-lg mb-3">
-                        علامة متخصصة في صياغة واختيار أرقى مجوهرات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب، نجمع بين البريق الدائم والذوق العصري الذي يناسبكِ في كل وقت.
+                    <p class="footer-desc-text mb-3">
+                        علامة تجارية متخصصة في صياغة واختيار أرقى مجوهرات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب والمزينة بأحجار الزركون، تجمع بين الفخامة والأناقة اليومية لقطع تدوم طويلاً.
                     </p>
                     <div class="d-flex flex-wrap gap-2">
                         <span class="trust-pill-tag">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/></svg>
-                            فضة عيار 925
+                            فضة عيار 925 أصلية
                         </span>
                         <span class="trust-pill-tag">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            معاينة عند الاستلام
+                            حق المعاينة مع المندوب
                         </span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-6">
-                    <h6 class="footer-modern-title">أقسام المتجر</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود</a></li>
-                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس</a></li>
-                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر</a></li>
-                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">أقراط وحلقان</a></li>
-                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية</a></li>
-                    </ul>
-                </div>
-
                 <div class="col-lg-3 col-6">
-                    <h6 class="footer-modern-title">أدلة ومعلومات</h6>
+                    <h6 class="footer-modern-title">أقسام ومجموعات المتجر</h6>
                     <ul class="list-unstyled mb-0">
-                        <li><a href="javascript:void(0)" class="footer-nav-link" onclick="openGuideModal('size')">دليل مقاسات الخواتم</a></li>
-                        <li><a href="javascript:void(0)" class="footer-nav-link" onclick="openGuideModal('care')">طرق العناية بالفضة</a></li>
-                        <li><a href="javascript:void(0)" class="footer-nav-link" onclick="openGuideModal('layering')">أسرار تنسيق السلاسل</a></li>
-                        <li><a href="#intro" class="footer-nav-link">سياسة المعاينة والاستبدال</a></li>
-                        <li><a href="#intro" class="footer-nav-link">أسئلة شائعة عن التوصيل</a></li>
+                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود فاخرة</a></li>
+                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس سوليتير</a></li>
+                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر كلاسيكية</a></li>
+                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">أقراط وحلقان لؤلؤ</a></li>
+                        <li><a href="#categories-showcase" class="footer-nav-link" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية كاملة</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <h6 class="footer-modern-title">طرق الدفع والتوصيل</h6>
-                    <p class="text-muted small mb-3">الدفع نقدياً عند الاستلام بعد المعاينة التامة، أو عبر المحافظ الإلكترونية وإنستاباي.</p>
-                    <div class="d-flex flex-wrap gap-2 mb-3">
-                        <span class="badge bg-secondary text-white font-en">Cash on Delivery</span>
-                        <span class="badge bg-dark border border-secondary text-white font-en">InstaPay</span>
-                        <span class="badge bg-danger text-white font-en">Vodafone Cash</span>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-modern-title">التواصل وخدمة العملاء</h6>
+                    <div class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>واتساب ومبيعات: <a href="https://wa.me/201299914230" target="_blank" dir="ltr" class="fw-bold">01299914230</a></span>
                     </div>
-                    <div class="d-flex gap-2">
-                        <a href="https://wa.me/201299914230" target="_blank" class="social-circle-btn" title="واتساب">
+                    <div class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>البريد الإلكتروني: <a href="mailto:rewaq1egy@gmail.com">rewaq1egy@gmail.com</a></span>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c59b27" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>أوقات العمل: يومياً من 10 صباحاً حتى 11 مساءً</span>
+                    </div>
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="https://wa.me/201299914230" target="_blank" class="social-circle-btn" title="واتساب رواق">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
                         </a>
-                        <a href="mailto:rewaq1egy@gmail.com" class="social-circle-btn" title="البريد">
+                        <a href="mailto:rewaq1egy@gmail.com" class="social-circle-btn" title="البريد الإلكتروني">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </a>
                     </div>
@@ -1962,14 +2062,15 @@
 
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-end mb-2 mb-md-0">
-                    <p class="m-0 text-muted small">© 2026 متجر رواق REWAQ. جميع الحقوق محفوظة.</p>
+                    <p class="m-0 footer-bottom-text">© 2026 متجر رواق REWAQ. جميع الحقوق محفوظة.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="m-0 text-muted small">صُمم بحب للمرأة العصرية • شحن سريع لكافة محافظات مصر</p>
+                    <p class="m-0 footer-bottom-text">صُمم بحب للمرأة العصرية • توصيل سريع ومعاينة مجانية</p>
                 </div>
             </div>
         </div>
     </footer>
+
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -2491,6 +2592,18 @@
         document.addEventListener('DOMContentLoaded', function () {
             renderCart();
             restoreWishlistUI();
+
+            // تشغيل دوران صور الخلفية السينمائية بسلاسة كل 5.5 ثوانٍ
+            var bgSlides = document.querySelectorAll('.modern-dynamic-bg .bg-slide');
+            var currentSlideIndex = 0;
+
+            if (bgSlides.length > 0) {
+                setInterval(function () {
+                    bgSlides[currentSlideIndex].classList.remove('active');
+                    currentSlideIndex = (currentSlideIndex + 1) % bgSlides.length;
+                    bgSlides[currentSlideIndex].classList.add('active');
+                }, 5500);
+            }
 
             var desktopSearch = document.getElementById('liveSearchInput');
             var mobileSearch = document.getElementById('mobileSearchInput');
