@@ -32,15 +32,15 @@
             --rewaq-gold-dark: #9b7921;
             --rewaq-gold-gradient: linear-gradient(135deg, #dfba4e 0%, #cfa83b 50%, #9e791f 100%);
             --rewaq-gold-soft: rgba(207, 168, 59, 0.12);
-            --rewaq-gold-glow: rgba(207, 168, 59, 0.28);
+            --rewaq-gold-glow: rgba(207, 168, 59, 0.35);
             --rewaq-surface: #ffffff;
             --rewaq-muted: #6b7280;
-            --rewaq-border: rgba(207, 168, 59, 0.22);
+            --rewaq-border: rgba(207, 168, 59, 0.25);
             --rewaq-radius-xl: 28px;
             --rewaq-radius-lg: 20px;
             --rewaq-radius-md: 14px;
             --rewaq-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
-            --rewaq-shadow-gold: 0 10px 30px -5px rgba(207, 168, 59, 0.32);
+            --rewaq-shadow-gold: 0 10px 30px -5px rgba(207, 168, 59, 0.35);
             --rewaq-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -51,7 +51,7 @@
             overflow-x: hidden !important;
             position: relative;
             margin: 0;
-            padding: 0 !important; /* حل مشكلة الفراغ في أسفل الصفحة */
+            padding: 0 !important;
             -webkit-text-size-adjust: 100%;
             font-family: 'Alexandria', 'Cairo', sans-serif;
             color: var(--rewaq-black);
@@ -70,7 +70,7 @@
             scroll-margin-top: 85px;
         }
 
-        /* خلفية ديناميكية واضحة وعالية الدقة */
+        /* خلفية ديناميكية سينمائية فخمة وواضحة جداً */
         .modern-dynamic-bg {
             position: fixed;
             top: 0;
@@ -93,12 +93,13 @@
             background-size: cover;
             background-position: center;
             opacity: 0;
-            transform: scale(1.05);
-            transition: opacity 1.8s ease-in-out, transform 7s ease-out;
+            transform: scale(1.08);
+            transition: opacity 2s ease-in-out, transform 8s ease-out;
         }
 
+        /* صور واضحة وبارزة ببريقها الكامل */
         .bg-slide.active {
-            opacity: 0.85; /* وضوح كامل للصور */
+            opacity: 0.88;
             transform: scale(1);
         }
 
@@ -118,9 +119,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(251, 249, 245, 0.35); /* تم تخفيفها لتظهر المجوهرات ببريقها */
-            backdrop-filter: blur(2px);
-            -webkit-backdrop-filter: blur(2px);
+            background: rgba(251, 249, 245, 0.32);
+            backdrop-filter: blur(1.5px);
+            -webkit-backdrop-filter: blur(1.5px);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -137,28 +138,42 @@
             color: var(--rewaq-gold) !important;
         }
 
-        /* ================== اللوجو الحقيقي المطور مع الصورة ================== */
+        /* ================== اللوجو بحجم كبير وظاهر جداً ================== */
         .rewaq-brand {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
             transition: var(--rewaq-transition);
         }
 
         .rewaq-brand:hover {
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .brand-logo-img {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
             object-fit: cover;
-            border: 1.5px solid var(--rewaq-gold);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+            border: 2px solid var(--rewaq-gold);
+            box-shadow: 0 6px 20px rgba(207, 168, 59, 0.35);
             flex-shrink: 0;
             background-color: #0d0d11;
+            transition: var(--rewaq-transition);
+        }
+
+        @media (max-width: 767.98px) {
+            .brand-logo-img {
+                width: 50px;
+                height: 50px;
+                border-radius: 14px;
+            }
+        }
+
+        .rewaq-brand:hover .brand-logo-img {
+            box-shadow: 0 8px 25px rgba(207, 168, 59, 0.55);
+            transform: scale(1.04);
         }
 
         .brand-text-wrap {
@@ -168,30 +183,37 @@
         }
 
         .brand-title {
-            font-size: 1.45rem;
+            font-size: 1.6rem;
             font-weight: 900;
             color: var(--rewaq-black);
             line-height: 1.15;
             margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 767.98px) {
+            .brand-title {
+                font-size: 1.4rem;
+            }
         }
 
         .brand-subtitle {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.72rem;
+            font-size: 0.78rem;
             font-weight: 800;
-            letter-spacing: 2.2px;
+            letter-spacing: 2.8px;
             color: var(--rewaq-gold);
             line-height: 1.2;
-            margin-top: 1px;
+            margin-top: 2px;
             text-transform: uppercase;
         }
 
         /* شريط التنقل */
         .rewaq-navbar {
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(207, 168, 59, 0.2);
+            border-bottom: 1.5px solid rgba(207, 168, 59, 0.25);
             position: sticky;
             top: 0;
             z-index: 1030;
@@ -237,14 +259,6 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
         }
 
-        .action-icon-btn svg {
-            transition: transform 0.2s ease;
-        }
-
-        .action-icon-btn:hover svg {
-            transform: scale(1.08);
-        }
-
         .cart-badge {
             position: absolute;
             top: -4px;
@@ -263,13 +277,13 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
-        /* ================== قائمة الموبايل (Offcanvas) ================== */
+        /* ================== قائمة الموبايل (Offcanvas) بالأقسام والروابط ================== */
         .rewaq-offcanvas {
-            width: 310px !important;
-            max-width: 85vw !important;
+            width: 325px !important;
+            max-width: 88vw !important;
             background: #ffffff;
-            border-left: 1.5px solid var(--rewaq-border) !important;
-            box-shadow: -15px 0 40px rgba(0, 0, 0, 0.15);
+            border-left: 2px solid var(--rewaq-gold) !important;
+            box-shadow: -15px 0 40px rgba(0, 0, 0, 0.2);
         }
 
         .offcanvas-header-luxury {
@@ -278,8 +292,55 @@
             border-bottom: 2px solid var(--rewaq-gold);
         }
 
+        /* شبكة الأقسام داخل قائمة الموبايل */
+        .offcanvas-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 0 14px;
+            margin-bottom: 1rem;
+        }
+
+        .offcanvas-cat-item {
+            background: #faf8f5;
+            border: 1px solid rgba(207, 168, 59, 0.25);
+            border-radius: 14px;
+            padding: 10px 6px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--rewaq-black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            transition: var(--rewaq-transition);
+        }
+
+        .offcanvas-cat-item:hover, .offcanvas-cat-item:active {
+            background: var(--rewaq-black);
+            color: var(--rewaq-gold-light);
+            border-color: var(--rewaq-gold);
+            transform: translateY(-2px);
+        }
+
+        .offcanvas-cat-item span {
+            font-size: 0.76rem;
+            font-weight: 700;
+        }
+
+        .offcanvas-cat-item svg {
+            width: 22px;
+            height: 22px;
+            color: var(--rewaq-gold);
+        }
+
+        .offcanvas-cat-item:hover svg {
+            color: var(--rewaq-gold-light);
+        }
+
         .mobile-nav-list {
-            padding: 0.75rem 0;
+            padding: 0.4rem 0;
             margin: 0;
             list-style: none;
         }
@@ -288,11 +349,11 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 0.85rem 1.2rem;
+            padding: 0.8rem 1.2rem;
             color: #27272a;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             border-radius: 12px;
             margin: 2px 10px;
             transition: var(--rewaq-transition);
@@ -305,8 +366,8 @@
         }
 
         .mobile-nav-icon {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 10px;
             background: rgba(207, 168, 59, 0.12);
             color: var(--rewaq-gold);
@@ -321,7 +382,7 @@
             border: 1.5px solid rgba(207, 168, 59, 0.35);
             border-radius: 18px;
             padding: 1.1rem;
-            margin: 1.2rem 10px 0.5rem;
+            margin: 0.8rem 12px 0.5rem;
             color: #ffffff;
         }
 
@@ -898,7 +959,6 @@
             margin-bottom: 0 !important;
         }
 
-        /* تعويض مسافة شريط الموبايل داخل الفوتر نفسه لمنع الفراغ الأبيض */
         @media (max-width: 991.98px) {
             .rewaq-footer-modern {
                 padding-bottom: 85px !important;
@@ -1090,7 +1150,7 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
 
-    <!-- حاوية الخلفية الحركية مع الصور الأصلية واضحة وعالية الدقة -->
+    <!-- حاوية الخلفية الحركية السينمائية الفخمة بالصور الأصلية عالية الدقة -->
     <div class="modern-dynamic-bg" aria-hidden="true">
         <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=85');"></div>
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1920&q=85');"></div>
@@ -1116,9 +1176,9 @@
     <header class="rewaq-navbar py-2" id="navbar">
         <nav class="navbar navbar-expand-lg" aria-label="شريط تنقل رواق">
             <div class="container-lg">
-                <!-- اللوجو الحقيقي بالصورة المباشرة واسم البراند رواق REWAQ -->
+                <!-- اللوجو الحقيقي المطور بحجم كبير وبارز -->
                 <a class="rewaq-brand" href="#intro">
-                    <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق REWAQ" class="brand-logo-img">
+                    <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو متجر رواق REWAQ" class="brand-logo-img">
                     <div class="brand-text-wrap">
                         <span class="brand-title">رِواق</span>
                         <span class="brand-subtitle">REWAQ</span>
@@ -1131,19 +1191,20 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                         <span class="cart-badge mobile-cart-badge">0</span>
                     </button>
+                    <!-- زر التلت شُرط المطور -->
                     <button class="action-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-label="فتح القائمة الرئيسية" title="القائمة">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
                     </button>
                 </div>
 
-                <!-- ================== القائمة الجانبية المحدثة والمصلحة للموبايل ================== -->
+                <!-- ================== القائمة الجانبية المحدثة والمطورة مع شبكة الأقسام ================== -->
                 <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
                     <div class="offcanvas-header offcanvas-header-luxury d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-2">
-                            <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img" style="width: 38px; height: 38px;">
+                            <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img" style="width: 44px; height: 44px;">
                             <div>
-                                <h6 class="text-white fw-bold m-0" id="offcanvasNavLabel">رِواق | REWAQ</h6>
-                                <small class="text-warning" style="font-size: 0.72rem;">أرقى المجوهرات والإكسسوارات</small>
+                                <h6 class="text-white fw-bold m-0 fs-5" id="offcanvasNavLabel">رِواق | REWAQ</h6>
+                                <small class="text-warning" style="font-size: 0.74rem;">أرقى المجوهرات والإكسسوارات</small>
                             </div>
                         </div>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
@@ -1151,6 +1212,7 @@
                     
                     <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
                         <div>
+                            <!-- مربع بحث القائمة -->
                             <div class="p-3 border-bottom bg-light">
                                 <div class="d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
                                     <span class="text-muted ms-2">
@@ -1160,6 +1222,41 @@
                                 </div>
                             </div>
 
+                            <!-- شبكة أقسام المتجر المباشرة داخل منيو التلت شُرط -->
+                            <div class="pt-3 px-3">
+                                <span class="small fw-bold text-muted d-block mb-2">أقسام وتصنيفات المتجر:</span>
+                            </div>
+                            <div class="offcanvas-categories-grid">
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3c0 6.5 3 11.5 6 11.5s6-5 6-11.5"/><polygon points="12 15 15 19 9 19" fill="currentColor" fill-opacity="0.25"/></svg>
+                                    <span>سلاسل</span>
+                                </a>
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('rings', document.getElementById('pill-rings'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="7"/><path d="M9 5l3-3 3 3-1.5 2h-3z" fill="currentColor" fill-opacity="0.3"/></svg>
+                                    <span>خواتم</span>
+                                </a>
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6" stroke-dasharray="2 2"/></svg>
+                                    <span>أساور</span>
+                                </a>
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v6"/><circle cx="12" cy="17" r="4.5" fill="currentColor" fill-opacity="0.25"/></svg>
+                                    <span>أقراط</span>
+                                </a>
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('sets', document.getElementById('pill-sets'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 19h20M4 19l2-11 5 6 1-9 1 9 5-6 2 11z" fill="currentColor" fill-opacity="0.2"/></svg>
+                                    <span>أطقم</span>
+                                </a>
+                                <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('all', document.getElementById('pill-all'))">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" fill-opacity="0.3"/></svg>
+                                    <span>الكل</span>
+                                </a>
+                            </div>
+
+                            <!-- روابط التنقل السريعة -->
+                            <div class="px-3 pt-2">
+                                <span class="small fw-bold text-muted d-block mb-1">روابط سريعة:</span>
+                            </div>
                             <ul class="mobile-nav-list">
                                 <li>
                                     <a class="mobile-nav-link active" href="#intro" data-bs-dismiss="offcanvas">
@@ -1167,14 +1264,6 @@
                                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                                         </div>
                                         <span>الصفحة الرئيسية</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="mobile-nav-link" href="#categories-showcase" data-bs-dismiss="offcanvas">
-                                        <div class="mobile-nav-icon">
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                                        </div>
-                                        <span>أقسام المتجر</span>
                                     </a>
                                 </li>
                                 <li>
@@ -1211,6 +1300,7 @@
                                 </li>
                             </ul>
 
+                            <!-- كارت VIP المباشر -->
                             <div class="mobile-menu-vip-card">
                                 <div class="d-flex align-items-center justify-content-between mb-2">
                                     <span class="badge bg-warning text-dark fw-bold" style="font-size: 0.7rem;">مساعدة فورية</span>
@@ -1733,7 +1823,7 @@
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="text-muted small">رمز المالانهاية | 925</span>
                             <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2-9.27 8.91 8.26 12 2"/></svg>
                                 <span class="text-muted font-en small">(4.9)</span>
                             </span>
                         </div>
@@ -2342,11 +2432,11 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- ================== كود جافاسكريبت المحسن والخفيف ================== -->
+    <!-- ================== كود جافاسكريبت المحسن ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v9';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v9';
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v10';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v10';
 
         function loadCartFromStorage() {
             try {
