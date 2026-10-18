@@ -8,13 +8,13 @@
     <meta name="description" content="متجر رواق REWAQ - أرقى إكسسوارات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18 مع معاينة مجانية عند الاستلام.">
     <meta name="theme-color" content="#0d0d11">
     
-    <!-- وسوم المعاينة -->
+    <!-- وسوم المعاينة في واتساب وسوشيال ميديا -->
     <meta property="og:title" content="رواق | REWAQ - مجوهرات فضة عيار 925 وأناقة عصرية">
     <meta property="og:description" content="تشكيلة راقية من الفضة عيار 925 والقطع المطلية بماء الذهب. معاينة حرة مع المندوب قبل الاستلام.">
     <meta property="og:image" content="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg">
     <meta property="og:type" content="website">
     
-    <!-- خطوط جوجل العربية السريعة -->
+    <!-- خطوط جوجل العربية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -43,7 +43,6 @@
             --rewaq-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* قفل العرض ومنع الخروج عن الشاشة نهائياً */
         html, body {
             width: 100%;
             max-width: 100%;
@@ -99,7 +98,7 @@
         }
 
         .bg-slide.active {
-            opacity: 0.18; /* شفافية ناعمة جداً تخلي الكلام والكروت تقرأ بكل سهولة وفخامة */
+            opacity: 0.22;
             transform: scale(1);
         }
 
@@ -109,8 +108,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(251, 249, 245, 0.85) 0%, rgba(246, 241, 230, 0.92) 100%);
-            backdrop-filter: blur(1px);
+            background: linear-gradient(180deg, rgba(251, 249, 245, 0.82) 0%, rgba(246, 241, 230, 0.88) 100%);
+            backdrop-filter: blur(1.5px);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -127,7 +126,7 @@
             color: var(--rewaq-gold) !important;
         }
 
-        /* ================== اللوجو بحجم كبير ومظبوط ================== */
+        /* ================== اللوجو بحجم كبير وظاهر جداً ================== */
         .rewaq-brand {
             display: inline-flex;
             align-items: center;
@@ -137,8 +136,8 @@
         }
 
         .brand-logo-img {
-            width: 64px;
-            height: 64px;
+            width: 68px;
+            height: 68px;
             border-radius: 18px;
             object-fit: cover;
             border: 2px solid var(--rewaq-gold);
@@ -150,14 +149,14 @@
 
         @media (max-width: 767.98px) {
             .brand-logo-img {
-                width: 54px;
-                height: 54px;
+                width: 56px;
+                height: 56px;
                 border-radius: 15px;
             }
         }
 
         .brand-title {
-            font-size: 1.7rem;
+            font-size: 1.75rem;
             font-weight: 900;
             color: var(--rewaq-black);
             line-height: 1.15;
@@ -166,7 +165,7 @@
 
         .brand-subtitle {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 800;
             letter-spacing: 2.8px;
             color: var(--rewaq-gold-dark);
@@ -233,7 +232,7 @@
             border: 2px solid #ffffff;
         }
 
-        /* ================== واجهة أول صفحة (Hero) بخلفية اللوجو الملكية ================== */
+        /* ================== أول سكشن (Hero) بخلفية اللوجو ================== */
         .hero-banner-rewaq {
             position: relative;
             border-radius: var(--rewaq-radius-xl);
@@ -462,7 +461,7 @@
             border-color: var(--rewaq-black);
         }
 
-        /* كارت المنتج - تم ضبط الأبعاد ومنع التمدد */
+        /* كارت المنتج */
         .rewaq-product-card {
             background: rgba(255, 255, 255, 0.96);
             border-radius: 22px;
@@ -588,6 +587,41 @@
             background: linear-gradient(145deg, #fffefb 0%, #f7f1df 100%);
         }
 
+        /* ================== زر اقرئي الدليل المودرن ================== */
+        .guide-read-btn {
+            background: linear-gradient(135deg, rgba(207, 168, 59, 0.12) 0%, rgba(207, 168, 59, 0.22) 100%);
+            color: var(--rewaq-gold-dark) !important;
+            border: 1.5px solid rgba(207, 168, 59, 0.45);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.65rem 1.4rem;
+            border-radius: 50rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--rewaq-transition);
+            box-shadow: 0 4px 14px rgba(207, 168, 59, 0.15);
+            width: 100%;
+        }
+
+        .guide-read-btn:hover {
+            background: var(--rewaq-gold-gradient);
+            color: #0d0d11 !important;
+            border-color: var(--rewaq-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(207, 168, 59, 0.4);
+        }
+
+        .guide-read-btn svg {
+            transition: transform 0.25s ease;
+        }
+
+        .guide-read-btn:hover svg {
+            transform: translateX(-4px);
+        }
+
         /* قائمة الموبايل والفوتر والبار السفلي */
         .offcanvas-categories-grid {
             display: grid;
@@ -635,11 +669,38 @@
             color: #ffffff;
         }
 
+        /* ================== فوتر منير وفخم مع كارت المساعدة الزجاجي ================== */
         .rewaq-footer-modern {
-            background: linear-gradient(180deg, #111115 0%, #060608 100%) !important;
+            background: linear-gradient(180deg, #181820 0%, #0d0d12 100%) !important;
             color: #ffffff !important;
             border-top: 2.5px solid var(--rewaq-gold);
-            padding: 3.5rem 0 2rem;
+            padding: 4rem 0 2rem;
+            position: relative;
+            z-index: 3;
+        }
+
+        .footer-action-card-modern {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(207, 168, 59, 0.08) 100%);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1.5px solid rgba(207, 168, 59, 0.45);
+            border-radius: 26px;
+            padding: 2.2rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-link-item {
+            color: #d1d5db !important;
+            text-decoration: none;
+            transition: var(--rewaq-transition);
+            display: inline-block;
+            padding: 3px 0;
+        }
+
+        .footer-link-item:hover {
+            color: var(--rewaq-gold-light) !important;
+            transform: translateX(-4px);
         }
 
         .mobile-bottom-bar {
@@ -768,7 +829,7 @@
         </nav>
     </header>
 
-    <!-- ================== أول صفحة (Hero Banner) بخلفية اللوجو الملكية ================== -->
+    <!-- ================== أول سكشن (Hero Banner) بخلفية اللوجو الملكية ================== -->
     <section id="intro" class="py-3 py-lg-4">
         <div class="container-lg">
             <div class="hero-banner-rewaq">
@@ -1475,7 +1536,7 @@
                         <p class="text-muted small mb-3">إرشادات بسيطة وفعالة لحماية إكسسواراتك من العطور والرطوبة لتدوم كالجديدة تماماً.</p>
                         <button class="guide-read-btn mt-auto" onclick="openGuideModal('care')">
                             <span>اقرئي الدليل كاملاً</span>
-                            <span>←</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 5 12 12 19"></polyline></svg>
                         </button>
                     </div>
                 </div>
@@ -1490,7 +1551,7 @@
                         <p class="text-muted small mb-3">طريقة عملية وسريعة لمعرفة مقاس إصبعك واختيار الخاتم الأنسب لراحتك بكل ثقة.</p>
                         <button class="guide-read-btn mt-auto" onclick="openGuideModal('size')">
                             <span>اقرئي الدليل كاملاً</span>
-                            <span>←</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 5 12 12 19"></polyline></svg>
                         </button>
                     </div>
                 </div>
@@ -1505,7 +1566,7 @@
                         <p class="text-muted small mb-3">تعلمي أسرار موازنة أطوال السلاسل ودمج اللونين الذهبي والفضي لإطلالة عصرية جذابة.</p>
                         <button class="guide-read-btn mt-auto" onclick="openGuideModal('layering')">
                             <span>اقرئي الدليل كاملاً</span>
-                            <span>←</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 5 12 12 19"></polyline></svg>
                         </button>
                     </div>
                 </div>
@@ -1811,24 +1872,27 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر المودرن ================== -->
+    <!-- ================== الفوتر المودرن المطور والمضيء ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
-            <div class="footer-action-card p-4 rounded-4 mb-4 border border-warning" style="background: rgba(25, 25, 32, 0.95);">
-                <div class="row align-items-center g-3">
+            <!-- كارت المساعدة الزجاجي الفاخر والمضيء -->
+            <div class="footer-action-card-modern">
+                <div class="row align-items-center g-4">
                     <div class="col-lg-8 text-center text-lg-end">
-                        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold small mb-2">خدمة عملاء رواق VIP</span>
-                        <h4 class="fw-bold text-white mb-2 fs-4">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h4>
-                        <p class="mb-0 text-light small">فريق رواق جاهز لمساعدتكِ فوراً عبر واتساب لتأكيد مواعيد الشحن وتجهيز علب الإهداء الخاصة.</p>
+                        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold small mb-2 shadow-sm">خدمة عملاء رواق VIP</span>
+                        <h3 class="fw-bold text-white mb-2 fs-4">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h3>
+                        <p class="mb-0 text-white-50 fs-6">فريق رواق جاهز لمساعدتكِ فوراً عبر واتساب لتأكيد مواعيد الشحن وتجهيز علب الإهداء الخاصة.</p>
                     </div>
                     <div class="col-lg-4 text-center text-lg-start">
-                        <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp px-4 py-2 rounded-pill shadow d-inline-flex align-items-center gap-2">
-                            <span>تحدثي معنا مباشرة</span>
+                        <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp px-4 py-3 rounded-pill shadow-lg d-inline-flex align-items-center justify-content-center gap-2 fw-bold w-100 w-sm-auto">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+                            <span>تحدثي معنا مباشرة الآن</span>
                         </a>
                     </div>
                 </div>
             </div>
 
+            <!-- أعمدة الروابط والمعلومات -->
             <div class="row g-4 mb-4">
                 <div class="col-lg-5 col-md-6">
                     <div class="rewaq-brand mb-3">
@@ -1838,31 +1902,38 @@
                             <span class="brand-subtitle text-warning">REWAQ</span>
                         </div>
                     </div>
-                    <p class="footer-desc-text mb-3 text-white-50 small">
-                        علامة تجارية متخصصة في صياغة واختيار أرقى مجوهرات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب والمزينة بأحجار الزركون، تجمع بين الفخامة والأناقة اليومية لقطع تدوم طويلاً.
+                    <p class="text-white-50 small mb-3 lh-lg" style="max-width: 420px;">
+                        علامة متخصصة في اختيار وصياغة أرقى مجوهرات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18، مع فصوص الزركون السويسرية لنمنحكِ إطلالة ملكية تدوم طويلاً.
                     </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">فضة 925 أصلية</span>
+                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">معاينة قبل الاستلام</span>
+                    </div>
                 </div>
 
                 <div class="col-lg-3 col-6">
-                    <h6 class="text-white fw-bold mb-3">أقسام ومجموعات المتجر</h6>
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">أقسام ومجموعات المتجر</h6>
                     <ul class="list-unstyled mb-0 small">
-                        <li class="mb-2"><a href="#categories-showcase" class="text-white-50 text-decoration-none" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود فاخرة</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="text-white-50 text-decoration-none" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس سوليتير</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="text-white-50 text-decoration-none" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر كلاسيكية</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="text-white-50 text-decoration-none" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">أقراط وحلقان لؤلؤ</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="text-white-50 text-decoration-none" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية كاملة</a></li>
+                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود فاخرة</a></li>
+                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس سوليتير</a></li>
+                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر كلاسيكية</a></li>
+                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">أقراط وحلقان لؤلؤ</a></li>
+                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية كاملة</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h6 class="text-white fw-bold mb-3">التواصل وخدمة العملاء</h6>
-                    <div class="contact-info-item text-white-50 small mb-2">
-                        <span>واتساب ومبيعات: <a href="https://wa.me/201299914230" target="_blank" dir="ltr" class="fw-bold text-warning">01299914230</a></span>
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">التواصل وخدمة العملاء</h6>
+                    <div class="text-light small mb-2 d-flex align-items-center gap-2">
+                        <span class="text-warning">●</span>
+                        <span>واتساب ومبيعات: <a href="https://wa.me/201299914230" target="_blank" dir="ltr" class="fw-bold text-warning text-decoration-none">01299914230</a></span>
                     </div>
-                    <div class="contact-info-item text-white-50 small mb-2">
-                        <span>البريد الإلكتروني: <a href="mailto:rewaq1egy@gmail.com" class="text-white">rewaq1egy@gmail.com</a></span>
+                    <div class="text-light small mb-2 d-flex align-items-center gap-2">
+                        <span class="text-warning">●</span>
+                        <span>البريد الإلكتروني: <a href="mailto:rewaq1egy@gmail.com" class="text-white text-decoration-none">rewaq1egy@gmail.com</a></span>
                     </div>
-                    <div class="contact-info-item text-white-50 small">
+                    <div class="text-light small d-flex align-items-center gap-2">
+                        <span class="text-warning">●</span>
                         <span>أوقات العمل: يومياً من 10 صباحاً حتى 11 مساءً</span>
                     </div>
                 </div>
