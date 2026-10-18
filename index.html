@@ -43,6 +43,11 @@
             --rewaq-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        /* سلاسة كاملة وتسريع الشاشة */
+        html {
+            scroll-behavior: smooth !important;
+        }
+
         html, body {
             width: 100%;
             max-width: 100%;
@@ -54,14 +59,12 @@
             font-family: 'Alexandria', 'Cairo', sans-serif;
             color: var(--rewaq-black);
             background-color: #fbf9f5;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
         }
 
         *, *::before, *::after {
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         section {
@@ -82,6 +85,8 @@
             z-index: 1;
             overflow: hidden;
             pointer-events: none;
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         .bg-slide {
@@ -95,6 +100,7 @@
             opacity: 0;
             transform: scale(1.06);
             transition: opacity 2s ease-in-out, transform 8s ease-out;
+            will-change: opacity, transform;
         }
 
         .bg-slide.active {
@@ -126,7 +132,7 @@
             color: var(--rewaq-gold) !important;
         }
 
-        /* ================== اللوجو بحجم كبير وظاهر جداً ================== */
+        /* اللوجو بحجم كبير ومميز */
         .rewaq-brand {
             display: inline-flex;
             align-items: center;
@@ -232,7 +238,7 @@
             border: 2px solid #ffffff;
         }
 
-        /* ================== أول سكشن (Hero) بخلفية اللوجو ================== */
+        /* أول سكشن بخلفية اللوجو */
         .hero-banner-rewaq {
             position: relative;
             border-radius: var(--rewaq-radius-xl);
@@ -241,6 +247,7 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
             background-color: #0d0d11;
             padding: 3rem 1.5rem;
+            transform: translateZ(0);
         }
 
         @media (min-width: 992px) {
@@ -385,7 +392,6 @@
             transition: var(--rewaq-transition);
         }
 
-        /* كروت الأقسام والكروت الأساسية */
         .pillar-card {
             background: rgba(255, 255, 255, 0.96);
             border-radius: var(--rewaq-radius-lg);
@@ -461,7 +467,6 @@
             border-color: var(--rewaq-black);
         }
 
-        /* كارت المنتج */
         .rewaq-product-card {
             background: rgba(255, 255, 255, 0.96);
             border-radius: 22px;
@@ -567,7 +572,6 @@
             border-radius: 50rem;
         }
 
-        /* كروت Bento وآراء العميلات */
         .bento-card, .testimonial-bubble, .blog-card {
             background: rgba(255, 255, 255, 0.96);
             border-radius: 22px;
@@ -587,7 +591,7 @@
             background: linear-gradient(145deg, #fffefb 0%, #f7f1df 100%);
         }
 
-        /* ================== زر اقرئي الدليل المودرن ================== */
+        /* زر اقرئي الدليل المودرن */
         .guide-read-btn {
             background: linear-gradient(135deg, rgba(207, 168, 59, 0.12) 0%, rgba(207, 168, 59, 0.22) 100%);
             color: var(--rewaq-gold-dark) !important;
@@ -622,7 +626,7 @@
             transform: translateX(-4px);
         }
 
-        /* قائمة الموبايل والفوتر والبار السفلي */
+        /* القائمة الجانبية المحدثة */
         .offcanvas-categories-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -645,6 +649,11 @@
             gap: 4px;
             font-size: 0.76rem;
             font-weight: 700;
+            transition: var(--rewaq-transition);
+        }
+
+        .offcanvas-cat-item:active {
+            transform: scale(0.96);
         }
 
         .offcanvas-cat-item svg { width: 22px; height: 22px; color: var(--rewaq-gold); }
@@ -658,6 +667,11 @@
             color: #27272a;
             text-decoration: none;
             font-weight: 600;
+            transition: var(--rewaq-transition);
+        }
+
+        .mobile-nav-link:active {
+            background-color: rgba(207, 168, 59, 0.12);
         }
 
         .mobile-menu-vip-card {
@@ -669,7 +683,7 @@
             color: #ffffff;
         }
 
-        /* ================== فوتر منير وفخم مع كارت المساعدة الزجاجي ================== */
+        /* فوتر مضيء وفخم مع كارت زجاجي */
         .rewaq-footer-modern {
             background: linear-gradient(180deg, #181820 0%, #0d0d12 100%) !important;
             color: #ffffff !important;
@@ -791,7 +805,8 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                         <span class="cart-badge mobile-cart-badge">0</span>
                     </button>
-                    <button class="action-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+                    <!-- زر التلت شرط المطور -->
+                    <button class="action-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-label="فتح القائمة">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
                     </button>
                 </div>
@@ -828,6 +843,96 @@
             </div>
         </nav>
     </header>
+
+    <!-- ================== قائمة الموبايل الجانبية (منيو التلت شُرط السلس والفوري) ================== -->
+    <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header bg-dark text-white p-3 border-bottom border-warning d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+                <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="rounded-3 border border-warning" style="width: 44px; height: 44px; object-fit: cover;">
+                <div>
+                    <h6 class="text-white fw-bold m-0 fs-5" id="offcanvasNavLabel">رِواق | REWAQ</h6>
+                    <small class="text-warning" style="font-size: 0.74rem;">أرقى المجوهرات والإكسسوارات</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        
+        <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
+            <div>
+                <!-- بحث داخل القائمة -->
+                <div class="p-3 border-bottom bg-light">
+                    <div class="d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
+                        <span class="text-muted ms-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </span>
+                        <input type="text" id="offcanvasSearchInput" placeholder="ابحثي عن سلسلة، خاتم، إسورة..." class="border-0 bg-transparent w-100 outline-none small text-dark">
+                    </div>
+                </div>
+
+                <!-- شبكة الأقسام مع تحويل فوري وغلق القائمة بسلاسة -->
+                <div class="pt-3 px-3">
+                    <span class="small fw-bold text-muted d-block mb-2">أقسام وتصنيفات المتجر:</span>
+                </div>
+                <div class="offcanvas-categories-grid">
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3c0 6.5 3 11.5 6 11.5s6-5 6-11.5"/><polygon points="12 15 15 19 9 19" fill="currentColor" fill-opacity="0.25"/></svg>
+                        <span>سلاسل</span>
+                    </a>
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('rings', document.getElementById('pill-rings'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="7"/><path d="M9 5l3-3 3 3-1.5 2h-3z" fill="currentColor" fill-opacity="0.3"/></svg>
+                        <span>خواتم</span>
+                    </a>
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6" stroke-dasharray="2 2"/></svg>
+                        <span>أساور</span>
+                    </a>
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v6"/><circle cx="12" cy="17" r="4.5" fill="currentColor" fill-opacity="0.25"/></svg>
+                        <span>أقراط</span>
+                    </a>
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('sets', document.getElementById('pill-sets'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 19h20M4 19l2-11 5 6 1-9 1 9 5-6 2 11z" fill="currentColor" fill-opacity="0.2"/></svg>
+                        <span>أطقم</span>
+                    </a>
+                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('all', document.getElementById('pill-all'))">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" fill-opacity="0.3"/></svg>
+                        <span>الكل</span>
+                    </a>
+                </div>
+
+                <!-- روابط التنقل السريعة مع الإغلاق الفوري والذهاب المباشر للقسم -->
+                <div class="px-3 pt-2">
+                    <span class="small fw-bold text-muted d-block mb-1">روابط سريعة:</span>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a class="mobile-nav-link active" href="#intro" data-bs-dismiss="offcanvas">الصفحة الرئيسية</a></li>
+                    <li><a class="mobile-nav-link" href="#categories-showcase" data-bs-dismiss="offcanvas">أقسام المتجر</a></li>
+                    <li><a class="mobile-nav-link" href="#products-catalog" data-bs-dismiss="offcanvas">المنتجات الأكثر طلباً</a></li>
+                    <li><a class="mobile-nav-link" href="#bento-editorial" data-bs-dismiss="offcanvas">التشكيلة الحصرية 2026</a></li>
+                    <li><a class="mobile-nav-link" href="#testimonials" data-bs-dismiss="offcanvas">آراء العميلات</a></li>
+                    <li><a class="mobile-nav-link" href="#latest-blog" data-bs-dismiss="offcanvas">دليل المقاسات والعناية</a></li>
+                </ul>
+
+                <!-- كارت استشارة VIP -->
+                <div class="mobile-menu-vip-card">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="badge bg-warning text-dark fw-bold" style="font-size: 0.7rem;">مساعدة فورية</span>
+                        <small class="text-white-50">10 ص - 11 م</small>
+                    </div>
+                    <h6 class="fw-bold mb-1 text-white fs-6">استشارة تنسيق ومقاسات؟</h6>
+                    <p class="text-light small mb-3 opacity-75">تواصلي مع مستشارة الأناقة برواق لتأكيد مقاسك واختيار هديتكِ.</p>
+                    <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp w-100 rounded-pill py-2 small d-flex align-items-center justify-content-center gap-2">
+                        <span>محادثة واتساب سريعة</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="p-3 bg-light border-top text-center">
+                <span class="small text-muted d-block mb-1">فضة 925 أصلية • معاينة عند الاستلام</span>
+                <small class="text-muted opacity-75">رواق REWAQ © 2026</small>
+            </div>
+        </div>
+    </div>
 
     <!-- ================== أول سكشن (Hero Banner) بخلفية اللوجو الملكية ================== -->
     <section id="intro" class="py-3 py-lg-4">
@@ -1574,95 +1679,6 @@
         </div>
     </section>
 
-    <!-- ================== قائمة الموبايل الجانبية (Offcanvas) ================== -->
-    <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-        <div class="offcanvas-header bg-dark text-white p-3 border-bottom border-warning d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-2">
-                <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="rounded-3 border border-warning" style="width: 44px; height: 44px; object-fit: cover;">
-                <div>
-                    <h6 class="text-white fw-bold m-0 fs-5" id="offcanvasNavLabel">رِواق | REWAQ</h6>
-                    <small class="text-warning" style="font-size: 0.74rem;">أرقى المجوهرات والإكسسوارات</small>
-                </div>
-            </div>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
-        </div>
-        
-        <div class="offcanvas-body p-0 d-flex flex-column justify-content-between">
-            <div>
-                <!-- بحث داخل القائمة -->
-                <div class="p-3 border-bottom bg-light">
-                    <div class="d-flex align-items-center bg-white border rounded-pill px-3 py-2 shadow-sm">
-                        <span class="text-muted ms-2">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        </span>
-                        <input type="text" id="offcanvasSearchInput" placeholder="ابحثي عن سلسلة، خاتم، إسورة..." class="border-0 bg-transparent w-100 outline-none small text-dark">
-                    </div>
-                </div>
-
-                <!-- شبكة الأقسام -->
-                <div class="pt-3 px-3">
-                    <span class="small fw-bold text-muted d-block mb-2">أقسام وتصنيفات المتجر:</span>
-                </div>
-                <div class="offcanvas-categories-grid">
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3c0 6.5 3 11.5 6 11.5s6-5 6-11.5"/><polygon points="12 15 15 19 9 19" fill="currentColor" fill-opacity="0.25"/></svg>
-                        <span>سلاسل</span>
-                    </a>
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('rings', document.getElementById('pill-rings'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="7"/><path d="M9 5l3-3 3 3-1.5 2h-3z" fill="currentColor" fill-opacity="0.3"/></svg>
-                        <span>خواتم</span>
-                    </a>
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6" stroke-dasharray="2 2"/></svg>
-                        <span>أساور</span>
-                    </a>
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('earrings', document.getElementById('pill-earrings'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v6"/><circle cx="12" cy="17" r="4.5" fill="currentColor" fill-opacity="0.25"/></svg>
-                        <span>أقراط</span>
-                    </a>
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('sets', document.getElementById('pill-sets'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 19h20M4 19l2-11 5 6 1-9 1 9 5-6 2 11z" fill="currentColor" fill-opacity="0.2"/></svg>
-                        <span>أطقم</span>
-                    </a>
-                    <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('all', document.getElementById('pill-all'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" fill-opacity="0.3"/></svg>
-                        <span>الكل</span>
-                    </a>
-                </div>
-
-                <!-- روابط التنقل السريعة -->
-                <div class="px-3 pt-2">
-                    <span class="small fw-bold text-muted d-block mb-1">روابط سريعة:</span>
-                </div>
-                <ul class="mobile-nav-list">
-                    <li><a class="mobile-nav-link active" href="#intro" data-bs-dismiss="offcanvas">الصفحة الرئيسية</a></li>
-                    <li><a class="mobile-nav-link" href="#products-catalog" data-bs-dismiss="offcanvas">المنتجات الأكثر طلباً</a></li>
-                    <li><a class="mobile-nav-link" href="#bento-editorial" data-bs-dismiss="offcanvas">التشكيلة الحصرية 2026</a></li>
-                    <li><a class="mobile-nav-link" href="#testimonials" data-bs-dismiss="offcanvas">آراء العميلات</a></li>
-                    <li><a class="mobile-nav-link" href="#latest-blog" data-bs-dismiss="offcanvas">دليل المقاسات والعناية</a></li>
-                </ul>
-
-                <!-- كارت استشارة VIP -->
-                <div class="mobile-menu-vip-card">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span class="badge bg-warning text-dark fw-bold" style="font-size: 0.7rem;">مساعدة فورية</span>
-                        <small class="text-white-50">10 ص - 11 م</small>
-                    </div>
-                    <h6 class="fw-bold mb-1 text-white fs-6">استشارة تنسيق ومقاسات؟</h6>
-                    <p class="text-light small mb-3 opacity-75">تواصلي مع مستشارة الأناقة برواق لتأكيد مقاسك واختيار هديتكِ.</p>
-                    <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp w-100 rounded-pill py-2 small d-flex align-items-center justify-content-center gap-2">
-                        <span>محادثة واتساب سريعة</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="p-3 bg-light border-top text-center">
-                <span class="small text-muted d-block mb-1">فضة 925 أصلية • معاينة عند الاستلام</span>
-                <small class="text-muted opacity-75">رواق REWAQ © 2026</small>
-            </div>
-        </div>
-    </div>
-
     <!-- ================== نافذة الطلب الفوري السريع (Modal) ================== -->
     <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -1958,8 +1974,8 @@
     <!-- ================== كود جافاسكريبت المحسن والمطور ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v11';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v11';
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v12';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v12';
 
         function loadCartFromStorage() {
             try {
