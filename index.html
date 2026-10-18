@@ -4,7 +4,7 @@
     <title>رواق | REWAQ - أرقى المجوهرات والإكسسوارات الفاخرة عيار 925</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- قفل العرض تماماً على شاشة الموبايل ومنع الزوم والتصغير التلقائي -->
+    <!-- قفل العرض تماماً على شاشة الموبايل لمنع الزوم والفراغات -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta name="description" content="متجر رواق REWAQ - أرقى إكسسوارات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18 مع معاينة مجانية عند الاستلام.">
     <meta name="theme-color" content="#0d0d11">
@@ -44,19 +44,18 @@
             --rewaq-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* قفل العرض تماماً على شاشة الموبايل ومنع الخروج أفقياً */
+        /* قفل العرض تماماً وإلغاء أي فراغ أبيض في أسفل الموقع */
         html, body {
             width: 100%;
             max-width: 100%;
             overflow-x: hidden !important;
             position: relative;
             margin: 0;
-            padding: 0;
+            padding: 0 !important; /* حل مشكلة الفراغ في أسفل الصفحة */
             -webkit-text-size-adjust: 100%;
             font-family: 'Alexandria', 'Cairo', sans-serif;
             color: var(--rewaq-black);
             background-color: #fbf9f5;
-            padding-bottom: 72px;
         }
 
         *, *::before, *::after {
@@ -71,13 +70,7 @@
             scroll-margin-top: 85px;
         }
 
-        @media (min-width: 992px) {
-            body {
-                padding-bottom: 0;
-            }
-        }
-
-        /* حاوية الخلفية مضبوطة على مقاس الشاشة 100% بدون 100vw المسببة للمسافات */
+        /* خلفية ديناميكية واضحة وعالية الدقة */
         .modern-dynamic-bg {
             position: fixed;
             top: 0;
@@ -104,9 +97,8 @@
             transition: opacity 1.8s ease-in-out, transform 7s ease-out;
         }
 
-        /* إرجاع وضوح وقوة صور الخلفية الأصلية */
         .bg-slide.active {
-            opacity: 0.85;
+            opacity: 0.85; /* وضوح كامل للصور */
             transform: scale(1);
         }
 
@@ -126,7 +118,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(251, 249, 245, 0.35);
+            background: rgba(251, 249, 245, 0.35); /* تم تخفيفها لتظهر المجوهرات ببريقها */
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(2px);
         }
@@ -145,7 +137,7 @@
             color: var(--rewaq-gold) !important;
         }
 
-        /* ================== اللوجو الفاخر المطور ================== */
+        /* ================== اللوجو الحقيقي المطور مع الصورة ================== */
         .rewaq-brand {
             display: inline-flex;
             align-items: center;
@@ -158,39 +150,15 @@
             transform: translateY(-1px);
         }
 
-        .brand-badge {
+        .brand-logo-img {
             width: 46px;
             height: 46px;
-            border-radius: 14px;
-            background: linear-gradient(145deg, #1b1b22 0%, #09090c 100%);
-            border: 1.5px solid rgba(207, 168, 59, 0.7);
-            color: var(--rewaq-gold-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.55rem;
-            font-weight: 900;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(243, 212, 120, 0.4);
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1.5px solid var(--rewaq-gold);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
             flex-shrink: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .brand-badge::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(60deg, transparent 40%, rgba(255, 255, 255, 0.22) 50%, transparent 60%);
-            transform: rotate(25deg);
-            animation: brandShine 6s infinite;
-        }
-
-        @keyframes brandShine {
-            0%, 80% { transform: translateX(-100%) rotate(25deg); }
-            100% { transform: translateX(100%) rotate(25deg); }
+            background-color: #0d0d11;
         }
 
         .brand-text-wrap {
@@ -205,27 +173,16 @@
             color: var(--rewaq-black);
             line-height: 1.15;
             margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .brand-title-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--rewaq-gold-gradient);
-            display: inline-block;
         }
 
         .brand-subtitle {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.65rem;
+            font-size: 0.72rem;
             font-weight: 800;
-            letter-spacing: 2.8px;
+            letter-spacing: 2.2px;
             color: var(--rewaq-gold);
             line-height: 1.2;
-            margin-top: 2px;
+            margin-top: 1px;
             text-transform: uppercase;
         }
 
@@ -930,13 +887,22 @@
             padding: 1.1rem;
         }
 
+        /* الفوتر المودرن بدون أي مسافات تحته */
         .rewaq-footer-modern {
             background: linear-gradient(180deg, #111115 0%, #060608 100%) !important;
             color: #ffffff !important;
             border-top: 2.5px solid var(--rewaq-gold);
             position: relative;
             padding-top: 3.5rem;
-            padding-bottom: 2rem;
+            padding-bottom: 2.5rem;
+            margin-bottom: 0 !important;
+        }
+
+        /* تعويض مسافة شريط الموبايل داخل الفوتر نفسه لمنع الفراغ الأبيض */
+        @media (max-width: 991.98px) {
+            .rewaq-footer-modern {
+                padding-bottom: 85px !important;
+            }
         }
 
         .footer-action-card {
@@ -1124,7 +1090,7 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
 
-    <!-- حاوية الخلفية الحركية مع الصور الأصلية عالية الدقة والوضوح -->
+    <!-- حاوية الخلفية الحركية مع الصور الأصلية واضحة وعالية الدقة -->
     <div class="modern-dynamic-bg" aria-hidden="true">
         <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=85');"></div>
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1920&q=85');"></div>
@@ -1150,12 +1116,12 @@
     <header class="rewaq-navbar py-2" id="navbar">
         <nav class="navbar navbar-expand-lg" aria-label="شريط تنقل رواق">
             <div class="container-lg">
-                <!-- اللوجو الفاخر المطور -->
+                <!-- اللوجو الحقيقي بالصورة المباشرة واسم البراند رواق REWAQ -->
                 <a class="rewaq-brand" href="#intro">
-                    <div class="brand-badge">ر</div>
+                    <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق REWAQ" class="brand-logo-img">
                     <div class="brand-text-wrap">
-                        <span class="brand-title">رِواق <span class="brand-title-dot"></span></span>
-                        <span class="brand-subtitle">REWAQ LUXURY</span>
+                        <span class="brand-title">رِواق</span>
+                        <span class="brand-subtitle">REWAQ</span>
                     </div>
                 </a>
 
@@ -1174,7 +1140,7 @@
                 <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
                     <div class="offcanvas-header offcanvas-header-luxury d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center gap-2">
-                            <div class="brand-badge" style="width: 38px; height: 38px; font-size: 1.25rem;">ر</div>
+                            <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img" style="width: 38px; height: 38px;">
                             <div>
                                 <h6 class="text-white fw-bold m-0" id="offcanvasNavLabel">رِواق | REWAQ</h6>
                                 <small class="text-warning" style="font-size: 0.72rem;">أرقى المجوهرات والإكسسوارات</small>
@@ -2279,7 +2245,7 @@
         </button>
     </nav>
 
-    <!-- الفوتر المودرن الفاخر -->
+    <!-- الفوتر المودرن الفاخر بدون أي مسافة بيضاء تحته -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
             <!-- كارت التواصل السريع في أعلى الفوتر -->
@@ -2303,10 +2269,10 @@
             <div class="row g-4 mb-4">
                 <div class="col-lg-5 col-md-6">
                     <div class="rewaq-brand mb-3">
-                        <div class="brand-badge">ر</div>
+                        <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img">
                         <div class="brand-text-wrap">
-                            <span class="brand-title text-white">رِواق <span class="brand-title-dot"></span></span>
-                            <span class="brand-subtitle">REWAQ LUXURY</span>
+                            <span class="brand-title text-white">رِواق</span>
+                            <span class="brand-subtitle">REWAQ</span>
                         </div>
                     </div>
                     <p class="footer-desc-text mb-3">
