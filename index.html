@@ -64,7 +64,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* تحسين التباعد على الموبايل والآيباد */
         @media (max-width: 991.98px) {
             body {
                 padding-bottom: 75px !important;
@@ -140,7 +139,6 @@
             color: var(--rewaq-gold) !important;
         }
 
-        /* اللوجو بحجم متجاوب */
         .rewaq-brand {
             display: inline-flex;
             align-items: center;
@@ -188,7 +186,6 @@
             text-transform: uppercase;
         }
 
-        /* شريط التنقل */
         .rewaq-navbar {
             background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(16px);
@@ -246,7 +243,7 @@
             border: 2px solid #ffffff;
         }
 
-        /* أول سكشن بخلفية اللوجو */
+        /* البانر الرئيسي */
         .hero-banner-rewaq {
             position: relative;
             border-radius: var(--rewaq-radius-xl);
@@ -259,15 +256,11 @@
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
-            .hero-banner-rewaq {
-                padding: 3.5rem 2.2rem;
-            }
+            .hero-banner-rewaq { padding: 3.5rem 2.2rem; }
         }
 
         @media (min-width: 1025px) {
-            .hero-banner-rewaq {
-                padding: 4.5rem 3.5rem;
-            }
+            .hero-banner-rewaq { padding: 4.5rem 3.5rem; }
         }
 
         .hero-logo-bg-layer {
@@ -460,9 +453,7 @@
             transition: var(--rewaq-transition);
         }
 
-        .story-circle:active {
-            transform: scale(0.92);
-        }
+        .story-circle:active { transform: scale(0.92); }
 
         .category-svg-icon {
             width: 32px;
@@ -528,9 +519,7 @@
             transition: transform 0.4s ease;
         }
 
-        .rewaq-product-card:hover .product-img-real {
-            transform: scale(1.06);
-        }
+        .rewaq-product-card:hover .product-img-real { transform: scale(1.06); }
 
         .product-badge-tag {
             position: absolute;
@@ -560,9 +549,7 @@
             color: #6b7280;
         }
 
-        .wishlist-toggle-btn.active {
-            color: #e11d48;
-        }
+        .wishlist-toggle-btn.active { color: #e11d48; }
 
         .product-title {
             font-size: 1.05rem;
@@ -612,7 +599,6 @@
             background: linear-gradient(145deg, #fffefb 0%, #f7f1df 100%);
         }
 
-        /* زر اقرئي الدليل */
         .guide-read-btn {
             background: linear-gradient(135deg, rgba(207, 168, 59, 0.12) 0%, rgba(207, 168, 59, 0.22) 100%);
             color: var(--rewaq-gold-dark) !important;
@@ -639,15 +625,9 @@
             box-shadow: 0 8px 22px rgba(207, 168, 59, 0.4);
         }
 
-        .guide-read-btn svg {
-            transition: transform 0.25s ease;
-        }
+        .guide-read-btn svg { transition: transform 0.25s ease; }
+        .guide-read-btn:hover svg { transform: translateX(-4px); }
 
-        .guide-read-btn:hover svg {
-            transform: translateX(-4px);
-        }
-
-        /* القائمة الجانبية للموبايل */
         .offcanvas-categories-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -673,10 +653,7 @@
             transition: var(--rewaq-transition);
         }
 
-        .offcanvas-cat-item:active {
-            transform: scale(0.96);
-        }
-
+        .offcanvas-cat-item:active { transform: scale(0.96); }
         .offcanvas-cat-item svg { width: 22px; height: 22px; color: var(--rewaq-gold); }
 
         .mobile-nav-list { padding: 0.4rem 0; margin: 0; list-style: none; }
@@ -691,9 +668,7 @@
             transition: var(--rewaq-transition);
         }
 
-        .mobile-nav-link:active {
-            background-color: rgba(207, 168, 59, 0.12);
-        }
+        .mobile-nav-link:active { background-color: rgba(207, 168, 59, 0.12); }
 
         .mobile-menu-vip-card {
             background: #15151b;
@@ -704,7 +679,6 @@
             color: #ffffff;
         }
 
-        /* كلاسات المودال والطلب السريع */
         .checkout-modal-content {
             border-radius: var(--rewaq-radius-lg);
             border: 1.5px solid rgba(207, 168, 59, 0.4);
@@ -747,38 +721,164 @@
             outline: none;
         }
 
-        /* الفوتر */
+        /* ================== الفوتر المودرن الفاخر الجديد (Ultra-Modern) ================== */
         .rewaq-footer-modern {
-            background: linear-gradient(180deg, #181820 0%, #0d0d12 100%) !important;
+            background: radial-gradient(circle at 50% 0%, rgba(207, 168, 59, 0.14) 0%, rgba(13, 13, 17, 0) 65%),
+                        linear-gradient(180deg, #121217 0%, #07070a 100%) !important;
             color: #ffffff !important;
-            border-top: 2.5px solid var(--rewaq-gold);
-            padding: 4rem 0 2rem;
+            border-top: 1.5px solid rgba(207, 168, 59, 0.35);
+            box-shadow: 0 -15px 45px rgba(0, 0, 0, 0.5);
+            padding: 4.5rem 0 2rem;
             position: relative;
             z-index: 3;
+            overflow: hidden;
+        }
+
+        .rewaq-footer-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(207, 168, 59, 0.8), transparent);
         }
 
         .footer-action-card-modern {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(207, 168, 59, 0.08) 100%);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            border: 1.5px solid rgba(207, 168, 59, 0.45);
-            border-radius: 26px;
-            padding: 2.2rem;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-            margin-bottom: 3.5rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(207, 168, 59, 0.08) 100%);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1.5px solid rgba(207, 168, 59, 0.38);
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .online-dot {
+            width: 9px;
+            height: 9px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #22c55e;
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
 
         .footer-link-item {
-            color: #d1d5db !important;
+            color: #a1a1aa !important;
             text-decoration: none;
             transition: var(--rewaq-transition);
-            display: inline-block;
-            padding: 3px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            font-size: 0.92rem;
         }
 
         .footer-link-item:hover {
             color: var(--rewaq-gold-light) !important;
-            transform: translateX(-4px);
+            transform: translateX(-5px);
+        }
+
+        .footer-link-item::before {
+            content: '›';
+            color: var(--rewaq-gold);
+            font-size: 1.15rem;
+            line-height: 1;
+            transition: var(--rewaq-transition);
+            opacity: 0.6;
+        }
+
+        .footer-link-item:hover::before {
+            opacity: 1;
+            transform: translateX(-2px);
+        }
+
+        .footer-contact-card {
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--rewaq-transition);
+            text-decoration: none;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact-card:hover {
+            background: rgba(207, 168, 59, 0.09);
+            border-color: rgba(207, 168, 59, 0.35);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .footer-contact-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(207, 168, 59, 0.12);
+            color: var(--rewaq-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(207, 168, 59, 0.25);
+        }
+
+        .footer-trust-chip {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(207, 168, 59, 0.25);
+            border-radius: 50rem;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            color: #e5e7eb;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-social-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #e5e7eb;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--rewaq-transition);
+            text-decoration: none;
+        }
+
+        .footer-social-btn:hover {
+            background: var(--rewaq-gold-gradient);
+            color: #0d0d11;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(207, 168, 59, 0.4);
+            border-color: transparent;
+        }
+
+        .payment-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            color: #d1d5db;
+            font-weight: 600;
         }
 
         .mobile-bottom-bar {
@@ -869,7 +969,6 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                         <span class="cart-badge mobile-cart-badge">0</span>
                     </button>
-                    <!-- زر التلت شرط المطور -->
                     <button class="action-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-label="فتح القائمة">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
                     </button>
@@ -908,7 +1007,7 @@
         </nav>
     </header>
 
-    <!-- ================== قائمة الموبايل والتابلت الجانبية ================== -->
+    <!-- قائمة الموبايل والتابلت الجانبية -->
     <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
         <div class="offcanvas-header bg-dark text-white p-3 border-bottom border-warning d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-2">
@@ -933,7 +1032,7 @@
                     </div>
                 </div>
 
-                <!-- شبكة الأقسام مع الانسيال بدل الأقراط -->
+                <!-- شبكة الأقسام -->
                 <div class="pt-3 px-3">
                     <span class="small fw-bold text-muted d-block mb-2">أقسام وتصنيفات المتجر:</span>
                 </div>
@@ -998,7 +1097,7 @@
         </div>
     </div>
 
-    <!-- ================== أول سكشن (Hero Banner) متجاوب تماماً ================== -->
+    <!-- ================== أول سكشن (Hero Banner) بالرقم المعدل 13,257 ================== -->
     <section id="intro" class="py-3 py-lg-4">
         <div class="container-lg">
             <div class="hero-banner-rewaq">
@@ -1025,9 +1124,10 @@
                                 <a href="#products-catalog" class="btn btn-rewaq-gold px-4 shadow">تسوقي التشكيلة الآن ←</a>
                                 <a href="#categories-showcase" class="btn btn-rewaq-outline-light px-4">استكشفي الأقسام</a>
                             </div>
+                            <!-- العداد المعدل: 13,257 -->
                             <div class="d-flex gap-3 gap-sm-4 justify-content-center justify-content-lg-start pt-3 border-top border-secondary border-opacity-50">
                                 <div>
-                                    <h4 class="fw-bold font-en mb-0 text-white">+15,000</h4>
+                                    <h4 class="fw-bold font-en mb-0 text-white">+13,257</h4>
                                     <small class="text-white-50">عميلة تثق بنا</small>
                                 </div>
                                 <div class="border-start border-secondary border-opacity-50 ps-3 ps-sm-4">
@@ -1053,6 +1153,7 @@
             </div>
         </div>
     </section>
+
     <!-- ================== ركائز ومميزات متجر رواق ================== -->
     <section class="py-2 py-lg-3">
         <div class="container-lg">
@@ -1105,7 +1206,7 @@
         </div>
     </section>
 
-    <!-- ================== أقسام الإكسسوارات السريعة (بالانسيال بدل الأقراط) ================== -->
+    <!-- ================== أقسام الإكسسوارات السريعة ================== -->
     <section id="categories-showcase" class="py-4">
         <div class="container-lg">
             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -1147,7 +1248,6 @@
                     <h6 class="fw-bold fs-6 mb-0 text-dark">أساور</h6>
                     <small class="text-muted">+90 قطعة</small>
                 </div>
-                <!-- استبدال الأقراط بقسم الانسيالات -->
                 <div class="col-auto col-md-2 story-category-card" onclick="filterCategory('anklets', document.getElementById('pill-anklets'))">
                     <div class="story-circle">
                         <svg class="category-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -1179,7 +1279,6 @@
             </div>
         </div>
     </section>
-
     <!-- ================== كتالوج المنتجات الأكثر طلباً ================== -->
     <section id="products-catalog" class="py-4 py-lg-5">
         <div class="container-lg">
@@ -1341,7 +1440,7 @@
                     </div>
                 </div>
 
-                <!-- منتج 4: استبدال الحلق بانسيال كارتييه لوف ستانلس ستيل -->
+                <!-- منتج 4: انسيال كارتييه لوف ستانلس ستيل -->
                 <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="anklets">
                     <div class="rewaq-product-card">
                         <span class="badge bg-primary product-badge-tag">الأكثر طلباً</span>
@@ -1609,6 +1708,7 @@
             </div>
         </div>
     </section>
+
     <!-- ================== آراء العميلات وتجارب حقيقية ================== -->
     <section id="testimonials" class="py-4 py-lg-5">
         <div class="container-lg">
@@ -1751,7 +1851,6 @@
             </div>
         </div>
     </section>
-
     <!-- ================== نافذة الطلب الفوري السريع (Modal) ================== -->
     <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -1961,19 +2060,22 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر المودرن ================== -->
+    <!-- ================== الفوتر المودرن الفاخر الجديد (Ultra-Modern) ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
-            <!-- كارت المساعدة الزجاجي الفاخر -->
+            <!-- كارت خدمة عملاء VIP العائم والفاخر -->
             <div class="footer-action-card-modern">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8 text-center text-lg-end">
-                        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold small mb-2 shadow-sm">خدمة عملاء رواق VIP</span>
-                        <h3 class="fw-bold text-white mb-2 fs-4">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h3>
-                        <p class="mb-0 text-white-50 fs-6">فريق رواق جاهز لمساعدتكِ فوراً عبر واتساب لتأكيد مواعيد الشحن وتجهيز علب الإهداء الخاصة.</p>
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-warning shadow-sm mb-3">
+                            <span class="online-dot"></span>
+                            <span class="small fw-bold text-warning font-en">خدمة عملاء رواق VIP • متاحون الآن</span>
+                        </div>
+                        <h3 class="fw-bold text-white mb-2 fs-4 fs-lg-3">هل تحتاجين مساعدة في اختيار مقاسكِ أو تنسيق قطعتكِ؟</h3>
+                        <p class="mb-0 text-white-50 fs-6">مستشارة الأناقة برواق جاهزة لمساعدتكِ فوراً عبر واتساب لتأكيد مواعيد الشحن وتجهيز علب الإهداء الخاصة.</p>
                     </div>
                     <div class="col-lg-4 text-center text-lg-start">
-                        <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp px-4 py-3 rounded-pill shadow-lg d-inline-flex align-items-center justify-content-center gap-2 fw-bold w-100 w-sm-auto">
+                        <a href="https://wa.me/201299914230" target="_blank" class="btn btn-whatsapp px-4 py-3 rounded-pill shadow-lg d-inline-flex align-items-center justify-content-center gap-2 fw-bold w-100 w-sm-auto fs-6">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
                             <span>تحدثي معنا مباشرة الآن</span>
                         </a>
@@ -1981,9 +2083,10 @@
                 </div>
             </div>
 
-            <!-- أعمدة الروابط والمعلومات -->
+            <!-- شبكة معلومات الفوتر والأقسام والتواصل -->
             <div class="row g-4 mb-4">
-                <div class="col-lg-5 col-md-6">
+                <!-- العمود 1: هوية البراند والضمان -->
+                <div class="col-lg-4 col-md-6">
                     <div class="rewaq-brand mb-3">
                         <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img">
                         <div class="brand-text-wrap">
@@ -1991,51 +2094,100 @@
                             <span class="brand-subtitle text-warning">REWAQ</span>
                         </div>
                     </div>
-                    <p class="text-white-50 small mb-3 lh-lg" style="max-width: 420px;">
-                        علامة متخصصة في اختيار وتصميم أرقى إكسسوارات الستانلس ستيل 316L المقاومة تماماً للماء والعطور وتغير اللون، مع فصوص الزركون السويسرية لنمنحكِ إطلالة أنيقة تدوم لسنوات.
+                    <p class="text-white-50 small mb-3 lh-lg">
+                        علامة متخصصة في أرقى إكسسوارات الستانلس ستيل 316L المقاومة تماماً للماء والعطور وتغير اللون، مع فصوص الزركون السويسرية لنمنحكِ إطلالة ملكية تدوم لسنوات.
                     </p>
                     <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">ستانلس ستيل 316L أصلي</span>
-                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">معاينة قبل الاستلام</span>
+                        <span class="footer-trust-chip">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#cfa83b" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>ستانلس 316L أصلي</span>
+                        </span>
+                        <span class="footer-trust-chip">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#cfa83b" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>معاينة حرة قبل الاستلام</span>
+                        </span>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-6">
-                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">أقسام ومجموعات المتجر</h6>
-                    <ul class="list-unstyled mb-0 small">
-                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود فاخرة</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس سوليتير</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر كلاسيكية</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('anklets', document.getElementById('pill-anklets'))">انسيالات وسلاسل يد فاخرة</a></li>
-                        <li class="mb-2"><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية كاملة</a></li>
+                <!-- العمود 2: تصنيفات ومجموعات المتجر -->
+                <div class="col-lg-2 col-6">
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">أقسام المتجر</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">سلاسل وعقود</a></li>
+                        <li><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('rings', document.getElementById('pill-rings'))">خواتم ومحابس</a></li>
+                        <li><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('bracelets', document.getElementById('pill-bracelets'))">أساور وبناجر</a></li>
+                        <li><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('anklets', document.getElementById('pill-anklets'))">انسيالات راقية</a></li>
+                        <li><a href="#categories-showcase" class="footer-link-item" onclick="filterCategory('sets', document.getElementById('pill-sets'))">أطقم ملكية</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">التواصل وخدمة العملاء</h6>
-                    <div class="text-light small mb-2 d-flex align-items-center gap-2">
-                        <span class="text-warning">●</span>
-                        <span>واتساب ومبيعات: <a href="https://wa.me/201299914230" target="_blank" dir="ltr" class="fw-bold text-warning text-decoration-none">01299914230</a></span>
+                <!-- العمود 3: طرق الدفع والشحن المعتمدة -->
+                <div class="col-lg-3 col-6">
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">الشحن والدفع</h6>
+                    <p class="text-white-50 small mb-2">توصيل سريع لباب البيت خلال 24 إلى 48 ساعة لجميع محافظات مصر.</p>
+                    <span class="small fw-bold text-warning d-block mb-2">طرق الدفع المتاحة:</span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="payment-pill">الدفع عند الاستلام (كاش)</span>
+                        <span class="payment-pill">إنستاباي InstaPay</span>
+                        <span class="payment-pill">فودافون كاش</span>
+                        <span class="payment-pill">محافظ إلكترونية</span>
                     </div>
-                    <div class="text-light small mb-2 d-flex align-items-center gap-2">
-                        <span class="text-warning">●</span>
-                        <span>البريد الإلكتروني: <a href="mailto:rewaq1egy@gmail.com" class="text-white text-decoration-none">rewaq1egy@gmail.com</a></span>
-                    </div>
-                    <div class="text-light small d-flex align-items-center gap-2">
-                        <span class="text-warning">●</span>
-                        <span>أوقات العمل: يومياً من 10 صباحاً حتى 11 مساءً</span>
+                </div>
+
+                <!-- العمود 4: التواصل المباشر ومواعيد العمل -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">التواصل المباشر</h6>
+                    
+                    <a href="https://wa.me/201299914230" target="_blank" class="footer-contact-card">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <small class="text-white-50 d-block" style="font-size: 0.72rem;">واتساب ومبيعات</small>
+                            <span class="fw-bold font-en text-warning" dir="ltr">01299914230</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:rewaq1egy@gmail.com" class="footer-contact-card">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <small class="text-white-50 d-block" style="font-size: 0.72rem;">البريد الإلكتروني</small>
+                            <span class="fw-bold font-en text-white" style="font-size: 0.85rem;">rewaq1egy@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <div class="text-white-50 small mt-2 d-flex align-items-center gap-2">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#cfa83b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>يومياً من 10 صباحاً حتى 11 مساءً</span>
                     </div>
                 </div>
             </div>
 
             <hr class="border-secondary opacity-25 my-4">
 
+            <!-- شريط الحقوق والسوشيال ميديا -->
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-end mb-2 mb-md-0">
+                <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
                     <p class="m-0 text-white-50 small">© 2026 متجر رواق REWAQ. جميع الحقوق محفوظة.</p>
+                    <p class="m-0 text-white-50" style="font-size: 0.75rem;">صُمم بحب للمرأة العصرية • توصيل سريع ومعاينة مجانية</p>
                 </div>
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="m-0 text-white-50 small">صُمم بحب للمرأة العصرية • توصيل سريع ومعاينة مجانية</p>
+                    <div class="d-inline-flex align-items-center gap-2">
+                        <a href="https://wa.me/201299914230" target="_blank" class="footer-social-btn" title="واتساب">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-btn" title="إنستجرام">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-btn" title="تيك توك">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </a>
+                        <a href="#" class="footer-social-btn" title="فيسبوك">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2044,7 +2196,7 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- ================== كود جافاسكريبت المحسن والمطور ================== -->
+    <!-- ================== كود جافاسكريبت المحسن بالكامل ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
         var CART_STORAGE_KEY = 'rewaq_cart_state_v14';
@@ -2164,8 +2316,14 @@
                 return;
             }
 
+            // تنظيف ومعالجة رقم الهاتف لجميع الصيغ
             phone = phone.replace(/[\s\-\+]/g, '');
-            if (phone.startsWith('20')) phone = phone.substring(2);
+            if (phone.startsWith('0020')) phone = phone.substring(4);
+            else if (phone.startsWith('20')) phone = phone.substring(2);
+
+            if (!phone.startsWith('0') && phone.length === 10) {
+                phone = '0' + phone;
+            }
 
             var phoneRegex = /^01[0125][0-9]{8}$/;
             if (!phoneRegex.test(phone)) {
@@ -2565,7 +2723,7 @@
                 }, 5500);
             }
 
-            // مزامنة البحث
+            // مزامنة حقول البحث
             var desktopSearch = document.getElementById('liveSearchInput');
             var offcanvasSearch = document.getElementById('offcanvasSearchInput');
 
