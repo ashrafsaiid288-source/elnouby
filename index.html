@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <title>رواق | REWAQ - أرقى المجوهرات والإكسسوارات الفاخرة عيار 925</title>
+    <title>رواق | REWAQ - أرقى الإكسسوارات والمجوهرات الفاخرة المطلية بماء الذهب</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="متجر رواق REWAQ - أرقى إكسسوارات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18 مع معاينة مجانية عند الاستلام.">
+    <meta name="description" content="متجر رواق REWAQ - أرقى الإكسسوارات الفاخرة والقطع المطلية بماء الذهب عيار 18 المقاومة لتغير اللون مع معاينة مجانية عند الاستلام.">
     <meta name="theme-color" content="#0d0d11">
     
     <!-- وسوم المعاينة في واتساب وسوشيال ميديا -->
-    <meta property="og:title" content="رواق | REWAQ - مجوهرات فضة عيار 925 وأناقة عصرية">
-    <meta property="og:description" content="تشكيلة راقية من الفضة عيار 925 والقطع المطلية بماء الذهب. معاينة حرة مع المندوب قبل الاستلام.">
+    <meta property="og:title" content="رواق | REWAQ - إكسسوارات ومجوهرات فاخرة مطلية بماء الذهب وأناقة عصرية">
+    <meta property="og:description" content="تشكيلة راقية من الإكسسوارات الفاخرة والقطع المطلية بماء الذهب عيار 18. معاينة حرة مع المندوب قبل الاستلام.">
     <meta property="og:image" content="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg">
     <meta property="og:type" content="website">
     
@@ -61,6 +61,12 @@
             background-color: #fbf9f5;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
+        }
+
+        @media (max-width: 991.98px) {
+            body {
+                padding-bottom: 75px !important;
+            }
         }
 
         *, *::before, *::after {
@@ -683,6 +689,49 @@
             color: #ffffff;
         }
 
+        /* كلاسات المودال والطلب السريع */
+        .checkout-modal-content {
+            border-radius: var(--rewaq-radius-lg);
+            border: 1.5px solid rgba(207, 168, 59, 0.4);
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .checkout-modal-header {
+            background: linear-gradient(135deg, #181820 0%, #0d0d12 100%);
+            border-bottom: 2px solid var(--rewaq-gold);
+            padding: 1.25rem 1.5rem;
+        }
+
+        .order-summary-box {
+            background: #faf8f5;
+            border: 1px solid rgba(207, 168, 59, 0.3);
+            border-radius: var(--rewaq-radius-md);
+            padding: 1rem;
+        }
+
+        .form-floating-custom label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            color: #374151;
+            display: block;
+        }
+
+        .form-control-custom {
+            border-radius: 12px;
+            border: 1.5px solid rgba(0, 0, 0, 0.12);
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            transition: var(--rewaq-transition);
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--rewaq-gold);
+            box-shadow: 0 0 0 3px rgba(207, 168, 59, 0.2);
+            outline: none;
+        }
+
         /* فوتر مضيء وفخم مع كارت زجاجي */
         .rewaq-footer-modern {
             background: linear-gradient(180deg, #181820 0%, #0d0d12 100%) !important;
@@ -844,14 +893,14 @@
         </nav>
     </header>
 
-    <!-- ================== قائمة الموبايل الجانبية (منيو التلت شُرط السلس والفوري) ================== -->
+    <!-- ================== قائمة الموبايل الجانبية ================== -->
     <div class="offcanvas offcanvas-end rewaq-offcanvas" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
         <div class="offcanvas-header bg-dark text-white p-3 border-bottom border-warning d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-2">
                 <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="rounded-3 border border-warning" style="width: 44px; height: 44px; object-fit: cover;">
                 <div>
                     <h6 class="text-white fw-bold m-0 fs-5" id="offcanvasNavLabel">رِواق | REWAQ</h6>
-                    <small class="text-warning" style="font-size: 0.74rem;">أرقى المجوهرات والإكسسوارات</small>
+                    <small class="text-warning" style="font-size: 0.74rem;">أرقى المجوهرات والإكسسوارات الفاخرة</small>
                 </div>
             </div>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
@@ -869,13 +918,14 @@
                     </div>
                 </div>
 
-                <!-- شبكة الأقسام مع تحويل فوري وغلق القائمة بسلاسة -->
+                <!-- شبكة الأقسام -->
                 <div class="pt-3 px-3">
                     <span class="small fw-bold text-muted d-block mb-2">أقسام وتصنيفات المتجر:</span>
                 </div>
                 <div class="offcanvas-categories-grid">
                     <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('necklaces', document.getElementById('pill-necklaces'))">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3c0 6.5 3 11.5 6 11.5s6-5 6-11.5"/><polygon points="12 15 15 19 9 19" fill="currentColor" fill-opacity="0.25"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3c0 6.5 3 11.5 6 11.5s6-5 6-11.5"/><polygon points="12 15 15 19 9 19" fill="currentColor" fill-opacity="0.25"/>
+                        </svg>
                         <span>سلاسل</span>
                     </a>
                     <a href="#products-catalog" class="offcanvas-cat-item" data-bs-dismiss="offcanvas" onclick="filterCategory('rings', document.getElementById('pill-rings'))">
@@ -900,7 +950,7 @@
                     </a>
                 </div>
 
-                <!-- روابط التنقل السريعة مع الإغلاق الفوري والذهاب المباشر للقسم -->
+                <!-- روابط التنقل السريعة -->
                 <div class="px-3 pt-2">
                     <span class="small fw-bold text-muted d-block mb-1">روابط سريعة:</span>
                 </div>
@@ -928,13 +978,13 @@
             </div>
 
             <div class="p-3 bg-light border-top text-center">
-                <span class="small text-muted d-block mb-1">فضة 925 أصلية • معاينة عند الاستلام</span>
+                <span class="small text-muted d-block mb-1">خامات فاخرة مقاومة للصدأ • معاينة عند الاستلام</span>
                 <small class="text-muted opacity-75">رواق REWAQ © 2026</small>
             </div>
         </div>
     </div>
 
-    <!-- ================== أول سكشن (Hero Banner) بخلفية اللوجو الملكية ================== -->
+    <!-- ================== أول سكشن (Hero Banner) ================== -->
     <section id="intro" class="py-3 py-lg-4">
         <div class="container-lg">
             <div class="hero-banner-rewaq">
@@ -955,7 +1005,7 @@
                                 وفخامة تروي <span class="gold-accent">تفاصيل أنوثتكِ</span>.
                             </h1>
                             <p class="lead text-light mb-4 fs-6 opacity-90">
-                                في <strong>رواق REWAQ</strong> ننتقي لكِ أجود خامات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18، مع معاينة حرة مع المندوب قبل الاستلام.
+                                في <strong>رواق REWAQ</strong> ننتقي لكِ أجود خامات الإكسسوارات الراقية والقطع المطلية بماء الذهب عيار 18 المقاومة لتغير اللون، مع معاينة حرة مع المندوب قبل الاستلام.
                             </p>
                             <div class="d-flex flex-wrap gap-2 gap-sm-3 justify-content-center justify-content-lg-start mb-4">
                                 <a href="#products-catalog" class="btn btn-rewaq-gold px-4 shadow">تسوقي التشكيلة الآن ←</a>
@@ -968,11 +1018,11 @@
                                 </div>
                                 <div class="border-start border-secondary border-opacity-50 ps-3 ps-sm-4">
                                     <h4 class="fw-bold font-en mb-0 text-white">100%</h4>
-                                    <small class="text-white-50">فضة إسترليني أصلية</small>
+                                    <small class="text-white-50">خامات مقاومة لتغير اللون</small>
                                 </div>
                                 <div class="border-start border-secondary border-opacity-50 ps-3 ps-sm-4">
                                     <h4 class="fw-bold font-en mb-0 text-warning d-flex align-items-center gap-1">
-                                        4.9 <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                        4.7 <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                                     </h4>
                                     <small class="text-white-50">تقييم العميلات</small>
                                 </div>
@@ -1000,7 +1050,7 @@
                         </div>
                         <div>
                             <h6 class="fw-bold mb-1 text-dark fs-6">خامات وضمان</h6>
-                            <small class="text-muted d-none d-sm-block">فضة 925 مقاومة لتغير اللون</small>
+                            <small class="text-muted d-none d-sm-block">خامات ممتازة مقاومة للماء والصدأ</small>
                         </div>
                     </div>
                 </div>
@@ -1151,10 +1201,10 @@
                             <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="سلسلة الفراشة بماء الذهب" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">سلاسل عيار 18</span>
+                            <span class="text-muted small">سلاسل مطلية عيار 18</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
+                                <span class="text-muted font-en small">(4.8)</span>
                             </span>
                         </div>
                         <h4 class="product-title">سلسلة الفراشة بماء الذهب</h4>
@@ -1163,7 +1213,7 @@
                             <label class="small text-muted fw-bold d-block mb-1">الطلاء المفضل:</label>
                             <select id="variant-neck-1" class="form-select variant-select">
                                 <option value="طلاء ذهب أصفر عيار 18">ذهب أصفر عيار 18</option>
-                                <option value="فضة إسترليني 925 بيضاء">فضة إسترليني 925</option>
+                                <option value="فضي معدني لامع مقاوم للصدأ">فضي لامع مقاوم للصدأ</option>
                                 <option value="روز جولد وردي فاخر">روز جولد وردي</option>
                             </select>
                         </div>
@@ -1196,10 +1246,10 @@
                             <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="خاتم التاج الملكي" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">زركون نقي عيار 925</span>
+                            <span class="text-muted small">زركون سويسري نقي</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(5.0)</span>
+                                <span class="text-muted font-en small">(4.9)</span>
                             </span>
                         </div>
                         <h4 class="product-title">خاتم التاج الملكي المرصع</h4>
@@ -1234,18 +1284,18 @@
                 <!-- منتج 3: إسورة الحلقات -->
                 <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="bracelets">
                     <div class="rewaq-product-card">
-                        <span class="badge bg-success product-badge-tag">فضة 925</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'إسورة كارتييه الحلقات المتداخلة')" title="إضافة للمفضلة">
+                        <span class="badge bg-success product-badge-tag">ستانلس ستيل فاخر</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'إسورة الحلقات المترابطة')" title="إضافة للمفضلة">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </button>
                         <div class="product-visual-wrap">
                             <img src="https://images.unsplash.com/photo-1611591475850-8b1e459db4b9?auto=format&fit=crop&w=800&q=80" alt="إسورة الحلقات" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">أساور كلاسيكية</span>
+                            <span class="text-muted small">أساور كلاسيكية مطلية</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.8)</span>
+                                <span class="text-muted font-en small">(4.7)</span>
                             </span>
                         </div>
                         <h4 class="product-title">إسورة الحلقات المترابطة</h4>
@@ -1255,7 +1305,7 @@
                             <select id="variant-brace-1" class="form-select variant-select">
                                 <option value="مزدوج (ذهبي وفضي)">مزدوج (ذهبي وفضي معاً)</option>
                                 <option value="ذهبي خالص عيار 18">ذهبي مطلي بالكامل</option>
-                                <option value="فضي إسترليني 925">فضي إسترليني 925</option>
+                                <option value="فضي لامع مقاوم للصدأ">فضي لامع مقاوم للصدأ</option>
                             </select>
                         </div>
 
@@ -1287,7 +1337,7 @@
                             <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="حلق اللؤلؤ" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">لؤلؤ طبيعي مستزرع</span>
+                            <span class="text-muted small">لؤلؤ مستزرع فاخر</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                                 <span class="text-muted font-en small">(4.9)</span>
@@ -1320,24 +1370,24 @@
                     </div>
                 </div>
 
-                <!-- منتج 5: طقم لورا الفضي -->
+                <!-- منتج 5: طقم لورا الملكي -->
                 <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="sets">
                     <div class="rewaq-product-card">
                         <span class="badge bg-secondary text-white product-badge-tag fw-bold">طقم ملكي 3 قطع</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'طقم لورا الفضي الملكي')" title="إضافة للمفضلة">
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'طقم لورا الملكي الفاخر')" title="إضافة للمفضلة">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </button>
                         <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="طقم لورا الفضي" class="product-img-real" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="طقم لورا الملكي" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="text-muted small">سلسلة + خاتم + حلق</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(5.0)</span>
+                                <span class="text-muted font-en small">(4.8)</span>
                             </span>
                         </div>
-                        <h4 class="product-title">طقم لورا الفضي الملكي</h4>
+                        <h4 class="product-title">طقم لورا الملكي الفاخر</h4>
 
                         <div class="mb-3">
                             <label class="small text-muted fw-bold d-block mb-1">مقاس خاتم الطقم:</label>
@@ -1355,11 +1405,11 @@
                         </div>
 
                         <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('طقم لورا الفضي الملكي', 750, 'variant-set-1', 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80')">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('طقم لورا الملكي الفاخر', 750, 'variant-set-1', 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80')">
                                 <span>طلب فوري</span>
                                 <span>⚡</span>
                             </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('طقم لورا الفضي الملكي', 750, 'variant-set-1')" title="أضيفي للسلة">
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('طقم لورا الملكي الفاخر', 750, 'variant-set-1')" title="أضيفي للسلة">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                             </button>
                         </div>
@@ -1377,10 +1427,10 @@
                             <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80" alt="سلسلة إنفينيتي" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">رمز المالانهاية | 925</span>
+                            <span class="text-muted small">رمز المالانهاية | طلاء ذهب 18</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
+                                <span class="text-muted font-en small">(4.8)</span>
                             </span>
                         </div>
                         <h4 class="product-title">سلسلة إنفينيتي المالانهاية</h4>
@@ -1388,8 +1438,8 @@
                         <div class="mb-3">
                             <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
                             <select id="variant-neck-2" class="form-select variant-select">
-                                <option value="فضة 925 إسترليني">فضة 925 إسترليني</option>
                                 <option value="مطلية بماء الذهب 18">مطلية بماء الذهب 18</option>
+                                <option value="فضي معدني مقاوم لتغير اللون">فضي معدني مقاوم لتغير اللون</option>
                             </select>
                         </div>
 
@@ -1470,7 +1520,7 @@
                             <span class="text-muted small">زركون ملون فاخر</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.8)</span>
+                                <span class="text-muted font-en small">(4.7)</span>
                             </span>
                         </div>
                         <h4 class="product-title">سوار النجوم الساحر</h4>
@@ -1478,7 +1528,7 @@
                         <div class="mb-3">
                             <label class="small text-muted fw-bold d-block mb-1">لون السوار:</label>
                             <select id="variant-brace-2" class="form-select variant-select">
-                                <option value="فضي 925 بأحجار ملونة">فضي 925 بأحجار ملونة</option>
+                                <option value="فضي معدني بأحجار ملونة">فضي معدني بأحجار ملونة</option>
                                 <option value="ذهبي بأحجار زركون بيضاء">ذهبي بأحجار زركون بيضاء</option>
                             </select>
                         </div>
@@ -1502,6 +1552,7 @@
             </div>
         </div>
     </section>
+
     <!-- ================== التشكيلة الحصرية ================== -->
     <section id="bento-editorial" class="py-4 py-lg-5 bg-transparent">
         <div class="container-lg">
@@ -1542,77 +1593,83 @@
             </div>
         </div>
     </section>
-
-    <!-- ================== آراء العميلات ================== -->
+    <!-- ================== آراء العميلات الواقعية ================== -->
     <section id="testimonials" class="py-4 py-lg-5">
         <div class="container-lg">
             <div class="text-center mb-4 mb-lg-5">
-                <span class="text-primary-gold fw-bold small text-uppercase">شهادات نفخر بها</span>
-                <h2 class="display-6 fw-bold mt-1 text-dark">ماذا تقول عاشقات رواق؟</h2>
+                <span class="text-primary-gold fw-bold small text-uppercase">تجارب حقيقية</span>
+                <h2 class="display-6 fw-bold mt-1 text-dark">تجارب عميلات رواق</h2>
+                <p class="text-muted fs-6">آراء وتجارب حقيقية من بنات طلبوا وجربوا بنفسهم</p>
             </div>
 
             <div class="row g-3 g-lg-4">
+                <!-- تقييم 4 نجوم -->
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-bubble">
-                        <div class="mb-2">
+                        <div class="mb-2 d-flex align-items-center justify-content-between">
                             <span class="d-inline-flex gap-1">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             </span>
+                            <span class="badge bg-light text-muted border small">4 من 5</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4">"طلبت سلسلة الفراشة وخاتم التاج.. جودة القطع مبهرة ولمعتها راقية جداً وثابتة تماماً حتى مع العطور. والتغليف الفاخر مناسب جداً للإهداء."</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"بصراحه الحاجه جميله ولمعتها فخمه اوي وشبه الصور بظبط.. بس المندوب اتاخر عليا يوم عن الميعاد اللي اتفقنا عليه ف الواتس بس لما شوفت السلسله والخاتم نسيت التاخير الصراحه تسلم ايدكوا"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
-                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">س</div>
+                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">د</div>
                             <div>
-                                <h6 class="fw-bold mb-0 text-dark">سارة الشاذلي</h6>
-                                <small class="text-muted">عميلة موثقة • التجمع الخامس</small>
+                                <h6 class="fw-bold mb-0 text-dark">دينا مصطفى</h6>
+                                <small class="text-muted">طلبت سلسلة وخاتم • طنطا</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- تقييم 3 نجوم -->
                 <div class="col-md-6 col-lg-4">
                     <div class="testimonial-bubble">
-                        <div class="mb-2">
+                        <div class="mb-2 d-flex align-items-center justify-content-between">
                             <span class="d-inline-flex gap-1">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             </span>
+                            <span class="badge bg-light text-muted border small">3 من 5</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4">"خاتم السوليتير مقاسه دقيق بالمليمتر، وبريق الزركون يطابق الألماس الطبيعي بدقة. الشحن وصلني في أقل من 48 ساعة وبإمكانية المعاينة قبل الاستلام."</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"الاسوره شكلها حلو اووي و شيك فاللبس بجد بس العلبه كانت متبهدله شويه من الشحن يعني لو ههادي بيها حد كان هيبقا محرج.. ياريت تهتمو بتغليف الكرتونه اللي بره شوية بس القطعه نفسها خامتها نضيفه ومبتغيرش لون"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
-                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">ن</div>
+                            <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">آ</div>
                             <div>
-                                <h6 class="fw-bold mb-0 text-dark">نورهان عبد الرحمن</h6>
-                                <small class="text-muted">عميلة موثقة • المعادي</small>
+                                <h6 class="fw-bold mb-0 text-dark">آية سمير</h6>
+                                <small class="text-muted">طلبت إسورة الحلقات • الهرم، الجيزة</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- تقييم 2 نجوم -->
                 <div class="col-md-6 col-lg-4 mx-auto">
                     <div class="testimonial-bubble">
-                        <div class="mb-2">
+                        <div class="mb-2 d-flex align-items-center justify-content-between">
                             <span class="d-inline-flex gap-1">
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#d1d5db"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                             </span>
+                            <span class="badge bg-light text-muted border small">2 من 5</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4">"طقم لورا الفضي كان اختياري المثالي لمناسبتي الخاصة! الجميع أثنى على أناقته كأنه ذهب أبيض مصمم خصيصاً. ذوقكم رفيع وتعامل راقٍ للغاية."</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"الخاتم جه واسع عليا مع اني قايسه المقاس زي ما مكتوب ف الجدول هنا ف الموقع فطلع بيقع من ايدي.. كلمت خدمه العملا قالولي هيبدلوهولي ولسه مستنيه المندوب يجي ياخده.. هو كخامه حلو ولمعته حلوه بس موضوع المقاس دا عطلني الصراحه"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">م</div>
                             <div>
-                                <h6 class="fw-bold mb-0 text-dark">مريم الدسوقي</h6>
-                                <small class="text-muted">عميلة موثقة • الإسكندرية</small>
+                                <h6 class="fw-bold mb-0 text-dark">منى إبراهيم</h6>
+                                <small class="text-muted">طلبت محبس سوليتير • المنصورة</small>
                             </div>
                         </div>
                     </div>
@@ -1627,7 +1684,7 @@
             <div class="text-center mb-4 mb-lg-5">
                 <span class="text-primary-gold fw-bold small text-uppercase">أسرار الأناقة الدائمة</span>
                 <h2 class="display-6 fw-bold mt-1 text-dark">دليل رواق للأناقة والعناية</h2>
-                <p class="text-muted">نصائح احترافية للحفاظ على بريق مجوهراتك واختيار المقاسات بدقة متناهية</p>
+                <p class="text-muted">نصائح احترافية للحفاظ على بريق إكسسواراتك واختيار المقاسات بدقة متناهية</p>
             </div>
 
             <div class="row g-3 g-lg-4">
@@ -1637,7 +1694,7 @@
                             <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="العناية بالقطع" class="product-img-real" loading="lazy">
                         </div>
                         <span class="text-muted small">العناية بالقطع • قراءة في دقيقتين</span>
-                        <h5 class="fw-bold fs-6 my-2 text-dark">5 خطوات أساسية للحفاظ على بريق الفضة والقطع المطلية</h5>
+                        <h5 class="fw-bold fs-6 my-2 text-dark">5 خطوات أساسية للحفاظ على بريق الإكسسوارات والقطع المطلية</h5>
                         <p class="text-muted small mb-3">إرشادات بسيطة وفعالة لحماية إكسسواراتك من العطور والرطوبة لتدوم كالجديدة تماماً.</p>
                         <button class="guide-read-btn mt-auto" onclick="openGuideModal('care')">
                             <span>اقرئي الدليل كاملاً</span>
@@ -1668,7 +1725,7 @@
                         </div>
                         <span class="text-muted small">أسرار التنسيق • قراءة في 3 دقائق</span>
                         <h5 class="fw-bold fs-6 my-2 text-dark">فن تنسيق الطبقات المتعددة للسلاسل (Layering)</h5>
-                        <p class="text-muted small mb-3">تعلمي أسرار موازنة أطوال السلاسل ودمج اللونين الذهبي والفضي لإطلالة عصرية جذابة.</p>
+                        <p class="text-muted small mb-3">تعلمي أسرار موازنة أطوال السلاسل ودمج الدرجات الذهبية والمعدنية لإطلالة عصرية جذابة.</p>
                         <button class="guide-read-btn mt-auto" onclick="openGuideModal('layering')">
                             <span>اقرئي الدليل كاملاً</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 5 12 12 19"></polyline></svg>
@@ -1888,10 +1945,10 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر المودرن المطور والمضيء ================== -->
+    <!-- ================== الفوتر المودرن ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
-            <!-- كارت المساعدة الزجاجي الفاخر والمضيء -->
+            <!-- كارت المساعدة الزجاجي الفاخر -->
             <div class="footer-action-card-modern">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8 text-center text-lg-end">
@@ -1919,10 +1976,10 @@
                         </div>
                     </div>
                     <p class="text-white-50 small mb-3 lh-lg" style="max-width: 420px;">
-                        علامة متخصصة في اختيار وصياغة أرقى مجوهرات الفضة الإسترليني عيار 925 والقطع المطلية بماء الذهب عيار 18، مع فصوص الزركون السويسرية لنمنحكِ إطلالة ملكية تدوم طويلاً.
+                        علامة متخصصة في اختيار وتصميم أرقى الإكسسوارات العصرية والقطع المطلية بماء الذهب عيار 18 المقاومة لتغير اللون، مع فصوص الزركون السويسرية لنمنحكِ إطلالة ملكية تدوم طويلاً.
                     </p>
                     <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">فضة 925 أصلية</span>
+                        <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">طلاء ذهب عيار 18 ثابت</span>
                         <span class="badge bg-dark border border-secondary text-light px-3 py-2 rounded-pill small">معاينة قبل الاستلام</span>
                     </div>
                 </div>
@@ -1974,8 +2031,8 @@
     <!-- ================== كود جافاسكريبت المحسن والمطور ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v12';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v12';
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v13';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v13';
 
         function loadCartFromStorage() {
             try {
@@ -2090,6 +2147,9 @@
                 showToast('يرجى كتابة الاسم ورقم الهاتف والعنوان بالتفصيل.');
                 return;
             }
+
+            phone = phone.replace(/[\s\-\+]/g, '');
+            if (phone.startsWith('20')) phone = phone.substring(2);
 
             var phoneRegex = /^01[0125][0-9]{8}$/;
             if (!phoneRegex.test(phone)) {
@@ -2373,10 +2433,10 @@
         var guidesDatabase = {
             care: {
                 category: 'العناية بالقطع وبريقها',
-                title: '5 خطوات أساسية للحفاظ على بريق الفضة والقطع المطلية',
+                title: '5 خطوات أساسية للحفاظ على بريق الإكسسوارات والقطع المطلية',
                 html: `
                     <div class="mb-4">
-                        <p class="lead text-dark fw-bold">الفضة عيار 925 والإكسسوارات المطلية بماء الذهب تدوم لسنوات طويلة مع مراعاة هذه الإرشادات البسيطة:</p>
+                        <p class="lead text-dark fw-bold">الإكسسوارات الفاخرة والقطع المطلية بماء الذهب تدوم لسنوات طويلة مع مراعاة هذه الإرشادات البسيطة:</p>
                     </div>
                     <div class="p-3 bg-light rounded-3 mb-2 border">
                         <h6 class="fw-bold text-dark">1. وضع العطور أولاً:</h6>
@@ -2384,11 +2444,11 @@
                     </div>
                     <div class="p-3 bg-light rounded-3 mb-2 border">
                         <h6 class="fw-bold text-dark">2. الحفظ في أكياس مفرغة من الهواء:</h6>
-                        <p class="text-muted mb-0 small">احفظي كل قطعة في كيس محكم الإغلاق أو في صندوق رواق المخملي لمنع الأكسدة والرطوبة.</p>
+                        <p class="text-muted mb-0 small">احفظي كل قطعة في كيس محكم الإغلاق أو في صندوق رواق المخملي لحمايتها من الرطوبة والخدش.</p>
                     </div>
                     <div class="p-3 bg-light rounded-3 mb-2 border">
                         <h6 class="fw-bold text-dark">3. تجنب المياه والكلور:</h6>
-                        <p class="text-muted mb-0 small">يُفضل نزع المجوهرات قبل الاستحمام أو السباحة لتجنب تأثير الكلور والأملاح.</p>
+                        <p class="text-muted mb-0 small">يُفضل نزع المجوهرات قبل الاستحمام أو السباحة لتجنب تأثير الكلور والأملاح القاسية على طبقة الطلاء.</p>
                     </div>
                 `
             },
@@ -2491,18 +2551,15 @@
 
             // مزامنة البحث
             var desktopSearch = document.getElementById('liveSearchInput');
-            var mobileSearch = document.getElementById('mobileSearchInput');
             var offcanvasSearch = document.getElementById('offcanvasSearchInput');
 
             function syncSearch(val) {
                 if (desktopSearch) desktopSearch.value = val;
-                if (mobileSearch) mobileSearch.value = val;
                 if (offcanvasSearch) offcanvasSearch.value = val;
                 handleLiveSearch(val);
             }
 
             if (desktopSearch) desktopSearch.addEventListener('input', function(e) { syncSearch(e.target.value); });
-            if (mobileSearch) mobileSearch.addEventListener('input', function(e) { syncSearch(e.target.value); });
             if (offcanvasSearch) offcanvasSearch.addEventListener('input', function(e) { syncSearch(e.target.value); });
         });
     </script>
