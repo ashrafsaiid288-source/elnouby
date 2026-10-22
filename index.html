@@ -74,9 +74,32 @@
         }
 
         section {
-            scroll-margin-top: 85px;
+            scroll-margin-top: 110px;
             position: relative;
             z-index: 2;
+        }
+
+        /* شريط الإعلان العلوي المميز */
+        .top-promo-bar {
+            background: linear-gradient(90deg, #0d0d11 0%, #1a1710 50%, #0d0d11 100%);
+            border-bottom: 1px solid rgba(207, 168, 59, 0.4);
+            color: #ffffff;
+            font-size: 0.82rem;
+            padding: 8px 12px;
+            text-align: center;
+            position: relative;
+            z-index: 1035;
+            letter-spacing: 0.2px;
+        }
+
+        .top-promo-badge {
+            background: var(--rewaq-gold-gradient);
+            color: #0d0d11;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 50rem;
+            margin-left: 8px;
+            font-size: 0.74rem;
         }
 
         .sections-dynamic-bg {
@@ -717,6 +740,21 @@
             outline: none;
         }
 
+        .payment-method-card {
+            border: 1.5px solid rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+            padding: 12px;
+            cursor: pointer;
+            transition: var(--rewaq-transition);
+            background: #faf9f6;
+        }
+
+        .payment-method-card:has(input:checked) {
+            border-color: var(--rewaq-gold);
+            background: #fdfaf3;
+            box-shadow: 0 4px 15px rgba(207, 168, 59, 0.15);
+        }
+
         .free-shipping-progress-box {
             background: linear-gradient(135deg, #fef9ee 0%, #f7f1df 100%);
             border: 1.5px dashed var(--rewaq-gold);
@@ -877,14 +915,12 @@
             border-color: var(--rewaq-gold-light);
         }
 
-        .payment-pill {
+        .payment-box-detail {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 5px 12px;
-            font-size: 0.75rem;
-            color: #d1d5db;
-            font-weight: 600;
+            border: 1px solid rgba(207, 168, 59, 0.25);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
         }
 
         .mobile-bottom-bar {
@@ -934,6 +970,12 @@
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+
+    <!-- شريط الإعلان العلوي المميز عن الشحن المجاني -->
+    <div class="top-promo-bar d-flex align-items-center justify-content-center flex-wrap">
+        <span class="top-promo-badge">عرض حصري 🎁</span>
+        <span>شحن مجاني لكل محافظات مصر لأي طلب بقيمة <strong>1000 ج.م أو أكتر</strong> | معاينة حرة مع المندوب</span>
+    </div>
 
     <!-- خلفية الألماظ الحركية -->
     <div class="sections-dynamic-bg" aria-hidden="true">
@@ -1719,7 +1761,7 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"طقم الغزالة يجنن بجد! الخاتم والسلسلة فخامة مش طبيعية، ولما كملت طلبي فوق الألف الشحن نزل ببلاش وكمان عاينت مع المندوب قبل ما أدفع ❤️"</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"طقم الغزالة يجنن بجد! الخاتم والسلسلة فخامة مش طبيعية، ولما كملت طلبي فوق الألف الشحن نزل ببلاش وكمان عاينت مع المندوب قبل ما أدفع كاش ❤️"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">د</div>
                             <div>
@@ -1742,7 +1784,7 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة البجعة البيور وصلتني تاني يوم على طول، رقيقة جداً ولونها دهبي زي الدهب الحقيقي بالظبط ومبتغيرش مع الميا خالص 🥰"</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة البجعة البيور وصلتني تاني يوم على طول، حولت بإنستاباي في ثانية والمعاملة في قمة الذوق والأمانة ومبتغيرش مع الميا خالص 🥰"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">آ</div>
                             <div>
@@ -1789,7 +1831,6 @@
             </div>
 
             <div class="row g-3 g-lg-4">
-                <!-- كارت 1: العناية بالقطع -->
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
@@ -1805,7 +1846,6 @@
                     </div>
                 </div>
 
-                <!-- كارت 2: الدليل الجديد (اختيار الهدية بدلاً من الخواتم) -->
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
@@ -1821,7 +1861,6 @@
                     </div>
                 </div>
 
-                <!-- كارت 3: تنسيق الطبقات -->
                 <div class="col-md-6 col-lg-4 mx-auto">
                     <div class="blog-card">
                         <div class="product-visual-wrap" style="aspect-ratio: 16/9; margin-bottom: 1rem;">
@@ -1840,7 +1879,7 @@
         </div>
     </section>
 
-    <!-- ================== نافذة الطلب الفوري السريع (Modal) مع الشحن المجاني ================== -->
+    <!-- ================== نافذة الطلب الفوري السريع (Modal) مع طرق الدفع وأرقام التحويل ================== -->
     <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content checkout-modal-content">
@@ -1907,6 +1946,40 @@
                                 <textarea class="form-control form-control-custom w-100" id="checkoutDetailedAddress" rows="2" placeholder="المنطقة، الشارع، رقم العمارة والشقة، وعلامة مميزة جنبك" required></textarea>
                             </div>
 
+                            <!-- طرق الدفع المحدثة -->
+                            <div class="col-12">
+                                <label class="small text-muted fw-bold d-block mb-2">طريقة الدفع المفضلة: <span class="text-danger">*</span></label>
+                                <div class="row g-2">
+                                    <div class="col-md-4">
+                                        <label class="payment-method-card w-100 d-flex align-items-center gap-2 m-0">
+                                            <input type="radio" name="paymentMethod" value="نقدي عند الاستلام (كاش مع المندوب)" checked class="form-check-input ms-0">
+                                            <div>
+                                                <span class="d-block fw-bold small text-dark">نقدي عند الاستلام</span>
+                                                <small class="text-muted" style="font-size: 0.72rem;">كاش بعد المعاينة</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="payment-method-card w-100 d-flex align-items-center gap-2 m-0">
+                                            <input type="radio" name="paymentMethod" value="فودافون كاش ومحافظ (01007873801 أو 01299914230)" class="form-check-input ms-0">
+                                            <div>
+                                                <span class="d-block fw-bold small text-dark">محافظ كاش</span>
+                                                <small class="text-muted font-en" style="font-size: 0.72rem;">01007873801 / 01299914230</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="payment-method-card w-100 d-flex align-items-center gap-2 m-0">
+                                            <input type="radio" name="paymentMethod" value="إنستاباي InstaPay (01288858057)" class="form-check-input ms-0">
+                                            <div>
+                                                <span class="d-block fw-bold small text-dark">إنستاباي InstaPay</span>
+                                                <small class="text-muted font-en" style="font-size: 0.72rem;">01288858057</small>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col-12">
                                 <div class="p-3 bg-light rounded-3 border d-flex align-items-center justify-content-between">
                                     <div class="form-check m-0 d-flex align-items-center gap-2">
@@ -1935,7 +2008,7 @@
                                 <span id="modalSummaryShipping" class="font-en fw-bold text-dark">50 ج.م</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-dark text-white mb-3">
-                                <span class="fw-bold fs-6">الإجمالي المطلوب مع المندوب:</span>
+                                <span class="fw-bold fs-6">الإجمالي المطلوب:</span>
                                 <span id="modalSummaryGrandTotal" class="fs-4 fw-bold text-warning font-en">0 ج.م</span>
                             </div>
 
@@ -1971,7 +2044,7 @@
         </div>
     </div>
 
-    <!-- درج سلة المشتريات التفاعلي مع ميزة الشحن المجاني فوق 1000 ج.م -->
+    <!-- درج سلة المشتريات التفاعلي مع ميزة الشحن المجاني فوق 1000 ج.م واختيار الدفع -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCart" aria-labelledby="cartDrawerTitle">
         <div class="offcanvas-header border-bottom">
             <div class="d-flex align-items-center gap-2">
@@ -1994,14 +2067,21 @@
                 </ul>
             </div>
             <div class="border-top pt-3">
-                <div class="p-3 bg-light rounded-4 mb-3 border">
+                <div class="p-3 bg-light rounded-4 mb-2 border">
                     <label class="form-label small fw-bold text-dark mb-1 d-flex align-items-center gap-1">
                         <span>محافظة التوصيل:</span>
                     </label>
-                    <select id="shippingZoneSelect" class="form-select form-select-sm rounded-pill variant-select" onchange="updateShipping()">
+                    <select id="shippingZoneSelect" class="form-select form-select-sm rounded-pill variant-select mb-2" onchange="updateShipping()">
                         <option value="50" data-name="القاهرة والجيزة">القاهرة والجيزة (50 ج.م)</option>
                         <option value="60" data-name="الإسكندرية والقناة">الإسكندرية والقناة (60 ج.م)</option>
                         <option value="75" data-name="الدلتا والصعيد وباقي المحافظات">الدلتا، الصعيد وباقي المحافظات (75 ج.م)</option>
+                    </select>
+
+                    <label class="form-label small fw-bold text-dark mb-1">طريقة الدفع:</label>
+                    <select id="cartPaymentMethodSelect" class="form-select form-select-sm rounded-pill variant-select">
+                        <option value="نقدي عند الاستلام (كاش مع المندوب)" selected>كاش عند الاستلام</option>
+                        <option value="فودافون كاش ومحافظ (01007873801 أو 01299914230)">محافظ كاش (01007873801 / 01299914230)</option>
+                        <option value="إنستاباي InstaPay (01288858057)">إنستاباي (01288858057)</option>
                     </select>
                 </div>
 
@@ -2057,7 +2137,7 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر ================== -->
+    <!-- ================== الفوتر المودرن الفاخر مع أرقام الدفع والتحويل ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
             <div class="footer-action-card-modern">
@@ -2114,15 +2194,24 @@
                     </ul>
                 </div>
 
+                <!-- تفاصيل طرق الدفع وأرقام التحويل -->
                 <div class="col-lg-3 col-6">
-                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">الشحن والدفع</h6>
-                    <p class="text-white-50 small mb-2">توصيل لباب بيتك خلال 24 إلى 48 ساعة لكل محافظات مصر، ومعاينة مجانية مع المندوب.</p>
-                    <span class="small fw-bold text-warning d-block mb-2">طرق الدفع:</span>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="payment-pill">كاش عند الاستلام</span>
-                        <span class="payment-pill">إنستاباي InstaPay</span>
-                        <span class="payment-pill">فودافون كاش</span>
-                        <span class="payment-pill">محافظ إلكترونية</span>
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">طرق الدفع والتحويل</h6>
+                    
+                    <div class="payment-box-detail">
+                        <small class="text-warning fw-bold d-block" style="font-size: 0.76rem;">💵 نقدي عند الاستلام</small>
+                        <span class="text-white-50" style="font-size: 0.74rem;">سددي للمندوب بعد فتح ومعاينة القطع براحتك.</span>
+                    </div>
+
+                    <div class="payment-box-detail">
+                        <small class="text-warning fw-bold d-block" style="font-size: 0.76rem;">📱 محافظ كاش (فودافون كاش):</small>
+                        <span class="text-white font-en fw-bold d-block small" dir="ltr">01007873801</span>
+                        <span class="text-white font-en fw-bold d-block small" dir="ltr">01299914230</span>
+                    </div>
+
+                    <div class="payment-box-detail">
+                        <small class="text-warning fw-bold d-block" style="font-size: 0.76rem;">⚡ إنستاباي InstaPay:</small>
+                        <span class="text-white font-en fw-bold d-block small" dir="ltr">01288858057</span>
                     </div>
                 </div>
 
@@ -2191,12 +2280,12 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- ================== كود جافاسكريبت المطور (شحن مجاني + عامية مصرية) ================== -->
+    <!-- ================== كود جافاسكريبت المطور بالكامل ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v18';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v18';
-        var FREE_SHIPPING_THRESHOLD = 1000; // حد الشحن المجاني 1000 جنيه
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v19';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v19';
+        var FREE_SHIPPING_THRESHOLD = 1000;
 
         function changeProductImage(imgElementId, selectEl) {
             var selectedOption = selectEl.options[selectEl.selectedIndex];
@@ -2323,7 +2412,6 @@
             var baseShipping = govSelect ? parseInt(govSelect.value, 10) : 50;
             var subtotal = currentQuickCheckoutItem.price || 0;
             
-            // تطبيق قاعدة الشحن المجاني لو القطعة بـ 1000 أو أكثر
             var finalShipping = (subtotal >= FREE_SHIPPING_THRESHOLD) ? 0 : baseShipping;
             var grandTotal = subtotal + finalShipping;
 
@@ -2342,6 +2430,9 @@
             var address = document.getElementById('checkoutDetailedAddress').value.trim();
             var notes = document.getElementById('checkoutNotes').value.trim();
             var giftWrap = document.getElementById('checkoutGiftWrap').checked;
+
+            var paymentMethodRadio = document.querySelector('input[name="paymentMethod"]:checked');
+            var selectedPaymentMethod = paymentMethodRadio ? paymentMethodRadio.value : 'نقدي عند الاستلام (كاش مع المندوب)';
 
             if (!name || !phone || !address) {
                 showToast('يا ريت تكتبي الاسم ورقم الموبايل والعنوان بالتفصيل.');
@@ -2381,6 +2472,8 @@
             text += "• *اللون:* " + finalVariant + "\n";
             text += "• *السعر:* " + subtotal + " ج.م\n";
             text += "--------------------------------------\n";
+            text += "💳 *طريقة الدفع:* " + selectedPaymentMethod + "\n";
+            text += "--------------------------------------\n";
             text += "👤 *بيانات التوصيل:*\n";
             text += "• *الاسم:* " + name + "\n";
             text += "• *الموبايل:* " + phone + "\n";
@@ -2400,7 +2493,7 @@
             } else {
                 text += "• مصاريف الشحن: " + finalShipping + " ج.م\n";
             }
-            text += "💰 *المطلوب مع المندوب بعد المعاينة:* *" + grandTotal + " ج.م*\n";
+            text += "💰 *المطلوب سداده بعد المعاينة:* *" + grandTotal + " ج.م*\n";
             text += "--------------------------------------\n";
             text += "مستنية تأكيدكم وميعاد وصول المندوب.";
 
@@ -2427,7 +2520,6 @@
             var shippingSelect = document.getElementById('shippingZoneSelect');
             var baseShipping = (cartState.length > 0 && shippingSelect) ? parseInt(shippingSelect.value, 10) : 0;
             
-            // قاعدة الشحن المجاني لأي أوردر بـ 1000 أو أكثر
             var isFreeShipping = (subtotal >= FREE_SHIPPING_THRESHOLD);
             var finalShipping = isFreeShipping ? 0 : baseShipping;
             var grandTotal = subtotal + (cartState.length > 0 ? finalShipping : 0);
@@ -2451,7 +2543,6 @@
 
             if (grandTotalEl) grandTotalEl.textContent = (cartState.length > 0 ? grandTotal + ' ج.م' : '0 ج.م');
 
-            // تحديث رسالة الشحن المجاني
             if (freeShippingTextEl) {
                 if (cartState.length === 0) {
                     freeShippingTextEl.innerHTML = 'شحن مجاني لأي طلب بـ 1000 ج.م أو أكتر!';
@@ -2575,6 +2666,9 @@
             var zoneName = selectedOption ? selectedOption.getAttribute('data-name') : 'القاهرة والجيزة';
             var baseShipping = selectedOption ? parseInt(shippingSelect.value, 10) : 50;
 
+            var paymentSelect = document.getElementById('cartPaymentMethodSelect');
+            var selectedPaymentMethod = paymentSelect ? paymentSelect.value : 'نقدي عند الاستلام (كاش مع المندوب)';
+
             var subtotal = 0;
             var text = "👑 *طلب تأكيد سلة المشتريات من رواق REWAQ:*\n\n";
             cartState.forEach(function(item, idx) {
@@ -2588,13 +2682,15 @@
             var grandTotal = subtotal + finalShipping;
 
             text += "\n---------------------------\n";
+            text += "💳 *طريقة الدفع:* " + selectedPaymentMethod + "\n";
+            text += "---------------------------\n";
             text += "📦 مجموع القطع: " + subtotal + " ج.م\n";
             if (isFreeShipping) {
                 text += "🚚 الشحن والتوصيل: *مجاني 🎁* (عرض طلب فوق 1000 ج.م)\n";
             } else {
                 text += "🚚 الشحن والتوصيل: " + finalShipping + " ج.م (" + zoneName + ")\n";
             }
-            text += "💰 الإجمالي المطلوب مع المندوب: *" + grandTotal + " ج.م*\n";
+            text += "💰 الإجمالي المطلوب: *" + grandTotal + " ج.م*\n";
             text += "---------------------------\n";
             text += "مستنية تأكيدكم عشان ابعتلكم الاسم والعنوان بالتفصيل.";
 
@@ -2674,7 +2770,6 @@
             }
         }
 
-        // قاعدة بيانات مقالات الدليل بالعامية المصرية
         var guidesDatabase = {
             care: {
                 category: 'العناية بالقطع ولمعتها',
