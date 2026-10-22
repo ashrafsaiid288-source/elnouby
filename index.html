@@ -721,7 +721,7 @@
             outline: none;
         }
 
-        /* ================== الفوتر المودرن الفاخر الجديد ================== */
+        /* ================== الفوتر المودرن الفاخر ================== */
         .rewaq-footer-modern {
             background: radial-gradient(circle at 50% 0%, rgba(207, 168, 59, 0.14) 0%, rgba(13, 13, 17, 0) 65%),
                         linear-gradient(180deg, #121217 0%, #07070a 100%) !important;
@@ -849,7 +849,7 @@
             gap: 6px;
         }
 
-        /* تصميم أزرار السوشيال ميديا فائق العصرية */
+        /* أزرار السوشيال ميديا */
         .footer-social-btn {
             width: 44px;
             height: 44px;
@@ -1281,7 +1281,8 @@
             </div>
         </div>
     </section>
-    <!-- ================== كتالوج المنتجات الأكثر طلباً ================== -->
+
+    <!-- ================== كتالوج المنتجات المحدث ================== -->
     <section id="products-catalog" class="py-4 py-lg-5">
         <div class="container-lg">
             <div class="text-center mb-4 mb-lg-5">
@@ -1302,365 +1303,92 @@
             <!-- رسالة عند عدم وجود نتائج بحث -->
             <div id="noResultsMsg" class="text-center py-5 d-none">
                 <h5 class="fw-bold text-muted">عذراً، لم نجد قطعاً تطابق بحثكِ!</h5>
-                <p class="text-muted small">جربي البحث بكلمة أخرى مثل: خاتم، سلسلة، أو انسيال</p>
+                <p class="text-muted small">جربي البحث بكلمة أخرى مثل: غزال، نجمة، أو سلسلة</p>
             </div>
 
             <div class="row g-3 g-lg-4" id="productsGrid">
-                <!-- منتج 1: سلسلة الفراشة -->
+                <!-- منتج 1: سلسلة الغزال التريند (تبديل أوتوماتيكي للصور مع اختيار اللون) -->
                 <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="necklaces">
                     <div class="rewaq-product-card">
-                        <span class="badge bg-danger product-badge-tag">خصم 20%</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة الفراشة ستانلس ستيل')" title="إضافة للمفضلة">
+                        <span class="badge bg-danger product-badge-tag">الأكثر طلباً 🔥</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة الغزال التريند')" title="إضافة للمفضلة">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </button>
                         <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="سلسلة الفراشة ستانلس ستيل" class="product-img-real" loading="lazy">
+                            <img id="product-img-deer" src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/1.pink.jpeg" alt="سلسلة الغزال التريند" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">ستانلس ستيل عالي الجودة</span>
+                            <span class="text-muted small">ستانلس ستيل أصلي 316L</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
+                                <span class="text-muted font-en small">(5.0)</span>
                             </span>
                         </div>
-                        <h4 class="product-title">سلسلة الفراشة ستانلس ستيل</h4>
+                        <h4 class="product-title">سلسلة الغزال التريند</h4>
 
                         <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
-                            <select id="variant-neck-1" class="form-select variant-select">
-                                <option value="لون ذهبي ثابت">لون ذهبي ثابت ضد الماء</option>
-                                <option value="فضي ستانلس لامع">فضي ستانلس لامع</option>
-                                <option value="روز جولد وردي">روز جولد وردي فاخر</option>
+                            <label class="small text-muted fw-bold d-block mb-1">اختاري اللون المفضل:</label>
+                            <select id="variant-deer" class="form-select variant-select" onchange="changeProductImage('product-img-deer', this)">
+                                <option value="وردي (Pink)" data-img="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/1.pink.jpeg" selected>وردي (Pink)</option>
+                                <option value="أحمر (Red)" data-img="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/1.red.jpeg">أحمر (Red)</option>
+                                <option value="أبيض (White)" data-img="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/1.white.jpeg">أبيض (White)</option>
                             </select>
                         </div>
 
                         <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">340 ج.م</span>
-                            <span class="price-old">425 ج.م</span>
+                            <span class="price-now">250 ج.م</span>
+                            <span class="price-old">370 ج.م</span>
                         </div>
 
                         <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سلسلة الفراشة ستانلس ستيل', 340, 'variant-neck-1', 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80')">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModalWithDynamicImg('سلسلة الغزال التريند', 250, 'variant-deer', 'product-img-deer')">
                                 <span>طلب فوري</span>
                                 <span>⚡</span>
                             </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة الفراشة ستانلس ستيل', 340, 'variant-neck-1')" title="أضيفي للسلة">
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة الغزال التريند', 250, 'variant-deer')" title="أضيفي للسلة">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- منتج 2: خاتم التاج -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="rings">
+                <!-- منتج 2: سلسلة نجمة الشمال -->
+                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="necklaces">
                     <div class="rewaq-product-card">
-                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">الأكثر مبيعاً</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'خاتم التاج الملكي مرصع بزركون')" title="إضافة للمفضلة">
+                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">وصل حديثاً ✨</span>
+                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة نجمة الشمال')" title="إضافة للمفضلة">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </button>
                         <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="خاتم التاج الملكي" class="product-img-real" loading="lazy">
+                            <img id="product-img-north-star" src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/2.jpeg" alt="سلسلة نجمة الشمال" class="product-img-real" loading="lazy">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">ستانلس ستيل وزركون نقي</span>
+                            <span class="text-muted small">ستانلس ستيل ضد الماء والصدأ</span>
                             <span class="small d-inline-flex align-items-center gap-1">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(5.0)</span>
+                                <span class="text-muted font-en small">(4.9)</span>
                             </span>
                         </div>
-                        <h4 class="product-title">خاتم التاج الملكي المرصع</h4>
+                        <h4 class="product-title">سلسلة نجمة الشمال</h4>
 
                         <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">المقاس الأمريكي (US):</label>
-                            <select id="variant-ring-1" class="form-select variant-select">
-                                <option value="مقاس 6 (52 مم)">مقاس 6 (52 مم)</option>
-                                <option value="مقاس 7 (54 مم)" selected>مقاس 7 (54 مم) - الأكثر طلباً</option>
-                                <option value="مقاس 8 (57 مم)">مقاس 8 (57 مم)</option>
-                                <option value="مقاس 9 (60 مم)">مقاس 9 (60 مم)</option>
+                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
+                            <select id="variant-star" class="form-select variant-select">
+                                <option value="لون ذهبي ثابت" selected>لون ذهبي ثابت ضد الماء</option>
                             </select>
                         </div>
 
                         <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">280 ج.م</span>
+                            <span class="price-now">270 ج.م</span>
                             <span class="price-old">350 ج.م</span>
                         </div>
 
                         <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('خاتم التاج الملكي مرصع بزركون', 280, 'variant-ring-1', 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80')">
+                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سلسلة نجمة الشمال', 270, 'variant-star', 'https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/2.jpeg')">
                                 <span>طلب فوري</span>
                                 <span>⚡</span>
                             </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('خاتم التاج الملكي مرصع بزركون', 280, 'variant-ring-1')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 3: إسورة الحلقات -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="bracelets">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-success product-badge-tag">ستانلس ستيل 316L</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'إسورة الحلقات المترابطة')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1611591475850-8b1e459db4b9?auto=format&fit=crop&w=800&q=80" alt="إسورة الحلقات" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">أساور كلاسيكية ستانلس</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">إسورة الحلقات المترابطة</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
-                            <select id="variant-brace-1" class="form-select variant-select">
-                                <option value="مزدوج (ذهبي وفضي معاً)">مزدوج (ذهبي وفضي معاً)</option>
-                                <option value="ذهبي ثابت بالكامل">ذهبي ثابت ضد الماء</option>
-                                <option value="فضي ستانلس لامع">فضي ستانلس لامع</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">420 ج.م</span>
-                            <span class="price-old">500 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('إسورة الحلقات المترابطة', 420, 'variant-brace-1', 'https://images.unsplash.com/photo-1611591475850-8b1e459db4b9?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('إسورة الحلقات المترابطة', 420, 'variant-brace-1')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 4: انسيال كارتييه لوف ستانلس ستيل -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="anklets">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-primary product-badge-tag">الأكثر طلباً</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'انسيال كارتييه لوف ستانلس ستيل')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="انسيال كارتييه لوف ستانلس ستيل" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">انسيال ستانلس ستيل 316L</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(5.0)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">انسيال كارتييه لوف ستانلس ستيل</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
-                            <select id="variant-anklet-1" class="form-select variant-select">
-                                <option value="لون ذهبي ثابت">لون ذهبي ثابت ضد الماء</option>
-                                <option value="فضي ستانلس لامع">فضي ستانلس لامع</option>
-                                <option value="روز جولد وردي">روز جولد وردي</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">240 ج.م</span>
-                            <span class="price-old">310 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('انسيال كارتييه لوف ستانلس ستيل', 240, 'variant-anklet-1', 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('انسيال كارتييه لوف ستانلس ستيل', 240, 'variant-anklet-1')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 5: طقم لورا الملكي -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="sets">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-secondary text-white product-badge-tag fw-bold">طقم ملكي 3 قطع</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'طقم لورا الملكي الفاخر')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" alt="طقم لورا الملكي" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">سلسلة + خاتم + انسيال</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">طقم لورا الملكي الفاخر</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">مقاس خاتم الطقم:</label>
-                            <select id="variant-set-1" class="form-select variant-select">
-                                <option value="خاتم مقاس 6">خاتم مقاس 6</option>
-                                <option value="خاتم مقاس 7" selected>خاتم مقاس 7</option>
-                                <option value="خاتم مقاس 8">خاتم مقاس 8</option>
-                                <option value="خاتم مقاس 9">خاتم مقاس 9</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">750 ج.م</span>
-                            <span class="price-old">950 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('طقم لورا الملكي الفاخر', 750, 'variant-set-1', 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('طقم لورا الملكي الفاخر', 750, 'variant-set-1')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 6: سلسلة إنفينيتي -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="necklaces">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">الأكثر إهداءً</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سلسلة إنفينيتي المالانهاية')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80" alt="سلسلة إنفينيتي" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">رمز المالانهاية | ستانلس ستيل</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">سلسلة إنفينيتي المالانهاية</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
-                            <select id="variant-neck-2" class="form-select variant-select">
-                                <option value="لون ذهبي ثابت">لون ذهبي ثابت ضد الماء</option>
-                                <option value="فضي ستانلس مقاوم للصدأ">فضي ستانلس مقاوم للصدأ</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">260 ج.م</span>
-                            <span class="price-old">320 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سلسلة إنفينيتي المالانهاية', 260, 'variant-neck-2', 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة إنفينيتي المالانهاية', 260, 'variant-neck-2')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 7: محبس سوليتير -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="rings">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-danger product-badge-tag">قطعة نادرة</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'محبس سوليتير كلاسيكي')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80" alt="محبس سوليتير" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">ستانلس ستيل وحجر سداسي</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">محبس سوليتير كلاسيكي</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">المقاس المطلوب:</label>
-                            <select id="variant-ring-2" class="form-select variant-select">
-                                <option value="مقاس 6">مقاس 6</option>
-                                <option value="مقاس 7" selected>مقاس 7</option>
-                                <option value="مقاس 8">مقاس 8</option>
-                                <option value="مقاس 9">مقاس 9</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">390 ج.م</span>
-                            <span class="price-old">480 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('محبس سوليتير كلاسيكي', 390, 'variant-ring-2', 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('محبس سوليتير كلاسيكي', 390, 'variant-ring-2')" title="أضيفي للسلة">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- منتج 8: سوار النجوم -->
-                <div class="col-12 col-md-6 col-lg-4 product-filter-item" data-category="bracelets">
-                    <div class="rewaq-product-card">
-                        <span class="badge bg-warning text-dark product-badge-tag fw-bold">وصل حديثاً</span>
-                        <button class="wishlist-toggle-btn" onclick="toggleWishlist(this, 'سوار النجوم المرصع بأحجار ملونة')" title="إضافة للمفضلة">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </button>
-                        <div class="product-visual-wrap">
-                            <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" alt="سوار النجوم" class="product-img-real" loading="lazy">
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="text-muted small">ستانلس ستيل وزركون ملون</span>
-                            <span class="small d-inline-flex align-items-center gap-1">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#cfa83b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                <span class="text-muted font-en small">(4.9)</span>
-                            </span>
-                        </div>
-                        <h4 class="product-title">سوار النجوم الساحر</h4>
-
-                        <div class="mb-3">
-                            <label class="small text-muted fw-bold d-block mb-1">اللون المفضل:</label>
-                            <select id="variant-brace-2" class="form-select variant-select">
-                                <option value="فضي ستانلس بأحجار ملونة">فضي ستانلس بأحجار ملونة</option>
-                                <option value="ذهبي ثابت بزركون أبيض">ذهبي ثابت بزركون أبيض</option>
-                            </select>
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="price-now">310 ج.م</span>
-                            <span class="price-old">380 ج.م</span>
-                        </div>
-
-                        <div class="d-flex gap-2 mt-auto pt-2">
-                            <button class="btn btn-quick-buy flex-grow-1" onclick="openQuickCheckoutModal('سوار النجوم الساحر', 310, 'variant-brace-2', 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80')">
-                                <span>طلب فوري</span>
-                                <span>⚡</span>
-                            </button>
-                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سوار النجوم الساحر', 310, 'variant-brace-2')" title="أضيفي للسلة">
+                            <button class="btn btn-rewaq-primary px-3 py-2 rounded-pill flex-shrink-0" onclick="addToCart('سلسلة نجمة الشمال', 270, 'variant-star')" title="أضيفي للسلة">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                             </button>
                         </div>
@@ -1669,7 +1397,6 @@
             </div>
         </div>
     </section>
-
     <!-- ================== التشكيلة الحصرية ================== -->
     <section id="bento-editorial" class="py-4 py-lg-5 bg-transparent">
         <div class="container-lg">
@@ -1690,7 +1417,7 @@
                         <div class="d-flex align-items-center justify-content-between pt-4 border-top border-secondary">
                             <div>
                                 <span class="d-block small text-white-50">يبدأ سعر القطع من</span>
-                                <h4 class="fw-bold text-warning font-en mb-0">240 ج.م</h4>
+                                <h4 class="fw-bold text-warning font-en mb-0">250 ج.م</h4>
                             </div>
                             <a href="#products-catalog" class="btn btn-rewaq-gold">تصفحي المجموعة ←</a>
                         </div>
@@ -1734,12 +1461,12 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"بجد تسلم ايديكو الاسوره طلعت احلى من الصور بكتير وبتلمع ومبتغيرش لون مع الميا خااالص.. صحابي افتكروها دهب بجد😂❤️❤️ وخامتها تقيله وشيك اوووي فاللبس شكراً ليكم."</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة الغزال تحفة فنية بجد! لونها ولمعتها تجنن والخامة تقيلة ومبتغيرش لون نهائي مع الميا والبرفان.. وشكراً على سرعة التوصيل والمعاينة مع المندوب ❤️"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">د</div>
                             <div>
                                 <h6 class="fw-bold mb-0 text-dark">دينا مصطفى</h6>
-                                <small class="text-muted">طلبت إسورة الحلقات • طنطا</small>
+                                <small class="text-muted">طلبت سلسلة الغزال (وردي) • طنطا</small>
                             </div>
                         </div>
                     </div>
@@ -1758,12 +1485,12 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"تحفه تحفهههه! السلسله وصلتني ف اقل من يومين ومعاها علبه شيك اوي فخمه تنفع هديه بجد.. وعجبني اني فتحت وعاينت الحاجه مع المندوب قبل ما ادفع.. هطلب منكوا تاني اكيد🥰"</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة نجمة الشمال وصلتني في أقل من 48 ساعة ومعاها علبة شيك جداً تنفع هدية.. وعجبني جداً إني فتحت وعاينت القطعة قبل السداد، ذوق وأمانة في التعامل 🥰"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">آ</div>
                             <div>
                                 <h6 class="fw-bold mb-0 text-dark">آية سمير</h6>
-                                <small class="text-muted">طلبت سلسلة الفراشة • الهرم، الجيزة</small>
+                                <small class="text-muted">طلبت سلسلة نجمة الشمال • الهرم، الجيزة</small>
                             </div>
                         </div>
                     </div>
@@ -1782,12 +1509,12 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"الانسيال والخاتم طلع مقاسهم مظبوط بالملي والخامه تقيله ومحترمه مش الشغل الخفيف دا.. وخدمه العملا على الواتس ذوق جدا وردو عليا ف ثواني شكرا بجد على المعامله الراقيه دي❤️"</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"طلبت اللونين الوردي والأبيض من سلسلة الغزال، الحقيقة الصور ظالماهم في الحقيقة شكلهم أفخم بمراحل ولمعتهم ثابتة جداً. خدمة العملاء على الواتساب سريعة ومحترمة جداً ❤️"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">م</div>
                             <div>
                                 <h6 class="fw-bold mb-0 text-dark">منى إبراهيم</h6>
-                                <small class="text-muted">طلبت انسيال ومحبس • المنصورة</small>
+                                <small class="text-muted">طلبت قطعتين • المنصورة</small>
                             </div>
                         </div>
                     </div>
@@ -1802,7 +1529,7 @@
             <div class="text-center mb-4 mb-lg-5">
                 <span class="text-primary-gold fw-bold small text-uppercase">أسرار الأناقة الدائمة</span>
                 <h2 class="display-6 fw-bold mt-1 text-dark">دليل رواق للأناقة والعناية</h2>
-                <p class="text-muted">نصائح احترافية للحفاظ على بريق إكسسواراتك واختيار المقاسات بدقة متناهية</p>
+                <p class="text-muted">نصائح احترافية للحفاظ على بريق إكسسواراتك واختيار القطع بدقة متناهية</p>
             </div>
 
             <div class="row g-3 g-lg-4">
@@ -1853,6 +1580,7 @@
             </div>
         </div>
     </section>
+
     <!-- ================== نافذة الطلب الفوري السريع (Modal) ================== -->
     <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
@@ -1876,7 +1604,7 @@
                             <img id="modalProductImg" src="" alt="المنتج" class="rounded-3 shadow-sm" style="width: 72px; height: 72px; object-fit: cover; border: 1.5px solid rgba(207, 168, 59, 0.4);">
                             <div>
                                 <h6 class="fw-bold mb-1 text-dark fs-6 fs-sm-5" id="modalProductName">اسم المنتج</h6>
-                                <span class="badge bg-dark text-warning rounded-pill small" id="modalProductVariant">المقاس: قياسي</span>
+                                <span class="badge bg-dark text-warning rounded-pill small" id="modalProductVariant">اللون: قياسي</span>
                             </div>
                         </div>
                         <div class="text-start">
@@ -1910,7 +1638,7 @@
                             </div>
 
                             <div class="col-md-6 form-floating-custom">
-                                <label for="checkoutVariantSelector">تأكيد المقاس / اللون المطلوب:</label>
+                                <label for="checkoutVariantSelector">تأكيد اللون المطلوب:</label>
                                 <select id="checkoutVariantSelector" class="form-select form-control-custom w-100" onchange="updateModalVariantText()">
                                 </select>
                             </div>
@@ -2062,10 +1790,10 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر المودرن الفاخر الجديد (بالأيقونات والروابط المحدثة) ================== -->
+    <!-- ================== الفوتر المودرن الفاخر ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
-            <!-- كارت خدمة عملاء VIP العائم والفاخر -->
+            <!-- كارت خدمة عملاء VIP العائم -->
             <div class="footer-action-card-modern">
                 <div class="row align-items-center g-4">
                     <div class="col-lg-8 text-center text-lg-end">
@@ -2087,7 +1815,6 @@
 
             <!-- شبكة معلومات الفوتر -->
             <div class="row g-4 mb-4">
-                <!-- العمود 1: هوية البراند والضمان -->
                 <div class="col-lg-4 col-md-6">
                     <div class="rewaq-brand mb-3">
                         <img src="https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/images/%D9%84%D9%88%D8%AC%D9%88/%D9%84%D9%88%D8%AC%D9%88.jpeg" alt="لوجو رواق" class="brand-logo-img">
@@ -2111,7 +1838,6 @@
                     </div>
                 </div>
 
-                <!-- العمود 2: تصنيفات ومجموعات المتجر -->
                 <div class="col-lg-2 col-6">
                     <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">أقسام المتجر</h6>
                     <ul class="list-unstyled mb-0">
@@ -2123,7 +1849,6 @@
                     </ul>
                 </div>
 
-                <!-- العمود 3: طرق الدفع والشحن المعتمدة -->
                 <div class="col-lg-3 col-6">
                     <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">الشحن والدفع</h6>
                     <p class="text-white-50 small mb-2">توصيل سريع لباب البيت خلال 24 إلى 48 ساعة لجميع محافظات مصر.</p>
@@ -2136,7 +1861,6 @@
                     </div>
                 </div>
 
-                <!-- العمود 4: التواصل المباشر ومواعيد العمل -->
                 <div class="col-lg-3 col-md-6">
                     <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">التواصل المباشر</h6>
                     
@@ -2169,7 +1893,7 @@
 
             <hr class="border-secondary opacity-25 my-4">
 
-            <!-- شريط الحقوق وأيقونات السوشيال ميديا المودرن المحدثة بروابطك -->
+            <!-- شريط الحقوق وأيقونات السوشيال ميديا -->
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-end mb-3 mb-md-0">
                     <p class="m-0 text-white-50 small">© 2026 متجر رواق REWAQ. جميع الحقوق محفوظة.</p>
@@ -2177,7 +1901,6 @@
                 </div>
                 <div class="col-md-6 text-center text-md-start">
                     <div class="d-inline-flex align-items-center gap-2">
-                        <!-- إنستجرام -->
                         <a href="https://www.instagram.com/rewaq_egy?exln=OHRsNHdpcWVqYzB0&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="إنستجرام رواق">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -2185,13 +1908,11 @@
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <!-- تيك توك -->
                         <a href="https://www.tiktok.com/@rewaq._" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="تيك توك رواق">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.34 0 .67.06.97.16V9.06a6.37 6.37 0 0 0-.97-.08 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/>
                             </svg>
                         </a>
-                        <!-- فيسبوك -->
                         <a href="https://www.facebook.com/share/1EgCKte7cs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="فيسبوك رواق">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -2206,11 +1927,31 @@
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- ================== كود جافاسكريبت المحسن بالكامل ================== -->
+    <!-- ================== كود جافاسكريبت المطور بالكامل ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v14';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v14';
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v15';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v15';
+
+        // دالة تبديل صورة المنتج في الكارت عند اختيار اللون
+        function changeProductImage(imgElementId, selectEl) {
+            var selectedOption = selectEl.options[selectEl.selectedIndex];
+            var newImgSrc = selectedOption.getAttribute('data-img');
+            var imgEl = document.getElementById(imgElementId);
+            if (imgEl && newImgSrc) {
+                imgEl.src = newImgSrc;
+            }
+        }
+
+        // دالة فتح مودال الشراء السريع مع سحب الصورة المعروضة الحالية تلقائياً
+        function openQuickCheckoutModalWithDynamicImg(name, price, variantSelectId, imgElementId) {
+            var currentImgSrc = '';
+            var imgEl = document.getElementById(imgElementId);
+            if (imgEl) {
+                currentImgSrc = imgEl.src;
+            }
+            openQuickCheckoutModal(name, price, variantSelectId, currentImgSrc);
+        }
 
         function loadCartFromStorage() {
             try {
@@ -2262,6 +2003,10 @@
                     var opt = document.createElement('option');
                     opt.value = originalSelect.options[i].value;
                     opt.textContent = originalSelect.options[i].textContent;
+                    var optionImg = originalSelect.options[i].getAttribute('data-img');
+                    if (optionImg) {
+                        opt.setAttribute('data-img', optionImg);
+                    }
                     if (originalSelect.options[i].value === selectedVariant) {
                         opt.selected = true;
                     }
@@ -2270,7 +2015,7 @@
             } else {
                 var opt = document.createElement('option');
                 opt.value = 'قياسي';
-                opt.textContent = 'المقاس/اللون القياسي';
+                opt.textContent = 'اللون القياسي';
                 modalVariantSelect.appendChild(opt);
             }
 
@@ -2278,7 +2023,7 @@
                 name: name,
                 price: price,
                 variant: selectedVariant,
-                img: imgSrc || 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=300&q=80'
+                img: imgSrc || 'https://raw.githubusercontent.com/ashrafsaiid288-source/elnouby/main/image/2.jpeg'
             };
 
             document.getElementById('modalProductName').textContent = name;
@@ -2300,6 +2045,14 @@
             if (sel) {
                 currentQuickCheckoutItem.variant = sel.value;
                 document.getElementById('modalProductVariant').textContent = sel.value;
+                
+                // تحديث صورة المودال أيضاً عند تغيير اللون من داخل المودال نفسه
+                var selectedOption = sel.options[sel.selectedIndex];
+                var optionImg = selectedOption.getAttribute('data-img');
+                if (optionImg) {
+                    currentQuickCheckoutItem.img = optionImg;
+                    document.getElementById('modalProductImg').src = optionImg;
+                }
             }
         }
 
@@ -2326,7 +2079,6 @@
                 return;
             }
 
-            // تنظيف ومعالجة رقم الهاتف لجميع الصيغ المصرية
             phone = phone.replace(/[\s\-\+]/g, '');
             if (phone.startsWith('0020')) phone = phone.substring(4);
             else if (phone.startsWith('20')) phone = phone.substring(2);
@@ -2356,7 +2108,7 @@
             text += "--------------------------------------\n";
             text += "🛍️ *القطعة المطلوبة:*\n";
             text += "• *" + currentQuickCheckoutItem.name + "*\n";
-            text += "• *المقاس / اللون:* " + finalVariant + "\n";
+            text += "• *اللون / الخيار:* " + finalVariant + "\n";
             text += "• *السعر:* " + subtotal + " ج.م\n";
             text += "--------------------------------------\n";
             text += "👤 *بيانات العميل والتوصيل:*\n";
