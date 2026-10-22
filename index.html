@@ -1784,12 +1784,12 @@
                             </span>
                             <span class="badge bg-warning text-dark font-en small fw-bold">5.0</span>
                         </div>
-                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة البجعة البيور وصلتني تاني يوم على طول، حولت بإنستاباي في ثانية والمعاملة في قمة الذوق والأمانة ومبتغيرش مع الميا خالص 🥰"</p>
+                        <p class="text-dark fs-6 mb-4 lh-base">"سلسلة البجعة البيور وصلتني تاني يوم على طول، والتوصيل لإسكندرية 40ج بس وحولت بإنستاباي في ثانية والمعاملة في قمة الذوق 🥰"</p>
                         <div class="d-flex align-items-center gap-3 border-top pt-3">
                             <div class="rounded-circle bg-dark text-warning d-flex align-items-center justify-content-center fw-bold" style="width: 44px; height: 44px;">آ</div>
                             <div>
                                 <h6 class="fw-bold mb-0 text-dark">آية سمير</h6>
-                                <small class="text-muted">طلبت سلسلة البجعة • الهرم، الجيزة</small>
+                                <small class="text-muted">طلبت سلسلة البجعة • ميامي، الإسكندرية</small>
                             </div>
                         </div>
                     </div>
@@ -1879,7 +1879,7 @@
         </div>
     </section>
 
-    <!-- ================== نافذة الطلب الفوري السريع (Modal) مع طرق الدفع وأرقام التحويل ================== -->
+    <!-- ================== نافذة الطلب الفوري السريع (Modal) بالتسعيرة المحدثة ================== -->
     <div class="modal fade" id="quickCheckoutModal" tabindex="-1" aria-labelledby="quickCheckoutTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content checkout-modal-content">
@@ -1923,15 +1923,14 @@
                                 <input type="tel" class="form-control form-control-custom w-100" id="checkoutCustomerPhone" placeholder="01xxxxxxxxx" required dir="ltr" maxlength="11">
                             </div>
 
+                            <!-- قائمة المحافظات بالتسعيرة الجديدة -->
                             <div class="col-md-6 form-floating-custom">
                                 <label for="checkoutGovernorate">محافظة التوصيل: <span class="text-danger">*</span></label>
                                 <select id="checkoutGovernorate" class="form-select form-control-custom w-100" onchange="recalculateModalTotal()" required>
+                                    <option value="40" data-name="الإسكندرية">الإسكندرية (40 ج.م)</option>
                                     <option value="50" data-name="القاهرة">القاهرة (50 ج.م)</option>
                                     <option value="50" data-name="الجيزة">الجيزة (50 ج.م)</option>
-                                    <option value="60" data-name="الإسكندرية">الإسكندرية (60 ج.م)</option>
-                                    <option value="60" data-name="محافظات القناة">محافظات القناة (60 ج.م)</option>
-                                    <option value="75" data-name="الدلتا والوجه البحري">الدلتا والوجه البحري (75 ج.م)</option>
-                                    <option value="75" data-name="الصعيد وباقي المحافظات">الصعيد وباقي المحافظات (75 ج.م)</option>
+                                    <option value="80" data-name="باقي المحافظات (الدلتا، القناة، والصعيد)">باقي المحافظات (80 ج.م)</option>
                                 </select>
                             </div>
 
@@ -1946,7 +1945,7 @@
                                 <textarea class="form-control form-control-custom w-100" id="checkoutDetailedAddress" rows="2" placeholder="المنطقة، الشارع، رقم العمارة والشقة، وعلامة مميزة جنبك" required></textarea>
                             </div>
 
-                            <!-- طرق الدفع المحدثة -->
+                            <!-- طرق الدفع المحدثة بأرقام الكاش وإنستاباي -->
                             <div class="col-12">
                                 <label class="small text-muted fw-bold d-block mb-2">طريقة الدفع المفضلة: <span class="text-danger">*</span></label>
                                 <div class="row g-2">
@@ -2005,7 +2004,7 @@
                             </div>
                             <div class="d-flex justify-content-between align-items-center mb-2 text-muted small">
                                 <span>مصاريف الشحن:</span>
-                                <span id="modalSummaryShipping" class="font-en fw-bold text-dark">50 ج.م</span>
+                                <span id="modalSummaryShipping" class="font-en fw-bold text-dark">40 ج.م</span>
                             </div>
                             <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-dark text-white mb-3">
                                 <span class="fw-bold fs-6">الإجمالي المطلوب:</span>
@@ -2044,7 +2043,7 @@
         </div>
     </div>
 
-    <!-- درج سلة المشتريات التفاعلي مع ميزة الشحن المجاني فوق 1000 ج.م واختيار الدفع -->
+    <!-- درج سلة المشتريات التفاعلي مع تسعيرة الشحن الجديدة (إسكندرية 40، قاهرة وجيزة 50، الباقي 80) -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCart" aria-labelledby="cartDrawerTitle">
         <div class="offcanvas-header border-bottom">
             <div class="d-flex align-items-center gap-2">
@@ -2055,7 +2054,7 @@
         </div>
         <div class="offcanvas-body d-flex flex-column justify-content-between">
             <div>
-                <!-- شريط تنبيه الشحن المجاني -->
+                <!-- شريط تنبيه الشحن المجاني فوق 1000 ج -->
                 <div id="freeShippingBanner" class="free-shipping-progress-box">
                     <div class="d-flex align-items-center gap-2 mb-1">
                         <span class="fs-5">🚚</span>
@@ -2072,9 +2071,9 @@
                         <span>محافظة التوصيل:</span>
                     </label>
                     <select id="shippingZoneSelect" class="form-select form-select-sm rounded-pill variant-select mb-2" onchange="updateShipping()">
+                        <option value="40" data-name="الإسكندرية">الإسكندرية (40 ج.م)</option>
                         <option value="50" data-name="القاهرة والجيزة">القاهرة والجيزة (50 ج.م)</option>
-                        <option value="60" data-name="الإسكندرية والقناة">الإسكندرية والقناة (60 ج.م)</option>
-                        <option value="75" data-name="الدلتا والصعيد وباقي المحافظات">الدلتا، الصعيد وباقي المحافظات (75 ج.م)</option>
+                        <option value="80" data-name="باقي المحافظات">باقي المحافظات (80 ج.م)</option>
                     </select>
 
                     <label class="form-label small fw-bold text-dark mb-1">طريقة الدفع:</label>
@@ -2091,7 +2090,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center mb-2 text-muted small">
                     <span>تكلفة التوصيل:</span>
-                    <span id="cartShippingCost" class="font-en fw-bold text-dark">50 ج.م</span>
+                    <span id="cartShippingCost" class="font-en fw-bold text-dark">40 ج.م</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center mb-3 pt-2 border-top">
                     <span class="fs-5 fw-bold text-dark">الإجمالي الكلي:</span>
@@ -2137,7 +2136,7 @@
         </button>
     </nav>
 
-    <!-- ================== الفوتر المودرن الفاخر مع أرقام الدفع والتحويل ================== -->
+    <!-- ================== الفوتر المودرن الفاخر مع أرقام الدفع والتسعيرة ================== -->
     <footer id="footer" class="rewaq-footer-modern">
         <div class="container-lg">
             <div class="footer-action-card-modern">
@@ -2194,13 +2193,15 @@
                     </ul>
                 </div>
 
-                <!-- تفاصيل طرق الدفع وأرقام التحويل -->
+                <!-- تفاصيل طرق الدفع والتوصيل المحدثة -->
                 <div class="col-lg-3 col-6">
-                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">طرق الدفع والتحويل</h6>
+                    <h6 class="text-white fw-bold mb-3 fs-6 border-bottom border-warning pb-2 d-inline-block">طرق الدفع والتوصيل</h6>
                     
                     <div class="payment-box-detail">
-                        <small class="text-warning fw-bold d-block" style="font-size: 0.76rem;">💵 نقدي عند الاستلام</small>
-                        <span class="text-white-50" style="font-size: 0.74rem;">سددي للمندوب بعد فتح ومعاينة القطع براحتك.</span>
+                        <small class="text-warning fw-bold d-block" style="font-size: 0.76rem;">🚚 مصاريف الشحن والتوصيل:</small>
+                        <span class="text-white-50 d-block" style="font-size: 0.74rem;">• الإسكندرية: <strong>40 ج.م</strong></span>
+                        <span class="text-white-50 d-block" style="font-size: 0.74rem;">• القاهرة والجيزة: <strong>50 ج.م</strong></span>
+                        <span class="text-white-50 d-block" style="font-size: 0.74rem;">• باقي المحافظات: <strong>80 ج.م</strong></span>
                     </div>
 
                     <div class="payment-box-detail">
@@ -2283,8 +2284,8 @@
     <!-- ================== كود جافاسكريبت المطور بالكامل ================== -->
     <script>
         var REWAQ_WHATSAPP_PHONE = "201299914230";
-        var CART_STORAGE_KEY = 'rewaq_cart_state_v19';
-        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v19';
+        var CART_STORAGE_KEY = 'rewaq_cart_state_v20';
+        var WISHLIST_STORAGE_KEY = 'rewaq_wishlist_state_v20';
         var FREE_SHIPPING_THRESHOLD = 1000;
 
         function changeProductImage(imgElementId, selectEl) {
@@ -2409,7 +2410,7 @@
 
         function recalculateModalTotal() {
             var govSelect = document.getElementById('checkoutGovernorate');
-            var baseShipping = govSelect ? parseInt(govSelect.value, 10) : 50;
+            var baseShipping = govSelect ? parseInt(govSelect.value, 10) : 40;
             var subtotal = currentQuickCheckoutItem.price || 0;
             
             var finalShipping = (subtotal >= FREE_SHIPPING_THRESHOLD) ? 0 : baseShipping;
@@ -2663,8 +2664,8 @@
 
             var shippingSelect = document.getElementById('shippingZoneSelect');
             var selectedOption = shippingSelect ? shippingSelect.options[shippingSelect.selectedIndex] : null;
-            var zoneName = selectedOption ? selectedOption.getAttribute('data-name') : 'القاهرة والجيزة';
-            var baseShipping = selectedOption ? parseInt(shippingSelect.value, 10) : 50;
+            var zoneName = selectedOption ? selectedOption.getAttribute('data-name') : 'الإسكندرية';
+            var baseShipping = selectedOption ? parseInt(shippingSelect.value, 10) : 40;
 
             var paymentSelect = document.getElementById('cartPaymentMethodSelect');
             var selectedPaymentMethod = paymentSelect ? paymentSelect.value : 'نقدي عند الاستلام (كاش مع المندوب)';
